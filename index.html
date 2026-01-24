@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOS Labs | Automatización de Marketing y Ventas para PYMEs</title>
+    <meta name="description" content="Automatizo tu marketing y ventas con IA para que vendas más sin trabajar más. Diagnóstico gratuito para PYMEs.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MOS Labs | Automatización de Marketing y Ventas para PYMEs">
+    <meta property="og:description" content="Automatizo tu marketing y ventas con IA para que vendas más sin trabajar más.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mos-labs.com">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MOS Labs | Automatización de Marketing y Ventas">
+    <meta name="twitter:description" content="Automatizo tu marketing y ventas con IA para que vendas más sin trabajar más.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MOS Labs",
+        "description": "Consultora de automatización de marketing y ventas con IA para PYMEs",
+        "url": "https://mos-labs.com",
+        "founder": {
+            "@type": "Person",
+            "name": "Jose María Moscardó"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Málaga",
+            "addressCountry": "ES"
+        },
+        "areaServed": "ES",
+        "serviceType": ["Marketing Automation", "Sales Automation", "AI Consulting"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/Logo moslabs celeste sin fondo.svg" alt="MOS Labs" class="logo-img">
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#proceso" class="nav-link">Proceso</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta" aria-label="Agendar llamada de diagnóstico">Hablemos</a>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                Tu marketing y ventas funcionan.<br>
+                <span class="highlight">Pero te están costando demasiado tiempo.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Automatizo los procesos que te roban horas cada semana para que te centres en lo que importa: hacer crecer tu negocio.
+            </p>
+            <div class="hero-ctas">
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="btn btn-primary">
+                    Agenda tu diagnóstico gratuito
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#proceso" class="btn btn-ghost">
+                    Ver cómo funciona
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-badges">
+                <span class="badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Diagnóstico sin compromiso
+                </span>
+                <span class="badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Respuesta en 24h
+                </span>
+                <span class="badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Solo trabajo con 3 clientes a la vez
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section problems" id="problemas">
+        <div class="container">
+            <h2 class="section-title">¿Te suena familiar?</h2>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2"/>
+                            <line x1="9" y1="6" x2="15" y2="6"/>
+                            <line x1="9" y1="10" x2="15" y2="10"/>
+                            <line x1="9" y1="14" x2="12" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Contenido que se pierde</h3>
+                    <p class="problem-text">Creas contenido para una red y no lo aprovechas en las demás. Horas de trabajo que podrían rendir 3x más.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            <path d="M2 12h2M20 12h2"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Leads que se enfrían</h3>
+                    <p class="problem-text">Entran contactos interesados pero nadie los sigue a tiempo. Cuando respondes, ya han comprado a otro.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                            <rect x="9" y="3" width="6" height="4" rx="1"/>
+                            <line x1="9" y1="12" x2="15" y2="12"/>
+                            <line x1="9" y1="16" x2="15" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Seguimiento manual</h3>
+                    <p class="problem-text">Llevas el seguimiento comercial en la cabeza, en post-its o en un Excel caótico. Se te escapan oportunidades.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Emails que no salen</h3>
+                    <p class="problem-text">Sabes que deberías enviar newsletters, secuencias de bienvenida, seguimientos... pero nunca hay tiempo.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Propuestas eternas</h3>
+                    <p class="problem-text">Cada propuesta comercial te lleva horas. Copiar, pegar, adaptar, formatear... una y otra vez.</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title">Reporting infinito</h3>
+                    <p class="problem-text">Pasas el último día del mes recopilando datos de 5 herramientas distintas para hacer un informe.</p>
+                </div>
+            </div>
+            <p class="problems-closing">No es que no sepas lo que hay que hacer. Es que no tienes tiempo para montarlo.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Cómo puedo ayudarte</h2>
+            <p class="section-subtitle">Tres áreas donde la automatización inteligente transforma tu día a día</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Automatización de Marketing</h3>
+                    <p class="service-description">Tu contenido trabajando en todos los canales sin esfuerzo extra</p>
+                    <ul class="service-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Content repurposing automático (1 pieza → múltiples formatos)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Email marketing y newsletters automatizadas
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Programación inteligente en redes sociales
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Nurturing de leads con secuencias personalizadas
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                            <polyline points="18,8 22,4 18,4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Automatización Comercial</h3>
+                    <p class="service-description">Que ningún lead se enfríe y ninguna oportunidad se escape</p>
+                    <ul class="service-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            CRM configurado y automatizado
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Seguimiento automático de leads
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Cold outreach sistematizado
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Alertas y recordatorios inteligentes
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88 16.24,7.76"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Consultoría Estratégica</h3>
+                    <p class="service-description">No automatizamos el caos. Primero diseñamos el sistema.</p>
+                    <ul class="service-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Auditoría de procesos actuales
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Diseño de funnels de marketing y ventas
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Roadmap de implementación por fases
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Quick wins desde el primer mes
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process" id="proceso">
+        <div class="container">
+            <h2 class="section-title">Así trabajamos juntos</h2>
+            <p class="section-subtitle">Un proceso claro, sin sorpresas, con resultados desde el primer mes</p>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Diagnóstico</h3>
+                        <p class="step-text">Hablamos 20-30 minutos. Entiendo tu negocio, tus procesos actuales y dónde estás perdiendo tiempo. Sin compromiso.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Propuesta</h3>
+                        <p class="step-text">Te preparo una propuesta clara con fases, quick wins y precios. Sabrás exactamente qué vas a conseguir y cuándo.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Implementación</h3>
+                        <p class="step-text">Monto las automatizaciones mientras tú sigues con tu negocio. Te mantengo informado y pido feedback cuando hace falta.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/>
+                                <polyline points="17,6 23,6 23,12"/>
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Optimización</h3>
+                        <p class="step-text">Una vez funcionando, ajustamos y mejoramos. Las automatizaciones evolucionan con tu negocio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-cta">
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="btn btn-primary">
+                    ¿Empezamos por el diagnóstico?
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section results" id="resultados">
+        <div class="container">
+            <h2 class="section-title">Resultados reales</h2>
+            <p class="section-subtitle">Lo que consiguen las empresas que automatizan su marketing y ventas</p>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <span class="result-sector">E-commerce de material de oficina</span>
+                    <p class="result-text">De 0 a sistema completo de nurturing + content repurposing. El equipo ahorra 15h/semana en tareas manuales.</p>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-sector">Asesoría laboral B2B</span>
+                    <p class="result-text">Sistema de captación y seguimiento automatizado. Respuesta a leads en menos de 5 minutos, 24/7.</p>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-sector">Marca de producto artesanal</span>
+                    <p class="result-text">Email marketing automatizado que genera el 25% de las ventas online sin intervención manual.</p>
+                </div>
+            </div>
+
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">15-20h</span>
+                    <span class="metric-label">ahorradas por semana de media</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">&lt;5 min</span>
+                    <span class="metric-label">respuesta a leads</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">Mes 2</span>
+                    <span class="metric-label">ROI positivo desde</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title">Quién está detrás</h2>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/Foto Jose fondo azul.png" alt="Jose María Moscardó - Fundador de MOS Labs" class="about-photo">
+                </div>
+
+                <div class="about-text">
+                    <p>Soy <strong>Jose María Moscardó</strong>. Llevo más de 8 años en marketing B2B — he trabajado en empresas como <strong>CHEP, Nielsen y OpenUp</strong> gestionando presupuestos de hasta 250K€ y equipos multidisciplinares.</p>
+
+                    <p>En 2020 fundé <strong>Wysecamp</strong>, una comunidad de innovación que llegó a 3,000+ profesionales. Ahí descubrí que lo que más necesitan las PYMEs no es más estrategia, es tiempo para ejecutarla.</p>
+
+                    <p>Ahora combino mi experiencia en marketing con herramientas de automatización (<strong>n8n, Make, Claude, APIs</strong>) para que puedas competir con empresas más grandes sin multiplicar tu equipo.</p>
+
+                    <p>No te voy a vender humo ni herramientas que no necesitas. Mi trabajo es entender tu negocio y montar sistemas que funcionen cuando tú no estás delante.</p>
+
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <span class="badge-value">8+</span>
+                            <span class="badge-label">años en Marketing B2B</span>
+                        </div>
+                        <div class="about-badge">
+                            <span class="badge-value">250K€</span>
+                            <span class="badge-label">en presupuestos gestionados</span>
+                        </div>
+                        <div class="about-badge">
+                            <span class="badge-value">3,000+</span>
+                            <span class="badge-label">profesionales en comunidad</span>
+                        </div>
+                    </div>
+
+                    <div class="about-stack">
+                        <span class="stack-label">Stack tecnológico:</span>
+                        <div class="stack-icons">
+                            <span class="stack-item">n8n</span>
+                            <span class="stack-item">Make</span>
+                            <span class="stack-item">Claude AI</span>
+                            <span class="stack-item">APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Cuánto cuesta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Depende del alcance. Hay proyectos desde 500€ (automatizaciones puntuales) hasta varios miles (sistemas completos). En el diagnóstico gratuito te doy una estimación sin compromiso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Cuánto tiempo lleva ver resultados?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los quick wins suelen estar funcionando en 2-4 semanas. Un sistema completo de marketing y ventas automatizado puede llevar 2-3 meses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Necesito conocimientos técnicos?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Yo me encargo de toda la parte técnica. Tú solo necesitas explicarme cómo funciona tu negocio y qué quieres conseguir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Con qué herramientas trabajas?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Principalmente n8n y Make para automatizaciones, Claude y otras IAs para contenido e inteligencia, y las herramientas que ya uses (Google Workspace, CRMs, email marketing, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>¿Qué pasa si no funciona?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos en fases con resultados medibles. Si algo no funciona, lo ajustamos. No te voy a cobrar por algo que no te aporta valor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="calendly">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <h2 class="cta-title">¿Listo para recuperar tu tiempo?</h2>
+            <p class="cta-subtitle">Agenda una llamada de diagnóstico. En 20-30 minutos identificamos las automatizaciones que más impacto tendrían en tu negocio.</p>
+
+            <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                Agendar diagnóstico gratuito
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+            </a>
+
+            <div class="cta-badges">
+                <span class="cta-badge">Sin compromiso</span>
+                <span class="cta-badge">Respuesta en 24h</span>
+                <span class="cta-badge">Solo 3 clientes nuevos al mes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/Logo moslabs celeste sin fondo.svg" alt="MOS Labs" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Automatización de marketing y ventas para PYMEs</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <nav class="footer-nav">
+                        <a href="#servicios">Servicios</a>
+                        <a href="#proceso">Proceso</a>
+                        <a href="#sobre-mi">Sobre mí</a>
+                        <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener">Contacto</a>
+                    </nav>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <div class="contact-info">
+                        <a href="mailto:jose.moscardo@mos-labs.com" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            jose.moscardo@mos-labs.com
+                        </a>
+                        <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <span class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Málaga, España
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 MOS Labs. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="privacidad.html">Política de Privacidad</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
