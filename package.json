@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Landing page de MOS Labs - Automatización de Marketing y Ventas para PYMEs",
   "scripts": {
-    "start": "npx serve . -l $PORT"
+    "start": "npx http-server . -p $PORT --no-dotfiles"
   },
   "engines": {
     "node": ">=18"
