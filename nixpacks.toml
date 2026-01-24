@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x"]
+
+[phases.build]
+cmds = ["echo 'Static site - no build needed'"]
+
+[start]
+cmd = "npx http-server . -p ${PORT:-3000} --no-dotfiles -c-1"
