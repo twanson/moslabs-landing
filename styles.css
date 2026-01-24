@@ -1133,6 +1133,51 @@ a.contact-item:hover {
         --section-padding: 60px;
     }
 
+    /* Typography hierarchy for mobile */
+    .hero-title {
+        font-weight: 700;
+    }
+
+    .section-title {
+        font-weight: 700;
+    }
+
+    .hero-subtitle,
+    .section-subtitle {
+        font-weight: 400;
+    }
+
+    .service-title,
+    .problem-title,
+    .result-title,
+    .process-title {
+        font-weight: 600;
+    }
+
+    .service-description,
+    .problem-description,
+    .result-description,
+    .process-description {
+        font-weight: 400;
+    }
+
+    .badge,
+    .hero-badge {
+        font-weight: 500;
+    }
+
+    .faq-question {
+        font-weight: 600;
+    }
+
+    .faq-answer {
+        font-weight: 400;
+    }
+
+    .footer-title {
+        font-weight: 600;
+    }
+
     .logo-img {
         height: 50px;
     }
