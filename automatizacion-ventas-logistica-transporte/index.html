@@ -228,25 +228,63 @@
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">¿Prefieres escribirnos?</h2>
+            <p class="section-subtitle">Cuéntanos sobre tu negocio y te responderemos en menos de 24 horas</p>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xzdewlan" method="POST">
+                <input type="hidden" name="pagina_origen" value="automatizacion-ventas-logistica-transporte">
+                <input type="hidden" name="sector" value="Logística y Transporte">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                </div>
+                <div class="form-group">
+                    <label for="message">¿En qué podemos ayudarte? *</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos brevemente qué procesos te gustaría automatizar o qué problema quieres resolver..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Enviar mensaje
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- Related Pages -->
     <section class="section seo-related">
         <div class="container">
             <h2 class="section-title">También te puede interesar</h2>
             <div class="related-grid">
                 
-                <a href="/automatizacion-ventas-madrid/" class="related-card">
-                    <h3>Automatización de Ventas en Madrid</h3>
-                    <p>Soluciones de automatización para empresas en Madrid</p>
+                <a href="/automatizacion-procesos-pequenas-empresas/" class="related-card">
+                    <h3>Automatización de Procesos para Pequeñas Empresas</h3>
+                    <p>Soluciones de automatización para pequeñas empresas</p>
                 </a>
 
-                <a href="/automatizacion-ventas-malaga/" class="related-card">
-                    <h3>Automatización de Ventas en Málaga</h3>
-                    <p>Soluciones de automatización para empresas en Málaga</p>
+                <a href="/automatizacion-leads-inmobiliarias-malaga/" class="related-card">
+                    <h3>Automatización de Leads para Inmobiliarias en Málaga</h3>
+                    <p>Soluciones de automatización para inmobiliarias en Málaga</p>
                 </a>
 
-                <a href="/automatizacion-leads-hoteles-rurales/" class="related-card">
-                    <h3>Automatización de Leads para Hoteles Rurales</h3>
-                    <p>Soluciones de automatización para hoteles rurales</p>
+                <a href="/automatizacion-leads-educacion-formacion/" class="related-card">
+                    <h3>Automatización de Leads para Centros de Educación y Formación</h3>
+                    <p>Soluciones de automatización para centros de educación y formación</p>
                 </a>
             </div>
         </div>

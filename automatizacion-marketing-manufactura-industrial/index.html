@@ -228,25 +228,63 @@
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">¿Prefieres escribirnos?</h2>
+            <p class="section-subtitle">Cuéntanos sobre tu negocio y te responderemos en menos de 24 horas</p>
+
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xzdewlan" method="POST">
+                <input type="hidden" name="pagina_origen" value="automatizacion-marketing-manufactura-industrial">
+                <input type="hidden" name="sector" value="Manufactura Industrial">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre *</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                </div>
+                <div class="form-group">
+                    <label for="message">¿En qué podemos ayudarte? *</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos brevemente qué procesos te gustaría automatizar o qué problema quieres resolver..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Enviar mensaje
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- Related Pages -->
     <section class="section seo-related">
         <div class="container">
             <h2 class="section-title">También te puede interesar</h2>
             <div class="related-grid">
                 
-                <a href="/automatizacion-ventas-malaga/" class="related-card">
-                    <h3>Automatización de Ventas en Málaga</h3>
-                    <p>Soluciones de automatización para empresas en Málaga</p>
+                <a href="/automatizacion-atencion-cliente-gimnasios/" class="related-card">
+                    <h3>Automatización de Atención al Cliente para Gimnasios</h3>
+                    <p>Soluciones de automatización para gimnasios y centros deportivos</p>
                 </a>
 
-                <a href="/crm-clinica-dental-automatizado/" class="related-card">
-                    <h3>CRM Automatizado para Clínicas Dentales</h3>
-                    <p>Soluciones de automatización para clínicas dentales</p>
+                <a href="/automatizacion-ventas-crm-inmobiliarias/" class="related-card">
+                    <h3>Automatización de Ventas y CRM para Inmobiliarias</h3>
+                    <p>Soluciones de automatización para inmobiliarias</p>
                 </a>
 
-                <a href="/automatizacion-leads-consultorias-profesionales/" class="related-card">
-                    <h3>Automatización de Leads para Consultorías Profesionales</h3>
-                    <p>Soluciones de automatización para consultorías profesionales</p>
+                <a href="/automatizacion-leads-inmobiliarias-precio/" class="related-card">
+                    <h3>Automatización de Leads para Inmobiliarias - Precios y Servicios</h3>
+                    <p>Soluciones de automatización para inmobiliarias</p>
                 </a>
             </div>
         </div>
