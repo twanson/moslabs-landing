@@ -259,6 +259,45 @@
       "beneficios": ["Consultor local que conoce el tejido empresarial de Málaga", "Presupuestos adaptados a PYMEs", "Quick wins desde el primer mes", "Escalabilidad sin aumentar personal"],
       "volumen": 180,
       "dificultad": 3
+    },
+    {
+      "keyword": "automatizar procesos de ventas B2B",
+      "slug": "automatizar-procesos-ventas-b2b",
+      "titulo": "Automatización de Procesos de Ventas B2B",
+      "h1": "Automatiza tu proceso comercial B2B y cierra más rápido",
+      "sector": "Empresas B2B",
+      "sector_lower": "empresas B2B",
+      "problema": "Los ciclos de venta B2B son largos y complejos. Los leads se enfrían, el seguimiento se descuida y las oportunidades se pierden entre reuniones y propuestas.",
+      "solucion": "Implemento sistemas de automatización comercial B2B con nurturing inteligente, scoring de leads y seguimiento sistemático. Reduce ciclos de venta hasta un 40%.",
+      "beneficios": ["Nurturing automatizado durante todo el ciclo de venta", "Lead scoring para priorizar oportunidades", "Seguimiento sistemático sin esfuerzo manual", "Reducción del ciclo de venta hasta un 40%"],
+      "volumen": 390,
+      "dificultad": 8
+    },
+    {
+      "keyword": "software automatización para empresas B2B España",
+      "slug": "software-automatizacion-empresas-b2b-espana",
+      "titulo": "Software de Automatización para Empresas B2B en España",
+      "h1": "Los mejores software de automatización B2B para empresas españolas",
+      "sector": "Empresas B2B España",
+      "sector_lower": "empresas B2B en España",
+      "problema": "Elegir el software de automatización adecuado es difícil. Hay cientos de opciones, muchas no tienen soporte en español ni entienden el mercado local.",
+      "solucion": "Te ayudo a elegir e implementar el software de automatización adecuado para tu empresa B2B. Trabajo con las mejores herramientas del mercado adaptadas al contexto español.",
+      "beneficios": ["Asesoramiento independiente sin ataduras a proveedores", "Implementación adaptada al mercado español", "Soporte y formación en español", "Integración con tus herramientas actuales"],
+      "volumen": 260,
+      "dificultad": 10
+    },
+    {
+      "keyword": "automatización email marketing B2B",
+      "slug": "automatizacion-email-marketing-b2b",
+      "titulo": "Automatización de Email Marketing B2B",
+      "h1": "Email marketing B2B automatizado que genera leads cualificados",
+      "sector": "Empresas B2B",
+      "sector_lower": "empresas B2B",
+      "problema": "El email marketing B2B requiere personalización y constancia. Enviar emails genéricos no funciona, pero personalizar cada mensaje manualmente es imposible.",
+      "solucion": "Diseño secuencias de email automatizadas que nutren leads B2B con contenido relevante según su industria, cargo y etapa del funnel. Más aperturas, más clics, más conversiones.",
+      "beneficios": ["Secuencias personalizadas por industria y cargo", "Nurturing automatizado que convierte leads en clientes", "Segmentación inteligente basada en comportamiento", "Métricas claras de ROI por campaña"],
+      "volumen": 480,
+      "dificultad": 6
     }
   ]
 }
