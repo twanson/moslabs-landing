@@ -37,6 +37,48 @@ function generateMetaDescription(keyword) {
     return `${keyword.titulo}. ${keyword.solucion.substring(0, 120)}... Consultoría especializada en automatización. Diagnóstico gratuito.`;
 }
 
+// Generate sitemap
+function generateSitemap(keywords) {
+    const staticPages = [
+        { url: 'https://www.mos-labs.com/', changefreq: 'weekly', priority: '1.0' },
+        { url: 'https://www.mos-labs.com/privacidad/', changefreq: 'monthly', priority: '0.3' },
+        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' }
+    ];
+
+    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Páginas estáticas -->
+`;
+
+    // Add static pages
+    staticPages.forEach(page => {
+        sitemap += `  <url>
+    <loc>${page.url}</loc>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>
+`;
+    });
+
+    sitemap += `
+  <!-- Páginas SEO programático -->
+`;
+
+    // Add SEO pages
+    keywords.forEach(keyword => {
+        sitemap += `  <url>
+    <loc>https://www.mos-labs.com/${keyword.slug}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+    });
+
+    sitemap += `</urlset>`;
+
+    return sitemap;
+}
+
 // Generate each page
 keywords.forEach(keyword => {
     let page = template;
@@ -64,4 +106,9 @@ keywords.forEach(keyword => {
     console.log(`Generated: /${keyword.slug}/`);
 });
 
-console.log(`\nTotal pages generated: ${keywords.length}`);
+// Generate and save sitemap
+const sitemap = generateSitemap(keywords);
+fs.writeFileSync(path.join(__dirname, '..', 'sitemap.xml'), sitemap);
+console.log(`\nSitemap updated with ${keywords.length + 3} URLs`);
+
+console.log(`Total pages generated: ${keywords.length}`);
