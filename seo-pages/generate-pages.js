@@ -32,9 +32,29 @@ function generateRelatedPages(currentSlug, allKeywords) {
                 </a>`).join('\n');
 }
 
-// Generate meta description
+// Generate meta description (max 155 chars, no truncation, clean sentence ending)
 function generateMetaDescription(keyword) {
-    return `${keyword.titulo}. ${keyword.solucion.substring(0, 120)}... Consultoría especializada en automatización. Diagnóstico gratuito.`;
+    const base = `${keyword.titulo}. `;
+    const suffix = `. Diagnóstico gratuito.`;
+    const maxSolucion = 155 - base.length - suffix.length;
+    let sol = keyword.solucion.substring(0, maxSolucion);
+    // Prefer cutting at last comma or period for a natural sentence break
+    const lastComma = sol.lastIndexOf(',');
+    const lastPeriod = sol.lastIndexOf('.');
+    const cutPoint = Math.max(lastComma, lastPeriod);
+    if (cutPoint > sol.length * 0.5) {
+        sol = sol.substring(0, cutPoint);
+    } else {
+        // Fall back to last space, but avoid cutting prepositions/articles
+        const lastSpace = sol.lastIndexOf(' ');
+        if (lastSpace > 0) {
+            sol = sol.substring(0, lastSpace);
+            // Remove trailing short words (de, en, a, y, el, la, los, las, un, una, que, con, para, tu, tus, sin, sus, más)
+            sol = sol.replace(/\s+(de|en|a|y|el|la|los|las|un|una|que|con|para|tu|tus|sin|sus|más)$/i, '');
+        }
+    }
+    sol = sol.replace(/[,.\s]+$/, '');
+    return `${base}${sol}${suffix}`;
 }
 
 // Generate sitemap
