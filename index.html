@@ -45,14 +45,18 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup - LocalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "LocalBusiness",
+        "@id": "https://www.mos-labs.com/#business",
         "name": "MOS Labs",
-        "description": "Consultora de automatización de marketing y ventas con IA para PYMEs",
-        "url": "https://mos-labs.com",
+        "alternateName": "MOS Labs - Automatización de Marketing y Ventas",
+        "description": "Consultoría de automatización de marketing y ventas con IA para PYMEs en España. Especialistas en n8n, Make, CRM automatizado y captación de leads.",
+        "url": "https://www.mos-labs.com/",
+        "logo": "https://www.mos-labs.com/assets/Logo moslabs celeste sin fondo.svg",
+        "image": "https://www.mos-labs.com/assets/og-image.png",
         "founder": {
             "@type": "Person",
             "name": "Jose María Moscardó"
@@ -60,10 +64,83 @@
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Málaga",
+            "addressRegion": "Andalucía",
             "addressCountry": "ES"
         },
-        "areaServed": "ES",
-        "serviceType": ["Marketing Automation", "Sales Automation", "AI Consulting"]
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.7213,
+            "longitude": -4.4214
+        },
+        "areaServed": [
+            {
+                "@type": "Country",
+                "name": "España"
+            },
+            {
+                "@type": "City",
+                "name": "Málaga"
+            }
+        ],
+        "serviceType": ["Automatización de Marketing", "Automatización de Ventas", "Consultoría IA", "CRM Automatizado", "Captación de Leads"],
+        "priceRange": "€€",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Schema Markup - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cuánto cuesta la automatización de marketing y ventas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende del alcance. Hay proyectos desde 500€ (automatizaciones puntuales) hasta varios miles (sistemas completos). En el diagnóstico gratuito te doy una estimación sin compromiso."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo lleva ver resultados con la automatización?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los quick wins suelen estar funcionando en 2-4 semanas. Un sistema completo de marketing y ventas automatizado puede llevar 2-3 meses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Necesito conocimientos técnicos para automatizar mi negocio?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Yo me encargo de toda la parte técnica. Tú solo necesitas explicarme cómo funciona tu negocio y qué quieres conseguir."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Con qué herramientas de automatización trabajas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Principalmente n8n y Make para automatizaciones, Claude y otras IAs para contenido e inteligencia, y las herramientas que ya uses (Google Workspace, CRMs, email marketing, etc.)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si la automatización no funciona?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trabajamos en fases con resultados medibles. Si algo no funciona, lo ajustamos. No te voy a cobrar por algo que no te aporta valor."
+                }
+            }
+        ]
     }
     </script>
 </head>
