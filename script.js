@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollAnimations();
     initSmoothScroll();
-    initFloatingCta();
 });
 
 // ===== Navbar Scroll Effect =====
@@ -134,39 +133,10 @@ function createParticle(container) {
     container.appendChild(particle);
 }
 
-// ===== Floating CTA (mobile) =====
-function initFloatingCta() {
-    const floatingCta = document.getElementById('floatingCta');
-    if (!floatingCta) return;
-
-    // Only show on mobile
-    const mq = window.matchMedia('(max-width: 768px)');
-
-    function handleScroll() {
-        if (!mq.matches) {
-            floatingCta.classList.remove('visible');
-            document.body.classList.remove('has-floating-cta');
-            return;
-        }
-
-        if (window.pageYOffset > 600) {
-            floatingCta.classList.add('visible');
-            document.body.classList.add('has-floating-cta');
-        } else {
-            floatingCta.classList.remove('visible');
-            document.body.classList.remove('has-floating-cta');
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    mq.addEventListener('change', handleScroll);
-    handleScroll();
-}
-
 // ===== Scroll Animations =====
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.problem-card, .service-card, .process-step, .result-card, .metric, .faq-item, .system-card, .stack-category, .resource-card, .sector-card'
+        '.problem-card, .service-card, .process-step, .result-card, .metric, .faq-item'
     );
 
     // Add animation class
