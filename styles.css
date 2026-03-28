@@ -1278,6 +1278,57 @@ a.contact-item:hover {
     color: var(--color-text-secondary);
 }
 
+/* ===== Blog Section ===== */
+.blog {
+    background: var(--color-bg);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.blog-card {
+    display: block;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.blog-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.blog-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.blog-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.blog-card:hover .blog-title {
+    color: var(--color-primary);
+}
+
+.blog-excerpt {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+}
+
 /* ===== Animations ===== */
 @keyframes fadeInUp {
     from {
