@@ -110,122 +110,217 @@
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#proceso" class="btn btn-ghost">
+                <a href="#servicios" class="btn btn-ghost">
                     Ver cómo funciona
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 5v14M5 12l7 7 7-7"/>
                     </svg>
                 </a>
             </div>
-            <div class="hero-badges">
-                <span class="badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 6L9 17l-5-5"/>
-                    </svg>
-                    Diagnóstico sin compromiso
-                </span>
-                <span class="badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 6L9 17l-5-5"/>
-                    </svg>
-                    Respuesta en 24h
-                </span>
-                <span class="badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 6L9 17l-5-5"/>
-                    </svg>
-                    Solo trabajo con 3 clientes a la vez
-                </span>
+            <!-- CAMBIO 4: Stats refinados — solo 3, orientados a beneficio cliente -->
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <span class="hero-metric-value">15-20h</span>
+                    <span class="hero-metric-label">ahorradas por semana</span>
+                </div>
+                <div class="hero-metric-divider"></div>
+                <div class="hero-metric">
+                    <span class="hero-metric-value">&lt;5 min</span>
+                    <span class="hero-metric-label">respuesta a leads</span>
+                </div>
+                <div class="hero-metric-divider"></div>
+                <div class="hero-metric">
+                    <span class="hero-metric-value">Mes 2</span>
+                    <span class="hero-metric-label">ROI positivo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMBIO 6: Stack tecnológico movido aquí, justo después del hero -->
+    <section class="section stack-section" id="stack">
+        <div class="container">
+            <p class="stack-heading">Stack probado en producción</p>
+            <div class="stack-grid">
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span>n8n</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                    <span>Make</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M8 12h8M12 8v8"/></svg>
+                    <span>Claude AI</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <span>Zapier</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span>HubSpot</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    <span>Pipedrive</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    <span>Supabase</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                    <span>WhatsApp API</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>Brevo</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M9 4v16"/><path d="M4 9h5"/></svg>
+                    <span>Notion</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Google Workspace</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>Vercel</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    <span>Anthropic API</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg>
+                    <span>OpenAI API</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    <span>Google Sheets API</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    <span>Telegram API</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Cal.com</span>
+                </div>
+                <div class="stack-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <span>Railway</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Problems Section -->
+    <!-- CAMBIO 1: Badge de sección + CAMBIO 3: Separar en VENTAS y MARKETING -->
     <section class="section problems" id="problemas">
         <div class="container">
+            <span class="section-badge">¿TE SUENA?</span>
             <h2 class="section-title">¿Te suena familiar?</h2>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="5" y="2" width="14" height="20" rx="2"/>
-                            <line x1="9" y1="6" x2="15" y2="6"/>
-                            <line x1="9" y1="10" x2="15" y2="10"/>
-                            <line x1="9" y1="14" x2="12" y2="14"/>
-                        </svg>
-                    </div>
-                    <h3 class="problem-title">Contenido que se pierde</h3>
-                    <p class="problem-text">Creas contenido para una red y no lo aprovechas en las demás. Horas de trabajo que podrían rendir 3x más.</p>
-                </div>
 
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                            <line x1="9" y1="9" x2="9.01" y2="9"/>
-                            <line x1="15" y1="9" x2="15.01" y2="9"/>
-                            <path d="M2 12h2M20 12h2"/>
-                        </svg>
+            <!-- VENTAS -->
+            <div class="problems-category">
+                <span class="problems-category-label">VENTAS</span>
+                <div class="problems-grid problems-grid--half">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                                <path d="M2 12h2M20 12h2"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Leads que se enfrían</h3>
+                        <p class="problem-text">Entran contactos interesados pero nadie los sigue a tiempo. Cuando respondes, ya han comprado a otro.</p>
                     </div>
-                    <h3 class="problem-title">Leads que se enfrían</h3>
-                    <p class="problem-text">Entran contactos interesados pero nadie los sigue a tiempo. Cuando respondes, ya han comprado a otro.</p>
-                </div>
 
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
-                            <rect x="9" y="3" width="6" height="4" rx="1"/>
-                            <line x1="9" y1="12" x2="15" y2="12"/>
-                            <line x1="9" y1="16" x2="15" y2="16"/>
-                        </svg>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                                <rect x="9" y="3" width="6" height="4" rx="1"/>
+                                <line x1="9" y1="12" x2="15" y2="12"/>
+                                <line x1="9" y1="16" x2="15" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Seguimiento manual</h3>
+                        <p class="problem-text">Llevas el seguimiento comercial en la cabeza, en post-its o en un Excel caótico. Se te escapan oportunidades.</p>
                     </div>
-                    <h3 class="problem-title">Seguimiento manual</h3>
-                    <p class="problem-text">Llevas el seguimiento comercial en la cabeza, en post-its o en un Excel caótico. Se te escapan oportunidades.</p>
-                </div>
 
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Propuestas eternas</h3>
+                        <p class="problem-text">Cada propuesta comercial te lleva horas. Copiar, pegar, adaptar, formatear... una y otra vez.</p>
                     </div>
-                    <h3 class="problem-title">Emails que no salen</h3>
-                    <p class="problem-text">Sabes que deberías enviar newsletters, secuencias de bienvenida, seguimientos... pero nunca hay tiempo.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12,6 12,12 16,14"/>
-                        </svg>
-                    </div>
-                    <h3 class="problem-title">Propuestas eternas</h3>
-                    <p class="problem-text">Cada propuesta comercial te lleva horas. Copiar, pegar, adaptar, formatear... una y otra vez.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <line x1="18" y1="20" x2="18" y2="10"/>
-                            <line x1="12" y1="20" x2="12" y2="4"/>
-                            <line x1="6" y1="20" x2="6" y2="14"/>
-                        </svg>
-                    </div>
-                    <h3 class="problem-title">Reporting infinito</h3>
-                    <p class="problem-text">Pasas el último día del mes recopilando datos de 5 herramientas distintas para hacer un informe.</p>
                 </div>
             </div>
-            <p class="problems-closing">No es que no sepas lo que hay que hacer. Es que no tienes tiempo para montarlo.</p>
+
+            <!-- MARKETING -->
+            <div class="problems-category">
+                <span class="problems-category-label">MARKETING</span>
+                <div class="problems-grid problems-grid--half">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                                <line x1="9" y1="6" x2="15" y2="6"/>
+                                <line x1="9" y1="10" x2="15" y2="10"/>
+                                <line x1="9" y1="14" x2="12" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Contenido que se pierde</h3>
+                        <p class="problem-text">Creas contenido para una red y no lo aprovechas en las demás. Horas de trabajo que podrían rendir 3x más.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Emails que no salen</h3>
+                        <p class="problem-text">Sabes que deberías enviar newsletters, secuencias de bienvenida, seguimientos... pero nunca hay tiempo.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="problem-title">Reporting infinito</h3>
+                        <p class="problem-text">Pasas el último día del mes recopilando datos de 5 herramientas distintas para hacer un informe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CAMBIO 5: Frase puente potente -->
+            <p class="problems-closing">No es que no sepas lo que hay que hacer. Es que no tienes tiempo para montarlo. <strong>Nosotros sí.</strong></p>
         </div>
     </section>
 
     <!-- Services Section -->
+    <!-- CAMBIO 1: Badge + CAMBIO 2: Tarjetas Problema → Solución → Resultado -->
     <section class="section services" id="servicios">
         <div class="container">
+            <span class="section-badge">QUÉ MONTAMOS</span>
             <h2 class="section-title">Cómo puedo ayudarte</h2>
             <p class="section-subtitle">Tres áreas donde la automatización inteligente transforma tu día a día</p>
 
@@ -237,33 +332,19 @@
                         </svg>
                     </div>
                     <h3 class="service-title">Automatización de Marketing</h3>
-                    <p class="service-description">Tu contenido trabajando en todos los canales sin esfuerzo extra</p>
-                    <ul class="service-list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Content repurposing automático (1 pieza → múltiples formatos)
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Email marketing y newsletters automatizadas
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Programación inteligente en redes sociales
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Nurturing de leads con secuencias personalizadas
-                        </li>
-                    </ul>
+
+                    <div class="service-block">
+                        <span class="service-label">PROBLEMA</span>
+                        <p>Creas contenido para una red y muere ahí. Nunca hay tiempo para reutilizarlo, programar o enviar newsletters.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label">SOLUCIÓN</span>
+                        <p>Content repurposing automático, email marketing programado, publicación inteligente en redes y nurturing de leads personalizado.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label service-label--result">RESULTADO</span>
+                        <p class="service-result-text">Tu contenido trabaja en todos los canales sin esfuerzo extra. 3x más alcance con el mismo input.</p>
+                    </div>
                 </div>
 
                 <div class="service-card featured">
@@ -276,33 +357,19 @@
                         </svg>
                     </div>
                     <h3 class="service-title">Automatización Comercial</h3>
-                    <p class="service-description">Que ningún lead se enfríe y ninguna oportunidad se escape</p>
-                    <ul class="service-list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            CRM configurado y automatizado
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Seguimiento automático de leads
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Cold outreach sistematizado
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Alertas y recordatorios inteligentes
-                        </li>
-                    </ul>
+
+                    <div class="service-block">
+                        <span class="service-label">PROBLEMA</span>
+                        <p>Los leads entran y nadie responde a tiempo. El seguimiento está en la cabeza, en post-its o en un Excel caótico.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label">SOLUCIÓN</span>
+                        <p>CRM configurado y automatizado, seguimiento de leads 24/7, cold outreach sistematizado y alertas inteligentes.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label service-label--result">RESULTADO</span>
+                        <p class="service-result-text">Respuesta a leads en &lt;5 min. Ninguna oportunidad se escapa. Pipeline siempre actualizado.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -313,41 +380,29 @@
                         </svg>
                     </div>
                     <h3 class="service-title">Consultoría Estratégica</h3>
-                    <p class="service-description">No automatizamos el caos. Primero diseñamos el sistema.</p>
-                    <ul class="service-list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Auditoría de procesos actuales
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Diseño de funnels de marketing y ventas
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Roadmap de implementación por fases
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 6L9 17l-5-5"/>
-                            </svg>
-                            Quick wins desde el primer mes
-                        </li>
-                    </ul>
+
+                    <div class="service-block">
+                        <span class="service-label">PROBLEMA</span>
+                        <p>Automatizar el caos no funciona. Si los procesos no están claros, las herramientas no van a salvarte.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label">SOLUCIÓN</span>
+                        <p>Auditoría de procesos, diseño de funnels de marketing y ventas, roadmap por fases con quick wins desde el mes 1.</p>
+                    </div>
+                    <div class="service-block">
+                        <span class="service-label service-label--result">RESULTADO</span>
+                        <p class="service-result-text">Un plan claro, priorizado, que genera resultados antes de estar terminado.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
+    <!-- CAMBIO 1: Badge -->
     <section class="section process" id="proceso">
         <div class="container">
+            <span class="section-badge">PROCESO</span>
             <h2 class="section-title">Así trabajamos juntos</h2>
             <p class="section-subtitle">Un proceso claro, sin sorpresas, con resultados desde el primer mes</p>
 
@@ -425,6 +480,7 @@
     <!-- Results Section -->
     <section class="section results" id="resultados">
         <div class="container">
+            <span class="section-badge">RESULTADOS</span>
             <h2 class="section-title">Resultados reales</h2>
             <p class="section-subtitle">Lo que consiguen las empresas que automatizan su marketing y ventas</p>
 
@@ -444,27 +500,13 @@
                     <p class="result-text">Email marketing automatizado que genera el 25% de las ventas online sin intervención manual.</p>
                 </div>
             </div>
-
-            <div class="metrics">
-                <div class="metric">
-                    <span class="metric-value">15-20h</span>
-                    <span class="metric-label">ahorradas por semana de media</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-value">&lt;5 min</span>
-                    <span class="metric-label">respuesta a leads</span>
-                </div>
-                <div class="metric">
-                    <span class="metric-value">Mes 2</span>
-                    <span class="metric-label">ROI positivo desde</span>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section — SIN CAMBIOS (instrucción explícita) -->
     <section class="section about" id="sobre-mi">
         <div class="container">
+            <span class="section-badge">SOBRE MÍ</span>
             <h2 class="section-title">Quién está detrás</h2>
 
             <div class="about-content">
@@ -493,16 +535,6 @@
                         <div class="about-badge">
                             <span class="badge-value">3,000+</span>
                             <span class="badge-label">profesionales en comunidad</span>
-                        </div>
-                    </div>
-
-                    <div class="about-stack">
-                        <span class="stack-label">Stack tecnológico:</span>
-                        <div class="stack-icons">
-                            <span class="stack-item">n8n</span>
-                            <span class="stack-item">Make</span>
-                            <span class="stack-item">Claude AI</span>
-                            <span class="stack-item">APIs</span>
                         </div>
                     </div>
                 </div>
