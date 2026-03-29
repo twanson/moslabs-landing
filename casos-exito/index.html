@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casos de éxito reales de automatización de marketing y ventas para PYMEs. Resultados medibles: más leads, menos trabajo manual, mayor facturación.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Casos de Éxito - Automatización para PYMEs | MOS Labs">
+    <meta property="og:description" content="Resultados reales de automatización de marketing y ventas para PYMEs en España. Descubre cómo otras empresas han transformado su negocio.">
+    <meta property="og:url" content="https://www.mos-labs.com/casos-exito/">
+    <meta property="og:site_name" content="MOS Labs">
+    <link rel="canonical" href="https://www.mos-labs.com/casos-exito/">
+    <title>Casos de Éxito - Automatización para PYMEs | MOS Labs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #333; line-height: 1.6; background-color: #f8f9fa; }
+        header { background-color: #fff; border-bottom: 1px solid #e0e0e0; padding: 1.5rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        header .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #1a73e8; text-decoration: none; }
+        nav a { margin-left: 2rem; color: #333; text-decoration: none; font-size: 0.95rem; }
+        nav a:hover { color: #1a73e8; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Hero */
+        .hero { padding: 4rem 0 3rem; text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; color: #1a1a1a; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; color: #555; max-width: 700px; margin: 0 auto; }
+
+        /* Stats Bar */
+        .stats-bar { display: flex; justify-content: center; gap: 3rem; padding: 2.5rem 0; background: white; border-bottom: 1px solid #e0e0e0; flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #1a73e8; display: block; }
+        .stat-label { font-size: 0.9rem; color: #666; }
+
+        /* Case Studies */
+        .cases-section { padding: 4rem 0; }
+        .case-card { background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 3rem; overflow: hidden; }
+        .case-header { padding: 2rem 2.5rem; border-bottom: 1px solid #f0f0f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .case-header h2 { font-size: 1.5rem; color: #1a1a1a; }
+        .case-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .case-tag { background: #e8f0fe; color: #1a73e8; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; }
+        .case-body { padding: 2.5rem; }
+        .case-context { margin-bottom: 2rem; }
+        .case-context h3 { font-size: 1.1rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+        .case-context p { font-size: 1rem; color: #444; }
+
+        .case-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .result-card { background: #f8f9fa; padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #e8eef7; }
+        .result-number { font-size: 2rem; font-weight: bold; color: #1a73e8; display: block; margin-bottom: 0.3rem; }
+        .result-label { font-size: 0.85rem; color: #666; }
+
+        .case-quote { background: #f0f7ff; border-left: 4px solid #1a73e8; padding: 1.5rem 2rem; border-radius: 0 8px 8px 0; margin-top: 2rem; font-style: italic; color: #444; }
+        .case-quote .author { font-style: normal; font-weight: 600; color: #333; margin-top: 0.8rem; display: block; }
+
+        .case-process { margin-top: 2rem; }
+        .case-process h3 { font-size: 1.1rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+        .process-steps { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .process-step { background: #fff; border: 1px solid #e0e0e0; padding: 1rem 1.2rem; border-radius: 8px; flex: 1; min-width: 150px; }
+        .process-step .step-num { font-size: 0.75rem; color: #1a73e8; font-weight: bold; text-transform: uppercase; }
+        .process-step p { font-size: 0.9rem; margin-top: 0.3rem; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); color: white; padding: 4rem 2rem; border-radius: 12px; text-align: center; margin: 3rem auto; max-width: 1100px; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-button { display: inline-block; background-color: #fff; color: #1a73e8; padding: 1rem 2.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid white; }
+        .cta-button:hover { background-color: transparent; color: white; }
+
+        footer { background-color: #1a1a1a; color: #fff; padding: 2rem; text-align: center; margin-top: 4rem; font-size: 0.9rem; }
+        footer a { color: #1a73e8; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .stats-bar { gap: 1.5rem; padding: 2rem 1rem; }
+            .stat-number { font-size: 2rem; }
+            .case-header { padding: 1.5rem; }
+            .case-body { padding: 1.5rem; }
+            .case-results { grid-template-columns: 1fr 1fr; }
+            header .container { padding: 0 1rem; flex-direction: column; gap: 1rem; }
+            nav a { margin-left: 1rem; }
+            .container { padding: 0 1rem; }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RL0B19YBLX');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Casos de Éxito - Automatización para PYMEs",
+        "description": "Casos de éxito reales de automatización de marketing y ventas para PYMEs.",
+        "url": "https://www.mos-labs.com/casos-exito/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "MOS Labs",
+            "url": "https://www.mos-labs.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">MOS Labs</a>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/#servicios">Servicios</a>
+                <a href="/blog/">Blog</a>
+                <a href="/#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Casos de Éxito</h1>
+            <p>Resultados reales de automatización de marketing y ventas para PYMEs en España. Sin humo, con números.</p>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number">+35%</span>
+            <span class="stat-label">Incremento medio en conversión</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">15h</span>
+            <span class="stat-label">Ahorro semanal medio</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">&lt;5 min</span>
+            <span class="stat-label">Tiempo de respuesta a leads</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">2-4 sem</span>
+            <span class="stat-label">Tiempo hasta primeros resultados</span>
+        </div>
+    </div>
+
+    <div class="container cases-section">
+
+        <!-- Case 1: Inmobiliaria -->
+        <div class="case-card">
+            <div class="case-header">
+                <h2>Agencia Inmobiliaria en Costa del Sol</h2>
+                <div class="case-tags">
+                    <span class="case-tag">Inmobiliaria</span>
+                    <span class="case-tag">Captación de leads</span>
+                    <span class="case-tag">CRM</span>
+                </div>
+            </div>
+            <div class="case-body">
+                <div class="case-context">
+                    <h3>El reto</h3>
+                    <p>Una agencia inmobiliaria con 5 agentes en la Costa del Sol recibía más de 150 leads mensuales desde Idealista, Fotocasa y su web. El problema: tardaban una media de 18 horas en responder, los leads se perdían entre bandejas de email, y no había seguimiento estructurado. Estimaban que perdían el 40% de las oportunidades.</p>
+                </div>
+
+                <div class="case-results">
+                    <div class="result-card">
+                        <span class="result-number">60s</span>
+                        <span class="result-label">Tiempo de respuesta (antes: 18h)</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">+42%</span>
+                        <span class="result-label">Más ventas en 3 meses</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">0</span>
+                        <span class="result-label">Leads perdidos</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">20h/sem</span>
+                        <span class="result-label">Ahorro en trabajo administrativo</span>
+                    </div>
+                </div>
+
+                <div class="case-process">
+                    <h3>Qué implementamos</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <span class="step-num">Fase 1</span>
+                            <p>Captura automática de leads de todos los portales vía n8n</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 2</span>
+                            <p>Respuesta automática instantánea personalizada por tipo de propiedad</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 3</span>
+                            <p>CRM con asignación inteligente a agentes por zona</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 4</span>
+                            <p>Secuencias de seguimiento y reactivación automáticas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-quote">
+                    "Antes perdíamos leads que ni sabíamos que existían. Ahora cada consulta tiene respuesta en un minuto y seguimiento automático hasta que compran o nos dicen que no. Las ventas se notaron desde el primer mes."
+                    <span class="author">— Director Comercial, agencia inmobiliaria Costa del Sol</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case 2: Clínica -->
+        <div class="case-card">
+            <div class="case-header">
+                <h2>Clínica Dental en Málaga</h2>
+                <div class="case-tags">
+                    <span class="case-tag">Salud</span>
+                    <span class="case-tag">Recordatorios</span>
+                    <span class="case-tag">Reactivación</span>
+                </div>
+            </div>
+            <div class="case-body">
+                <div class="case-context">
+                    <h3>El reto</h3>
+                    <p>Una clínica dental con 3 doctores y 2 recepcionistas tenía dos problemas principales: una tasa de no-show (faltas a citas) del 22%, y más de 800 pacientes inactivos que no habían vuelto en más de 12 meses. La recepcionista dedicaba 2 horas diarias a llamar para confirmar citas, con resultados mediocres.</p>
+                </div>
+
+                <div class="case-results">
+                    <div class="result-card">
+                        <span class="result-number">8%</span>
+                        <span class="result-label">Tasa de no-show (antes: 22%)</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">127</span>
+                        <span class="result-label">Pacientes reactivados en 2 meses</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">+18%</span>
+                        <span class="result-label">Más facturación mensual</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">10h/sem</span>
+                        <span class="result-label">Ahorro en llamadas de confirmación</span>
+                    </div>
+                </div>
+
+                <div class="case-process">
+                    <h3>Qué implementamos</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <span class="step-num">Fase 1</span>
+                            <p>Recordatorios automáticos por WhatsApp a 48h, 24h y 2h antes de cada cita</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 2</span>
+                            <p>Sistema de confirmación con respuesta automática y reagendado fácil</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 3</span>
+                            <p>Campaña de reactivación por email + WhatsApp a pacientes inactivos</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 4</span>
+                            <p>Solicitud automática de reseñas en Google tras cada visita</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-quote">
+                    "Los no-shows bajaron a la mitad en el primer mes. Y los pacientes que llevaban años sin venir empezaron a pedir cita solos cuando recibieron los mensajes. La recepcionista ahora se dedica a atender pacientes, no a hacer llamadas."
+                    <span class="author">— Directora, clínica dental en Málaga</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case 3: Consultora B2B -->
+        <div class="case-card">
+            <div class="case-header">
+                <h2>Consultora de Servicios B2B</h2>
+                <div class="case-tags">
+                    <span class="case-tag">B2B</span>
+                    <span class="case-tag">Email marketing</span>
+                    <span class="case-tag">Lead nurturing</span>
+                </div>
+            </div>
+            <div class="case-body">
+                <div class="case-context">
+                    <h3>El reto</h3>
+                    <p>Una consultora de 4 personas ofrecía servicios de digitalización a PYMEs. Generaban leads a través de LinkedIn y su web, pero el ciclo de venta era largo (3-4 meses) y no tenían un sistema de nurturing. Muchos leads se enfriaban antes de cerrar porque no había seguimiento consistente.</p>
+                </div>
+
+                <div class="case-results">
+                    <div class="result-card">
+                        <span class="result-number">-38%</span>
+                        <span class="result-label">Reducción del ciclo de venta</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">2.3x</span>
+                        <span class="result-label">Más leads cualificados por mes</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">31%</span>
+                        <span class="result-label">Tasa de conversión (antes: 12%)</span>
+                    </div>
+                    <div class="result-card">
+                        <span class="result-number">8h/sem</span>
+                        <span class="result-label">Ahorro en prospección manual</span>
+                    </div>
+                </div>
+
+                <div class="case-process">
+                    <h3>Qué implementamos</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <span class="step-num">Fase 1</span>
+                            <p>CRM automatizado con pipeline visual y lead scoring</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 2</span>
+                            <p>Secuencia de email nurturing de 8 emails con contenido educativo</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 3</span>
+                            <p>Alertas automáticas cuando un lead muestra interés de compra</p>
+                        </div>
+                        <div class="process-step">
+                            <span class="step-num">Fase 4</span>
+                            <p>Generación de propuestas semi-automáticas con IA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-quote">
+                    "Antes perdíamos leads porque nadie hacía seguimiento. Ahora el sistema envía contenido relevante hasta que el cliente está listo para hablar, y nos avisa en el momento justo. Cerramos más y en menos tiempo."
+                    <span class="author">— CEO, consultora de digitalización</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>¿Quieres resultados como estos?</h2>
+        <p>Cada negocio es diferente, pero el enfoque es el mismo: identificar qué automatizar, implementar rápido, y medir resultados desde el primer mes.</p>
+        <a href="https://www.mos-labs.com/#contacto" class="cta-button">Solicita tu Diagnóstico Gratuito</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MOS Labs. Marketing y Automatización para PYMEs en España.</p>
+        <p><a href="/">Inicio</a> | <a href="/blog/">Blog</a> | <a href="/#contacto">Contacto</a></p>
+    </footer>
+</body>
+</html>
