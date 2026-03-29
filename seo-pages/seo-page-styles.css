@@ -17,14 +17,14 @@
 
 .seo-badge {
     display: inline-block;
-    background: rgba(0, 188, 212, 0.15);
-    color: var(--primary);
+    background: rgba(83, 221, 252, 0.1);
+    color: var(--color-primary);
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: 24px;
-    border: 1px solid rgba(0, 188, 212, 0.3);
+    border: 1px solid rgba(83, 221, 252, 0.2);
 }
 
 .seo-hero-title {
@@ -33,24 +33,24 @@
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 24px;
-    color: var(--white);
+    color: var(--color-text);
 }
 
 .seo-hero-subtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     margin-bottom: 40px;
     line-height: 1.6;
 }
 
 /* Solution Section */
 .seo-solution {
-    background: var(--bg-secondary);
+    background: rgba(255, 255, 255, 0.01);
 }
 
 .solution-text {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     max-width: 800px;
     margin: 0 auto 60px;
     text-align: center;
@@ -66,26 +66,30 @@
 }
 
 .benefit-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 28px 24px;
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
 }
 
 .benefit-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--primary);
+    transform: translateY(-4px);
+    border-color: rgba(83, 221, 252, 0.3);
+    box-shadow: 0 0 30px rgba(83, 221, 252, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .benefit-icon {
     flex-shrink: 0;
     width: 24px;
     height: 24px;
-    color: var(--primary);
+    color: var(--color-primary);
 }
 
 .benefit-icon svg {
@@ -94,14 +98,14 @@
 }
 
 .benefit-text {
-    color: var(--text-primary);
+    color: var(--color-text);
     font-size: 1rem;
     line-height: 1.5;
 }
 
 /* Process Section */
 .seo-process {
-    background: var(--bg-primary);
+    background: var(--color-bg);
 }
 
 .process-steps {
@@ -113,24 +117,26 @@
 }
 
 .process-step-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 20px;
+    padding: 40px 28px;
     text-align: center;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .process-step-card:hover {
     transform: translateY(-4px);
-    border-color: var(--primary);
+    border-color: rgba(83, 221, 252, 0.3);
+    box-shadow: 0 0 30px rgba(83, 221, 252, 0.1);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .process-step-card .step-number {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: var(--bg-primary);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+    color: var(--color-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -138,24 +144,25 @@
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0 auto 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .process-step-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--color-text);
     margin-bottom: 12px;
 }
 
 .process-step-card p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
 /* About Section */
 .seo-about {
-    background: var(--bg-secondary);
+    background: rgba(255, 255, 255, 0.01);
 }
 
 .about-grid {
@@ -169,19 +176,19 @@
 
 .seo-about .about-photo {
     width: 100%;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .seo-about .about-text h2 {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--white);
+    color: var(--color-text);
     margin-bottom: 20px;
 }
 
 .seo-about .about-text p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 16px;
@@ -195,18 +202,18 @@
 }
 
 .badge-small {
-    background: rgba(0, 188, 212, 0.1);
-    color: var(--primary);
+    background: rgba(83, 221, 252, 0.08);
+    color: var(--color-primary);
     padding: 8px 16px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.85rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 188, 212, 0.2);
+    border: 1px solid rgba(83, 221, 252, 0.15);
 }
 
 /* Related Pages */
 .seo-related {
-    background: var(--bg-primary);
+    background: var(--color-bg);
 }
 
 .related-grid {
@@ -218,29 +225,33 @@
 }
 
 .related-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 28px;
     text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
     display: block;
 }
 
 .related-card:hover {
     transform: translateY(-4px);
-    border-color: var(--primary);
+    border-color: rgba(83, 221, 252, 0.3);
+    box-shadow: 0 0 30px rgba(83, 221, 252, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .related-card h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--color-text);
     margin-bottom: 8px;
 }
 
 .related-card p {
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
     line-height: 1.5;
 }
