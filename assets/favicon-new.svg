@@ -1,0 +1,14 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Drop shadow filter for favicon -->
+    <filter id="dropShadowFavicon" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-opacity="0.2" flood-color="#000000"/>
+    </filter>
+  </defs>
+
+  <!-- Blue rounded square (simplified, flat color) -->
+  <rect x="2" y="1" width="13" height="13" rx="3" fill="#4466ff" stroke="white" stroke-width="0.5" stroke-opacity="0.8" filter="url(#dropShadowFavicon)"/>
+
+  <!-- Orange rounded square (simplified, flat color) -->
+  <rect x="11" y="10" width="13" height="13" rx="3" fill="#ee7722" stroke="white" stroke-width="0.5" stroke-opacity="0.8" filter="url(#dropShadowFavicon)"/>
+</svg>

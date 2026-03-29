@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="Automatizo tu marketing y ventas con IA para que vendas más sin trabajar más."/>
 <meta name="twitter:image" content="https://www.mos-labs.com/assets/og-image.png"/>
 <link rel="canonical" href="https://www.mos-labs.com/"/>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon-new.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -280,11 +280,10 @@
     padding: 16px 40px;
   }
   .nav-logo {
-    font-family: 'Newsreader', serif;
-    font-size: 1.6rem; font-weight: 700;
-    background: linear-gradient(135deg, var(--cyan), var(--purple));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo img {
+    height: 36px; width: auto;
   }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a {
@@ -1186,11 +1185,8 @@
     display: grid; grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
-  .footer-brand h3 {
-    font-family: 'Newsreader', serif;
-    font-size: 1.3rem; font-weight: 600;
-    background: linear-gradient(135deg, var(--cyan), var(--purple));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  .footer-brand img {
+    height: 32px; width: auto;
     margin-bottom: 12px;
   }
   .footer-brand p {
@@ -1535,7 +1531,7 @@
 <!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-logo">MOS Labs</div>
+    <a href="/" class="nav-logo"><img src="assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs"></a>
     <div class="nav-links" id="navLinks">
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
@@ -2022,7 +2018,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <h3>MOS Labs</h3>
+      <a href="/"><img src="assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs"></a>
       <p>Automatización de marketing y ventas para PYMEs</p>
     </div>
     <div>

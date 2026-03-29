@@ -1,0 +1,58 @@
+<svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Blue gradient for light background (darker) -->
+    <linearGradient id="blueGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7788ee;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#5566dd;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#2233cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a99;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Orange gradient for light background (darker) -->
+    <linearGradient id="orangeGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffbb55;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#ff9933;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#dd6611;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#aa4400;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gloss overlay gradient (more prominent) -->
+    <linearGradient id="glossGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.35);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" />
+    </linearGradient>
+
+    <!-- MOS text gradient (dark) -->
+    <linearGradient id="mosTextGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Labs text gradient (dark with opacity) -->
+    <linearGradient id="labsTextGradientLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.4);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Blue rounded square -->
+  <rect x="0" y="2" width="58" height="58" rx="15" fill="url(#blueGradientLight)" stroke="white" stroke-width="0.18" stroke-opacity="1"/>
+
+  <!-- Gloss overlay for blue square -->
+  <rect x="0" y="2" width="58" height="29" rx="15" fill="url(#glossGradientLight)"/>
+
+  <!-- Orange rounded square -->
+  <rect x="30" y="36" width="58" height="58" rx="15" fill="url(#orangeGradientLight)" stroke="white" stroke-width="0.12" stroke-opacity="1"/>
+
+  <!-- Gloss overlay for orange square -->
+  <rect x="30" y="36" width="58" height="29" rx="15" fill="url(#glossGradientLight)"/>
+
+  <!-- MOS text -->
+  <text x="128" y="74" font-family="Plus Jakarta Sans, sans-serif" font-size="58" font-weight="800" letter-spacing="-2.5" fill="#1a1a2e">MOS</text>
+
+  <!-- Separator line -->
+  <line x1="322" y1="34" x2="322" y2="90" stroke="black" stroke-width="1" stroke-opacity="0.08"/>
+
+  <!-- Labs text -->
+  <text x="336" y="74" font-family="Plus Jakarta Sans, sans-serif" font-size="58" font-weight="300" letter-spacing="5" fill="rgba(0,0,0,0.4)">Labs</text>
+</svg>
