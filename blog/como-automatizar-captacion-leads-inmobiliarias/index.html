@@ -15,240 +15,188 @@
     <meta name="twitter:title" content="Cómo Automatizar la Captación de Leads en Inmobiliarias">
     <meta name="twitter:description" content="Guía profesional sobre automatización de leads para agencias inmobiliarias.">
     <link rel="canonical" href="https://www.mos-labs.com/blog/como-automatizar-captacion-leads-inmobiliarias/">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg">
     <title>Cómo Automatizar la Captación de Leads en Inmobiliarias - MOS Labs</title>
-    <link rel="stylesheet" href="../styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #E5E7EB;
             line-height: 1.6;
-            background-color: #f8f9fa;
+            background-color: #0a0a0f;
         }
 
-        header {
-            background-color: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            padding: 1.5rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            height: 70px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; height: 50px; z-index: 1001; }
+        .logo-img { height: 100%; width: auto; max-width: 150px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; padding: 10px; }
+        .hamburger { display: block; width: 25px; height: 20px; position: relative; }
+        .hamburger::before, .hamburger::after {
+            content: ''; position: absolute; width: 100%; height: 2px; background: #00D4FF;
+            transition: all 150ms ease;
+        }
+        .hamburger::before { top: 0; }
+        .hamburger::after { bottom: 0; }
+        .nav-menu { display: flex; align-items: center; gap: 30px; }
+        .nav-link { color: #E5E7EB; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: color 150ms ease; }
+        .nav-link:hover { color: #00D4FF; }
+        .nav-cta {
+            background: linear-gradient(135deg, #00D4FF, #00a8cc); color: #0a0a0f;
+            padding: 10px 20px; border-radius: 12px; font-weight: 600; white-space: nowrap;
+            text-decoration: none; transition: all 150ms ease;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-menu {
+                position: absolute; top: 70px; left: 0; right: 0;
+                background: rgba(10, 10, 15, 0.98); backdrop-filter: blur(10px);
+                flex-direction: column; gap: 15px; padding: 20px;
+                max-height: 0; overflow: hidden; transition: max-height 300ms ease;
+                border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+            }
+            .nav-menu.active { max-height: 500px; }
+            .nav-link { display: block; width: 100%; }
         }
 
-        header .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* Content container */
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        .logo { display: flex; align-items: center; text-decoration: none; }
-
-        nav a {
-            margin-left: 2rem;
-            color: #333;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            color: #1a73e8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
+        /* Article header */
         .article-header {
-            padding: 3rem 0;
+            padding: 140px 0 60px;
             text-align: center;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin-bottom: 3rem;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
         }
 
         .article-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-            line-height: 1.2;
+            font-size: 2.5rem; margin-bottom: 1rem; color: #fff; line-height: 1.2;
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
         .article-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: #666;
+            display: flex; justify-content: center; gap: 2rem;
+            margin-bottom: 1rem; font-size: 0.9rem; color: #9CA3AF;
         }
+        .article-meta span { display: flex; align-items: center; gap: 0.5rem; }
 
-        .article-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
+        /* Article content */
         .article-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
+            background: rgba(18, 18, 26, 0.8);
+            border: 1px solid #2D2D3D;
+            padding: 3rem; border-radius: 16px;
+            margin: 3rem auto; max-width: 800px;
         }
 
         .article-content h2 {
-            font-size: 1.8rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a73e8;
-            border-bottom: 2px solid #e8eef7;
-            padding-bottom: 0.5rem;
+            font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem;
+            color: #00D4FF;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2); padding-bottom: 0.5rem;
         }
-
-        .article-content h2:first-child {
-            margin-top: 0;
-        }
+        .article-content h2:first-child { margin-top: 0; }
 
         .article-content h3 {
-            font-size: 1.3rem;
-            margin-top: 1.8rem;
-            margin-bottom: 0.8rem;
-            color: #333;
+            font-size: 1.3rem; margin-top: 1.8rem; margin-bottom: 0.8rem; color: #fff;
         }
 
         .article-content p {
-            margin-bottom: 1.2rem;
-            text-align: justify;
+            margin-bottom: 1.2rem; color: #9CA3AF; text-align: justify;
         }
 
-        .article-content ul, .article-content ol {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
+        .article-content ul, .article-content ol { margin-left: 2rem; margin-bottom: 1.5rem; color: #9CA3AF; }
+        .article-content li { margin-bottom: 0.8rem; }
 
-        .article-content li {
-            margin-bottom: 0.8rem;
-        }
+        .article-content strong { color: #E5E7EB; }
 
         .highlight-box {
-            background-color: #f0f7ff;
-            border-left: 4px solid #1a73e8;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00D4FF;
+            padding: 1.5rem; margin: 2rem 0; border-radius: 8px;
         }
-
-        .highlight-box strong {
-            color: #1a73e8;
-        }
+        .highlight-box strong { color: #00D4FF; }
 
         .internal-link {
-            color: #1a73e8;
-            text-decoration: none;
-            border-bottom: 1px dotted #1a73e8;
+            color: #00D4FF; text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 212, 255, 0.5);
         }
+        .internal-link:hover { border-bottom: 1px solid #00D4FF; }
 
-        .internal-link:hover {
-            border-bottom: 1px solid #1a73e8;
-        }
-
+        /* CTA */
         .cta-section {
-            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 3rem 0;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid #2D2D3D;
+            color: white; padding: 3rem; border-radius: 16px;
+            text-align: center; margin: 3rem 0;
         }
-
-        .cta-section h3 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .cta-section p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
+        .cta-section h3 { color: white; margin-bottom: 1rem; font-size: 1.5rem; }
+        .cta-section p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #9CA3AF; }
         .cta-button {
             display: inline-block;
-            background-color: #fff;
-            color: #1a73e8;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid white;
+            background: linear-gradient(135deg, #00D4FF, #00a8cc);
+            color: #0a0a0f; padding: 1rem 2rem; border-radius: 12px;
+            text-decoration: none; font-weight: bold;
+            transition: all 300ms ease; border: none;
         }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
 
-        .cta-button:hover {
-            background-color: transparent;
-            color: white;
+        /* Footer */
+        .footer {
+            background: #12121a; border-top: 1px solid #2D2D3D;
+            padding: 60px 20px 20px;
         }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 4rem;
-            font-size: 0.9rem;
+        .footer-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px; max-width: 1200px; margin: 0 auto 40px;
         }
-
-        footer a {
-            color: #1a73e8;
-            text-decoration: none;
+        .footer-brand { }
+        .footer-logo { display: flex; align-items: center; height: 40px; margin-bottom: 16px; text-decoration: none; }
+        .footer-logo .logo-img { height: 100%; width: auto; }
+        .footer-tagline { color: #9CA3AF; font-size: 0.95rem; line-height: 1.6; }
+        .footer-title { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-nav { display: flex; flex-direction: column; gap: 12px; }
+        .footer-nav a { color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .footer-nav a:hover { color: #00D4FF; }
+        .contact-info { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .contact-item:hover { color: #00D4FF; }
+        .contact-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 20px; border-top: 1px solid #2D2D3D;
+            max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;
         }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
+        .copyright { color: #9CA3AF; font-size: 0.85rem; }
+        .legal-links { display: flex; gap: 20px; }
+        .legal-links a { color: #9CA3AF; font-size: 0.85rem; text-decoration: none; transition: color 150ms ease; }
+        .legal-links a:hover { color: #00D4FF; }
 
         @media (max-width: 768px) {
-            .article-header {
-                padding: 2rem 1rem;
-            }
-
-            .article-header h1 {
-                font-size: 1.8rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .article-content {
-                padding: 2rem 1.5rem;
-            }
-
-            header .container {
-                padding: 0 1rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav a {
-                margin-left: 1rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
+            .article-header { padding: 120px 1rem 40px; }
+            .article-header h1 { font-size: 1.8rem; }
+            .article-meta { flex-direction: column; gap: 0.5rem; }
+            .article-content { padding: 2rem 1.5rem; }
+            .container { padding: 0 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; justify-content: center; text-align: center; }
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
@@ -289,15 +237,24 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="/" class="logo"><img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs" style="height:32px;width:auto;"></a>
-            <nav>
-                <a href="/">Inicio</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/blog/">Blog</a>
-                <a href="/#contacto">Contacto</a>
-            </nav>
-        </div>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">
+                    <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
+                    <a href="/#servicios" class="nav-link">Servicios</a>
+                    <a href="/#proceso" class="nav-link">Proceso</a>
+                    <a href="/#sobre-mi" class="nav-link">Sobre nosotros</a>
+                    <a href="/blog/" class="nav-link">Blog</a>
+                    <a href="/#contacto" class="nav-link">Contacto</a>
+                    <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
+                </nav>
+            </div>
+        </nav>
     </header>
 
     <div class="article-header">
@@ -440,9 +397,51 @@
         </article>
     </div>
 
-    <footer>
-        <p>&copy; 2026 MOS Labs. Marketing y Automatización para PYMEs en Málaga.</p>
-        <p><a href="/">Inicio</a> | <a href="/#servicios">Servicios</a> | <a href="/blog/">Blog</a> | <a href="/#contacto">Contacto</a></p>
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Automatización de marketing y ventas para PYMEs</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <nav class="footer-nav">
+                        <a href="/#servicios">Servicios</a>
+                        <a href="/#proceso">Proceso</a>
+                        <a href="/#sobre-mi">Sobre nosotros</a>
+                        <a href="/blog/">Blog</a>
+                        <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener">Contacto</a>
+                    </nav>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <div class="contact-info">
+                        <a href="mailto:jose.moscardo@mos-labs.com" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            jose.moscardo@mos-labs.com
+                        </a>
+                        <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            LinkedIn
+                        </a>
+                        <span class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Málaga, España
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 MOS Labs. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="/privacidad/">Política de Privacidad</a>
+                    <a href="/aviso-legal/">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

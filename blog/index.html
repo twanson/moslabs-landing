@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - MOS Labs | Automatización de Marketing y Ventas para PYMEs</title>
+    <meta name="description" content="Guías prácticas de automatización de marketing y ventas para PYMEs. Aprende estrategias reales de automatización, CRM, email marketing e IA para tu negocio.">
+    <meta name="keywords" content="automatización marketing, automatización ventas, CRM, email marketing, IA, PYMEs, inmobiliarias, clínicas dentales">
+    <meta name="author" content="MOS Labs">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://moslabs.com/blog/">
+    <meta property="og:title" content="Blog - MOS Labs | Automatización de Marketing y Ventas">
+    <meta property="og:description" content="Guías prácticas de automatización de marketing y ventas para PYMEs.">
+    <meta property="og:image" content="/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://moslabs.com/blog/">
+    <meta property="twitter:title" content="Blog - MOS Labs | Automatización de Marketing y Ventas">
+    <meta property="twitter:description" content="Guías prácticas de automatización de marketing y ventas para PYMEs.">
+    <meta property="twitter:image" content="/assets/og-image.png">
+
+    <link rel="canonical" href="https://moslabs.com/blog/">
+    <link rel="icon" href="/assets/favicon-new.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/favicon-new.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        /* Blog-specific styles */
+        .hero-blog {
+            padding: 120px 20px 80px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hero-blog-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-blog h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+            letter-spacing: -1px;
+        }
+
+        .hero-blog-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .blog-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            border-color: var(--color-primary);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .blog-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary), #a855f7);
+            color: var(--color-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+
+        .blog-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-card-excerpt {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: gap 0.3s ease;
+        }
+
+        .blog-card-link:hover {
+            gap: 12px;
+        }
+
+        .blog-card-link:hover .arrow {
+            transform: translateX(3px);
+        }
+
+        .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 80px 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary), #a855f7);
+            color: var(--color-bg);
+            padding: 14px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Footer spacing */
+        .footer {
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-blog {
+                padding: 80px 20px 60px;
+            }
+
+            .hero-blog h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-blog-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .blog-section {
+                padding: 60px 20px;
+            }
+
+            .cta-section {
+                padding: 40px 24px;
+                margin: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
+                <a href="/#servicios" class="nav-link">Servicios</a>
+                <a href="/#proceso" class="nav-link">Proceso</a>
+                <a href="/#sobre-mi" class="nav-link">Sobre nosotros</a>
+                <a href="/blog/" class="nav-link active">Blog</a>
+                <a href="/#contacto" class="nav-link">Contacto</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-blog">
+        <div class="hero-blog-content">
+            <h1>Blog</h1>
+            <p class="hero-blog-subtitle">Guías prácticas de automatización de marketing y ventas para PYMEs</p>
+        </div>
+    </section>
+
+    <!-- Blog Articles Section -->
+    <section class="blog-section">
+        <div class="blog-grid">
+            <!-- Article 1: Inmobiliarias -->
+            <article class="blog-card">
+                <span class="blog-tag">Inmobiliarias</span>
+                <h2 class="blog-card-title">Cómo Automatizar la Captación de Leads en Inmobiliarias</h2>
+                <p class="blog-card-excerpt">Guía completa sobre cómo automatizar la captación de leads en inmobiliarias.</p>
+                <a href="/blog/como-automatizar-captacion-leads-inmobiliarias/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+
+            <!-- Article 2: Clínicas Dentales -->
+            <article class="blog-card">
+                <span class="blog-tag">Clínicas</span>
+                <h2 class="blog-card-title">Automatización de Clínicas Dentales: Guía Completa</h2>
+                <p class="blog-card-excerpt">Gestión de pacientes, recordatorios de citas, seguimiento automático y reactivación.</p>
+                <a href="/blog/automatizacion-clinicas-dentales-guia-completa/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+
+            <!-- Article 3: PYMEs Málaga -->
+            <article class="blog-card">
+                <span class="blog-tag">PYMEs</span>
+                <h2 class="blog-card-title">Automatización de Procesos para PYMEs en Málaga</h2>
+                <p class="blog-card-excerpt">Guía práctica de automatización de procesos. Qué automatizar primero, costos y ROI real.</p>
+                <a href="/blog/automatizacion-procesos-pymes-malaga-guia/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+
+            <!-- Article 4: CRM -->
+            <article class="blog-card">
+                <span class="blog-tag">CRM</span>
+                <h2 class="blog-card-title">CRM Automatizado para PYMEs: Guía Completa</h2>
+                <p class="blog-card-excerpt">Cómo elegir e implementar un CRM automatizado. Comparativa de herramientas y costes reales.</p>
+                <a href="/blog/crm-automatizado-pymes-guia-completa/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+
+            <!-- Article 5: IA -->
+            <article class="blog-card">
+                <span class="blog-tag">IA</span>
+                <h2 class="blog-card-title">Cómo Usar IA para Vender Más en tu PYME</h2>
+                <p class="blog-card-excerpt">Herramientas, estrategias y casos reales de IA aplicada a ventas en España.</p>
+                <a href="/blog/inteligencia-artificial-ventas-pymes-guia/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+
+            <!-- Article 6: Email Marketing -->
+            <article class="blog-card">
+                <span class="blog-tag">Email Marketing</span>
+                <h2 class="blog-card-title">Cómo Automatizar tu Email Marketing sin Ser Experto</h2>
+                <p class="blog-card-excerpt">Herramientas, flujos y estrategias de email marketing automatizado que funcionan.</p>
+                <a href="/blog/automatizacion-email-marketing-pymes-guia/" class="blog-card-link">
+                    Leer <span class="arrow">→</span>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>¿Necesitas ayuda con tu automatización?</h2>
+        <p>Realiza un diagnóstico gratuito y descubre qué puedes automatizar en tu PYME</p>
+        <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="cta-button">
+            Reservar diagnóstico gratuito
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MOS Labs" class="logo-footer">
+                </div>
+                <p class="footer-description">Automatización de marketing y ventas para PYMEs que quieren escalar sin complicarse.</p>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M18.5 0H1.5C0.67 0 0 0.67 0 1.5v17C0 19.33 0.67 20 1.5 20h17C19.33 20 20 19.33 20 18.5v-17C20 0.67 19.33 0 18.5 0zM6 17H3V8h3v9zm-1.5-10.27c-.96 0-1.73-.77-1.73-1.73s.77-1.73 1.73-1.73 1.73.77 1.73 1.73-.77 1.73-1.73 1.73zM17 17h-3v-4.37c0-1.04-.37-1.75-1.31-1.75-.71 0-1.14.48-1.33 1.94h-.03v4.18h-3V8h3v1.23h.04c.4-.6 1.14-1.5 2.79-1.5 2.08 0 3.64 1.36 3.64 4.29V17z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:jose@moslabs.com" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M18 2H2C0.9 2 0 2.9 0 4v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 4l-8 5-8-5v-2l8 5 8-5v2z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/#servicios">Servicios</a></li>
+                    <li><a href="/#proceso">Proceso</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:jose@moslabs.com">jose@moslabs.com</a></li>
+                    <li><a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener">Agendar llamada</a></li>
+                    <li>Málaga, España</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="/privacidad/">Política de Privacidad</a></li>
+                    <li><a href="/aviso-legal/">Aviso Legal</a></li>
+                    <li><a href="/cookies/">Política de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MOS Labs. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.nav-container')) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
