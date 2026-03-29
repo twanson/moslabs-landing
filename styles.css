@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 70px;
+    height: 36px;
     width: auto;
 }
 
@@ -1192,7 +1192,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo .logo-img {
-    height: 60px;
+    height: 32px;
 }
 
 .footer-tagline {
@@ -1458,11 +1458,11 @@ a.contact-item:hover {
     }
 
     .logo-img {
-        height: 50px;
+        height: 32px;
     }
 
     .footer-logo .logo-img {
-        height: 45px;
+        height: 28px;
     }
 
     .nav-toggle {
