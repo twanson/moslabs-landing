@@ -145,6 +145,54 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.mos-labs.com/blog/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/como-automatizar-captacion-leads-inmobiliarias/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/automatizacion-clinicas-dentales-guia-completa/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/automatizacion-procesos-pymes-malaga-guia/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/automatizacion-email-marketing-pymes-guia/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/crm-automatizado-pymes-guia-completa/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/blog/inteligencia-artificial-ventas-pymes-guia/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mos-labs.com/casos-exito/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.mos-labs.com/privacidad/</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>yearly</changefreq>
@@ -157,45 +205,9 @@
     <priority>0.1</priority>
   </url>
   <url>
-    <loc>https://www.mos-labs.com/blog/como-automatizar-captacion-leads-inmobiliarias/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.mos-labs.com/cookies/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://www.mos-labs.com/blog/automatizacion-clinicas-dentales-guia-completa/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.mos-labs.com/blog/automatizacion-procesos-pymes-malaga-guia/</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-    <url>
-        <loc>https://www.mos-labs.com/blog/automatizacion-email-marketing-pymes-guia/</loc>
-        <lastmod>2026-03-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.mos-labs.com/blog/crm-automatizado-pymes-guia-completa/</loc>
-        <lastmod>2026-03-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.mos-labs.com/blog/inteligencia-artificial-ventas-pymes-guia/</loc>
-        <lastmod>2026-03-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.mos-labs.com/casos-exito/</loc>
-        <lastmod>2026-03-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
 </urlset>
