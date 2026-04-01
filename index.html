@@ -633,40 +633,106 @@
     text-transform: uppercase; margin-bottom: 32px;
   }
   .pain-header {
-    margin-bottom: 64px;
+    margin-bottom: 72px;
   }
   .pain-header h2 {
     font-size: 2.5rem;
   }
-  .pain-columns { gap: 48px; margin-bottom: 48px;
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
   }
-  .pain-column h3 {
-    font-size: 1.3rem; font-weight: 500;
-    margin-bottom: 28px;
+  .pain-card {
+    position: relative;
+    padding: 36px 32px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
+  }
+  .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    border-radius: 20px 0 0 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  .pain-card.ventas::before {
+    background: linear-gradient(180deg, var(--cyan), rgba(83,221,252,0.2));
+  }
+  .pain-card.marketing::before {
+    background: linear-gradient(180deg, var(--purple, #7c3aed), rgba(124,58,237,0.2));
+  }
+  .pain-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    border-color: rgba(255,255,255,0.12);
+  }
+  .pain-card:hover::before {
+    opacity: 1;
+  }
+  .pain-card-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .pain-card-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .pain-card.ventas .pain-card-tag {
     color: var(--cyan);
+    background: rgba(83,221,252,0.1);
   }
-  .pain-item {
-    margin-bottom: 32px;
+  .pain-card.marketing .pain-card-tag {
+    color: var(--purple, #7c3aed);
+    background: rgba(124,58,237,0.1);
   }
-  .pain-item h4 {
+  .pain-card h4 {
     font-family: 'Newsreader', serif;
-    font-size: 1.1rem; font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text);
   }
-  .pain-item p {
+  .pain-card p {
     color: var(--text-muted);
-    font-size: 0.95rem; line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
   .pain-closing {
-    padding: 32px;
+    padding: 36px 40px;
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 20px;
     text-align: center;
     color: var(--text-muted);
-    font-size: 1.05rem; line-height: 1.7;
+    font-size: 1.2rem; line-height: 1.7;
   }
   .pain-closing strong { color: var(--text); }
+
+  @media (max-width: 900px) {
+    .pain-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  @media (min-width: 901px) and (max-width: 1100px) {
+    .pain-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
   /* ===== SERVICES ===== */
   .services {
@@ -1633,41 +1699,47 @@
       <h2 class="section-title">¿Te suena familiar?</h2>
     </div>
 
-    <div class="pain-columns">
-      <div>
-        <h3>Ventas</h3>
-        <div class="pain-item ventas">
-          <h4>Leads que se enfrían</h4>
-          <p>Entran contactos interesados pero nadie los sigue a tiempo. Cuando respondes, ya han comprado a otro.</p>
-        </div>
-        <div class="pain-item ventas">
-          <h4>Seguimiento manual</h4>
-          <p>Llevas el seguimiento comercial en la cabeza, en post-its o en un Excel caótico. Se te escapan oportunidades.</p>
-        </div>
-        <div class="pain-item ventas">
-          <h4>Propuestas eternas</h4>
-          <p>Cada propuesta comercial te lleva horas. Copiar, pegar, adaptar, formatear... una y otra vez.</p>
-        </div>
+    <div class="pain-grid">
+      <div class="pain-card ventas">
+        <span class="pain-card-icon">🧊</span>
+        <span class="pain-card-tag">Ventas</span>
+        <h4>Leads que se enfrían</h4>
+        <p>Entran contactos interesados pero nadie los sigue a tiempo. Cuando respondes, ya han comprado a otro.</p>
       </div>
-      <div>
-        <h3>Marketing</h3>
-        <div class="pain-item marketing">
-          <h4>Contenido que se pierde</h4>
-          <p>Creas contenido para una red y no lo aprovechas en las demás. Horas de trabajo que podrían rendir 3x.</p>
-        </div>
-        <div class="pain-item marketing">
-          <h4>Emails que no salen</h4>
-          <p>Sabes que deberías enviar newsletters, secuencias de bienvenida, seguimientos... pero nunca hay tiempo.</p>
-        </div>
-        <div class="pain-item marketing">
-          <h4>Reporting infinito</h4>
-          <p>Pasas el último día del mes recopilando datos de 5 herramientas distintas para hacer un informe.</p>
-        </div>
+      <div class="pain-card ventas">
+        <span class="pain-card-icon">📋</span>
+        <span class="pain-card-tag">Ventas</span>
+        <h4>Seguimiento manual</h4>
+        <p>Llevas el seguimiento comercial en la cabeza, en post-its o en un Excel caótico. Se te escapan oportunidades.</p>
+      </div>
+      <div class="pain-card ventas">
+        <span class="pain-card-icon">⏳</span>
+        <span class="pain-card-tag">Ventas</span>
+        <h4>Propuestas eternas</h4>
+        <p>Cada propuesta comercial te lleva horas. Copiar, pegar, adaptar, formatear... una y otra vez.</p>
+      </div>
+      <div class="pain-card marketing">
+        <span class="pain-card-icon">📤</span>
+        <span class="pain-card-tag">Marketing</span>
+        <h4>Contenido que se pierde</h4>
+        <p>Creas contenido para una red y no lo aprovechas en las demás. Horas de trabajo que podrían rendir 3x.</p>
+      </div>
+      <div class="pain-card marketing">
+        <span class="pain-card-icon">📧</span>
+        <span class="pain-card-tag">Marketing</span>
+        <h4>Emails que no salen</h4>
+        <p>Sabes que deberías enviar newsletters, secuencias de bienvenida, seguimientos... pero nunca hay tiempo.</p>
+      </div>
+      <div class="pain-card marketing">
+        <span class="pain-card-icon">📊</span>
+        <span class="pain-card-tag">Marketing</span>
+        <h4>Reporting infinito</h4>
+        <p>Pasas el último día del mes recopilando datos de 5 herramientas distintas para hacer un informe.</p>
       </div>
     </div>
 
     <div class="pain-closing">
-      No es que no sepas lo que hay que hacer. Es que no tienes tiempo para montarlo. <strong>Nosotros sí.</strong>
+      No es que no sepas lo que hay que hacer. Es que no tienes tiempo para montarlo. <strong>Yo sí.</strong>
     </div>
   </div>
 </section>
@@ -1803,7 +1875,7 @@
 <!-- ABOUT SECTION -->
 <section class="about" id="sobre-mi">
   <div class="about-inner">
-    <div class="about-label">Sobre nosotros</div>
+    <div class="about-label">Sobre mí</div>
     <h2 class="section-title">Quién está detrás</h2>
 
     <div class="about-card">
@@ -1814,16 +1886,16 @@
           </div>
       <div class="about-content">
         <p class="about-bio">
-          Somos <strong>MOS Labs</strong>. Llevamos más de 8 años en marketing B2B — hemos trabajado en empresas como <strong>CHEP</strong>, <strong>Nielsen</strong> y <strong>OpenUp</strong> gestionando presupuestos.
+          Soy <strong>Jose María Moscardó</strong>, fundador de <strong>MOS Labs</strong>. Llevo más de 8 años en marketing B2B — he trabajado en empresas como <strong>CHEP</strong>, <strong>Nielsen</strong> y <strong>OpenUp</strong> gestionando presupuestos.
         </p>
         <p class="about-bio">
-          En 2020 fundamos <strong>Wysecamp</strong>, una comunidad de innovación que llegó a 3,<span class="metric-highlight">000+</span> profesionales. Ahí descubrimos que lo que más necesitaban las empresas no era más marketing, sino automatizar el que ya tenían.
+          En 2020 fundé <strong>Wysecamp</strong>, una comunidad de innovación que llegó a 3,<span class="metric-highlight">000+</span> profesionales. Ahí descubrí que lo que más necesitaban las empresas no era más marketing, sino automatizar el que ya tenían.
         </p>
         <p class="about-bio">
-          Ahora combinamos experiencia en marketing con herramientas de automatización (n8n, Make, Claude, APIs) para que puedas competir con equipos 10 veces más grandes.
+          Ahora combino experiencia en marketing con herramientas de automatización (n8n, Make, Claude, APIs) para que puedas competir con equipos 10 veces más grandes.
         </p>
         <p class="about-bio">
-          No te vamos a vender humo ni herramientas que no necesitas. Nuestro trabajo es entender tu negocio y montar lo que realmente te ahorre tiempo.
+          No te voy a vender humo ni herramientas que no necesitas. Mi trabajo es entender tu negocio y montar lo que realmente te ahorre tiempo.
         </p>
 
         <div class="about-stats">
