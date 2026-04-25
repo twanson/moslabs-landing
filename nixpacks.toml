@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["nodejs-18_x"]
+nixPkgs = ["nodejs_20"]
 
 [phases.build]
 cmds = ["echo 'Static site - no build needed'"]
