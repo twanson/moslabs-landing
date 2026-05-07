@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== Navbar Scroll Effect =====
 function initNavbar() {
     const navbar = document.getElementById('navbar');
+    if (!navbar) return;
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
@@ -31,6 +32,7 @@ function initNavbar() {
 function initMobileMenu() {
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
+    if (!toggle || !menu) return;
     const links = menu.querySelectorAll('.nav-link, .nav-cta');
 
     toggle.addEventListener('click', () => {
@@ -189,7 +191,8 @@ function initSmoothScroll() {
 }
 
 function scrollToElement(element) {
-    const navbarHeight = document.getElementById('navbar').offsetHeight;
+    const navbar = document.getElementById('navbar');
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
 
