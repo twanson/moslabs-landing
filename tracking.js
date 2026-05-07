@@ -16,12 +16,14 @@
         var node = el;
         while (node && node !== document.body) {
             var tag = (node.tagName || '').toLowerCase();
-            var cls = (node.className && typeof node.className === 'string') ? node.className.toLowerCase() : '';
+            var classList = node.classList;
             var id = (node.id || '').toLowerCase();
-            if (tag === 'nav' || cls.indexOf('navbar') !== -1 || id === 'navbar') return 'nav';
-            if (tag === 'footer' || cls.indexOf('footer') !== -1) return 'footer';
-            if (cls.indexOf('cta-section') !== -1 || cls.indexOf('final-cta') !== -1) return 'cta-final';
-            if (cls.indexOf('hero') !== -1 || id.indexOf('hero') !== -1) return 'hero';
+            var has = function (c) { return classList && classList.contains(c); };
+            if (tag === 'nav' || has('navbar') || id === 'navbar') return 'nav';
+            if (tag === 'footer' || has('footer')) return 'footer';
+            // Sección final de CTA: <section class="cta"> en home, o variantes en otras páginas
+            if (tag === 'section' && (has('cta') || has('cta-section') || has('final-cta'))) return 'cta-final';
+            if (has('hero') || has('hero-section') || id.indexOf('hero') !== -1) return 'hero';
             node = node.parentElement;
         }
         return 'mid';
