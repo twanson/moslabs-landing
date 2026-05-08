@@ -41,8 +41,14 @@
 
         var ctaLocation = detectCtaLocation(link);
         var slug = pageSlug();
+        var origenValue = slug + '/' + ctaLocation;
 
-        // Reescribir href con UTMs (idempotente)
+        // Reescribir href (idempotente):
+        // - UTMs antes del hash → consumidos por GA4 si hiciera falta
+        // - ?Origen=... DESPUÉS del hash → consumido por Zoho Bookings
+        //   para pre-rellenar el campo "Origen" del formulario.
+        //   Zoho usa hash routing (#/moslabs), por eso los params para Zoho
+        //   van detrás del hash. Doc: help.zoho.com/.../bookings-booking-page
         if (!link.dataset.utmSet) {
             try {
                 var url = new URL(link.href);
@@ -50,7 +56,17 @@
                 url.searchParams.set('utm_medium', 'cta');
                 url.searchParams.set('utm_campaign', slug);
                 url.searchParams.set('utm_content', ctaLocation);
-                link.href = url.toString();
+                var newHref = url.toString();
+
+                // Añadir Origen detrás del hash si hay hash routing
+                var hashIdx = newHref.indexOf('#');
+                if (hashIdx !== -1) {
+                    var hashPart = newHref.substring(hashIdx + 1);
+                    var separator = hashPart.indexOf('?') !== -1 ? '&' : '?';
+                    newHref = newHref.substring(0, hashIdx + 1) + hashPart + separator + 'Origen=' + encodeURIComponent(origenValue);
+                }
+
+                link.href = newHref;
                 link.dataset.utmSet = 'true';
             } catch (e) { /* href no parseable, dejamos como estaba */ }
         }
@@ -62,6 +78,7 @@
                 cta_text: (link.textContent || '').trim().slice(0, 80),
                 page_path: location.pathname,
                 page_slug: slug,
+                origen: origenValue,
                 transport_type: 'beacon'
             });
         }
