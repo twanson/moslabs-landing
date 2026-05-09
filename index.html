@@ -2078,6 +2078,8 @@
       tp.set('alignLeft','1');
       tp.set('hideTitle','1');
       tp.set('dynamicHeight','1');
+      tp.set('theme','dark');
+      tp.set('transparentBackground','1');
       var iframe = document.createElement('iframe');
       iframe.src = 'https://tally.so/embed/dWK6qN?' + tp.toString();
       iframe.width = '100%';
@@ -2086,9 +2088,7 @@
       iframe.title = 'Contacto Mos Labs';
       iframe.loading = 'lazy';
       iframe.style.border = 'none';
-      iframe.style.borderRadius = '16px';
-      iframe.style.background = '#ffffff';
-      iframe.style.boxShadow = '0 8px 32px rgba(0,0,0,0.3)';
+      iframe.style.background = 'transparent';
       document.getElementById('tally-form-mount').appendChild(iframe);
     })();
     </script>
