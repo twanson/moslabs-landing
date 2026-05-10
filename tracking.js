@@ -103,3 +103,41 @@
         if (link) annotateAndTrack(link);
     }, true);
 })();
+
+// ===== MOS Labs — Lead Magnet Tracking =====
+// Detecta clicks a /recursos/auditoria-6-fugas/ y dispara evento GA4
+// 'lm_banner_click' con placement extraído del utm_content del href.
+// El submit del form Tally se trackea desde la propia landing del LM
+// con un listener de postMessage 'tally-form-submitted'.
+(function () {
+    'use strict';
+
+    var LM_PATH = 'auditoria-6-fugas';
+
+    function getPlacementFromHref(href) {
+        try {
+            var u = new URL(href, location.href);
+            return u.searchParams.get('utm_content') || 'unknown';
+        } catch (e) { return 'unknown'; }
+    }
+
+    function trackLmClick(link) {
+        if (!link || !link.href) return;
+        if (link.href.indexOf(LM_PATH) === -1) return;
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', 'lm_banner_click', {
+            lm_id: 'auditoria-6-fugas',
+            placement: getPlacementFromHref(link.href),
+            page_path: location.pathname,
+            link_text: (link.textContent || '').trim().slice(0, 80),
+            transport_type: 'beacon'
+        });
+    }
+
+    document.addEventListener('click', function (e) {
+        var t = e.target;
+        if (!t || !t.closest) return;
+        var link = t.closest('a[href*="' + LM_PATH + '"]');
+        if (link) trackLmClick(link);
+    }, true);
+})();

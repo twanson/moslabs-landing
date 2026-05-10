@@ -33,6 +33,57 @@
 <meta name="twitter:image:alt" content="Portada de la guía 'Las 6 fugas' por Jose María Moscardó"/>
 <link rel="canonical" href="https://www.mos-labs.com/recursos/auditoria-6-fugas/"/>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.mos-labs.com/recursos/auditoria-6-fugas/#article",
+      "headline": "Las 6 fugas — Auditoría operativa de marketing y ventas para PYMEs",
+      "description": "Auditoría operativa de 15 minutos para PYMEs de 5-50 empleados. Identifica las 6 fugas más comunes en marketing y ventas, calcula su coste mensual y prioriza la más urgente.",
+      "author": {
+        "@type": "Person",
+        "name": "Jose María Moscardó",
+        "url": "https://www.mos-labs.com/#sobre-mi",
+        "jobTitle": "Fundador",
+        "worksFor": { "@id": "https://www.mos-labs.com/#org" }
+      },
+      "publisher": { "@id": "https://www.mos-labs.com/#org" },
+      "datePublished": "2026-05-09",
+      "dateModified": "2026-05-10",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.mos-labs.com/assets/auditoria-6-fugas-cover.png",
+        "width": 565,
+        "height": 800
+      },
+      "mainEntityOfPage": "https://www.mos-labs.com/recursos/auditoria-6-fugas/",
+      "inLanguage": "es",
+      "about": ["automatización marketing", "automatización ventas", "PYMEs", "auditoría operativa", "fugas operativas"],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "PYMEs de 5-50 empleados con tracción comercial"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.mos-labs.com/#org",
+      "name": "Mos Labs",
+      "url": "https://www.mos-labs.com/",
+      "logo": "https://www.mos-labs.com/assets/logo-moslabs-horizontal-dark.svg",
+      "sameAs": ["https://linkedin.com/in/josemariamoscardo"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.mos-labs.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Las 6 fugas", "item": "https://www.mos-labs.com/recursos/auditoria-6-fugas/" }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -233,6 +284,57 @@
 })();
 </script>
 <script async src="https://tally.so/widgets/embed.js"></script>
+<script>
+// GA4 event: lm_form_submit cuando Tally avisa de submission completado.
+// Soporta nombres conocidos (Tally.FormSubmitted / tally-form-submitted) y un
+// fallback case-insensitive sobre cualquier campo string del payload que contenga
+// "FormSubmitted" o "submitted" — útil si Tally cambia el nombre del evento.
+(function () {
+  'use strict';
+  var fired = false;
+  function fire() {
+    if (fired) return;
+    fired = true;
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'lm_form_submit', {
+      lm_id: 'auditoria-6-fugas',
+      page_path: location.pathname,
+      transport_type: 'beacon'
+    });
+  }
+  function looksLikeSubmit(payload) {
+    if (!payload) return false;
+    if (typeof payload === 'string') {
+      var s = payload.toLowerCase();
+      return s.indexOf('formsubmitted') !== -1 || s.indexOf('submitted') !== -1;
+    }
+    if (typeof payload !== 'object') return false;
+    // Known signals
+    if (payload.event === 'Tally.FormSubmitted') return true;
+    if (payload.type === 'tally-form-submitted') return true;
+    // Case-insensitive fallback — scan known fields
+    var fields = [payload.event, payload.type, payload.eventName, payload.name];
+    for (var i = 0; i < fields.length; i++) {
+      var v = fields[i];
+      if (typeof v === 'string') {
+        var lv = v.toLowerCase();
+        if (lv.indexOf('formsubmitted') !== -1 || lv.indexOf('submitted') !== -1) return true;
+      }
+    }
+    return false;
+  }
+  window.addEventListener('message', function (e) {
+    try {
+      var data = e.data;
+      if (typeof data === 'string') {
+        // Try JSON; if it fails, evaluate the raw string for the fallback
+        try { data = JSON.parse(data); } catch (_) { /* keep string */ }
+      }
+      if (looksLikeSubmit(data)) fire();
+    } catch (_) { /* ignore */ }
+  });
+})();
+</script>
 <script src="/script.js"></script>
 <script src="/tracking.js" defer></script>
 </body>
