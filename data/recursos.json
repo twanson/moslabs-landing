@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "auditoria-6-fugas",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para PYMEs",
+    "type": "auditoria",
+    "summary": "Cuando termines de leerla (15 min) tendrás una hoja con seis números que dicen, en euros, dónde se está yendo el dinero cada mes en tu marketing y ventas. Para PYMEs de 5-50 empleados que ya tienen tracción y sospechan que están dejando dinero en la mesa por procesos manuales.",
+    "tags": ["auditoria", "marketing", "ventas", "pymes", "operaciones"],
+    "cover": "/recursos/auditoria-6-fugas/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas.pdf",
+    "form_tally_id": "68AdRY",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas",
+    "what_you_get": [
+      "Marco para distinguir las 6 fugas operativas más comunes en una PYME española",
+      "Por cada fuga: cómo medirla con datos que ya tienes, umbrales, estimación de coste y la primera decisión que toca tomar",
+      "Tabla de scoring para priorizar",
+      "Plan de 5 días para arreglar la peor"
+    ],
+    "what_you_dont_get": [
+      "Tutoriales paso a paso",
+      "Comparativas de herramientas",
+      "Teoría sobre embudos"
+    ],
+    "updated_at": "2026-05-09",
+    "listed": true
+  }
+]
