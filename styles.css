@@ -1736,3 +1736,151 @@ a.contact-item:hover {
         gap: 0;
     }
 }
+
+/* ===== LM Banner — "Las 6 fugas" ===== */
+.lm-banner-section {
+    padding: 80px 24px;
+    background: radial-gradient(ellipse 900px 500px at 50% 50%, rgba(83, 221, 252, 0.08), transparent 70%);
+    position: relative;
+}
+
+.lm-banner-card {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 56px;
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md), 0 0 80px rgba(83, 221, 252, 0.12);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.lm-banner-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    opacity: 0.8;
+}
+
+.lm-banner-content { min-width: 0; }
+
+.lm-banner-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.lm-banner-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--color-text);
+    margin: 0 0 16px;
+}
+
+.lm-banner-subtitle {
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    margin: 0 0 24px;
+}
+
+.lm-banner-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lm-banner-bullets li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+}
+
+.lm-banner-bullets li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.lm-banner-cta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+}
+
+.lm-banner-cta { text-decoration: none; }
+
+.lm-banner-meta {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.lm-banner-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lm-banner-cover-link {
+    display: block;
+    line-height: 0;
+    transform: rotate(-2deg);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 4px;
+    box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.lm-banner-cover-link:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow: 0 40px 80px -15px rgba(0,0,0,0.8), 0 0 40px rgba(83,221,252,0.2), 0 0 0 1px rgba(83,221,252,0.3);
+}
+
+.lm-banner-cover img {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .lm-banner-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 48px 36px;
+    }
+    .lm-banner-cover { order: -1; }
+    .lm-banner-cover img { max-width: 240px; }
+}
+
+@media (max-width: 640px) {
+    .lm-banner-section { padding: 56px 20px; }
+    .lm-banner-card { padding: 40px 24px; gap: 32px; }
+    .lm-banner-cta-row { flex-direction: column; align-items: flex-start; }
+    .lm-banner-cta-row .btn { width: 100%; }
+    .lm-banner-cover img { max-width: 200px; }
+}
