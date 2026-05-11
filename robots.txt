@@ -1,0 +1,12 @@
+# robots.txt — Mos Labs
+# https://www.mos-labs.com/
+
+User-agent: *
+Allow: /
+
+# Bloquea PDFs de descarga directa (deben servirse vía workflow tras submit del form)
+# Comentado: los PDFs son linkables porque queremos que aparezcan en búsqueda directa.
+# Disallow: /downloads/
+
+# Sitemap
+Sitemap: https://www.mos-labs.com/sitemap.xml

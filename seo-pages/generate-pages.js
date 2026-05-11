@@ -61,9 +61,10 @@ function generateMetaDescription(keyword) {
 function generateSitemap(keywords) {
     const staticPages = [
         { url: 'https://www.mos-labs.com/', changefreq: 'weekly', priority: '1.0' },
+        { url: 'https://www.mos-labs.com/recursos/', changefreq: 'weekly', priority: '0.9' },
+        { url: 'https://www.mos-labs.com/blog/', changefreq: 'weekly', priority: '0.7' },
         { url: 'https://www.mos-labs.com/privacidad/', changefreq: 'monthly', priority: '0.3' },
-        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' },
-        { url: 'https://www.mos-labs.com/blog/', changefreq: 'weekly', priority: '0.7' }
+        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' }
     ];
 
     // Load lead magnet resources from data/recursos.json (if exists)
