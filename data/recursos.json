@@ -24,5 +24,31 @@
     ],
     "updated_at": "2026-05-09",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-inmobiliarias",
+    "title": "Las 6 fugas — Inmobiliarias",
+    "subtitle": "Auditoría operativa de marketing y ventas para inmobiliarias",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una inmobiliaria cada mes (leads de Idealista sin contestar, visitas sin cerrar, ex-compradores sin reactivar...). 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "inmobiliarias", "marketing", "ventas", "portales"],
+    "cover": "/recursos/auditoria-6-fugas-inmobiliarias/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-inmobiliarias.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-inmobiliarias",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial inmobiliario",
+      "Cómo medir cada fuga con datos de tu CRM y portales",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de CRMs inmobiliarios",
+      "Plantillas genéricas de email",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
   }
 ]
