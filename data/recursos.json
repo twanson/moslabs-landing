@@ -5,7 +5,13 @@
     "subtitle": "Auditoría operativa de marketing y ventas para PYMEs",
     "type": "auditoria",
     "summary": "Cuando termines de leerla (15 min) tendrás una hoja con seis números que dicen, en euros, dónde se está yendo el dinero cada mes en tu marketing y ventas. Para PYMEs de 5-50 empleados que ya tienen tracción y sospechan que están dejando dinero en la mesa por procesos manuales.",
-    "tags": ["auditoria", "marketing", "ventas", "pymes", "operaciones"],
+    "tags": [
+      "auditoria",
+      "marketing",
+      "ventas",
+      "pymes",
+      "operaciones"
+    ],
     "cover": "/recursos/auditoria-6-fugas/cover.png",
     "pdf": "/downloads/mos-labs-auditoria-6-fugas.pdf",
     "form_tally_id": "68AdRY",
@@ -31,7 +37,13 @@
     "subtitle": "Auditoría operativa de marketing y ventas para inmobiliarias",
     "type": "auditoria",
     "summary": "Las 6 fugas operativas que sangran a una inmobiliaria cada mes (leads de Idealista sin contestar, visitas sin cerrar, ex-compradores sin reactivar...). 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
-    "tags": ["auditoria", "inmobiliarias", "marketing", "ventas", "portales"],
+    "tags": [
+      "auditoria",
+      "inmobiliarias",
+      "marketing",
+      "ventas",
+      "portales"
+    ],
     "cover": "/recursos/auditoria-6-fugas-inmobiliarias/cover.png",
     "pdf": "/downloads/mos-labs-auditoria-6-fugas-inmobiliarias.pdf",
     "form_tally_id": "0Q1oW9",
@@ -46,6 +58,231 @@
     "what_you_dont_get": [
       "Comparativas de CRMs inmobiliarios",
       "Plantillas genéricas de email",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-despachos-abogados",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para despachos de abogados",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a un despacho cada mes: leads de la web que se enfrían, primeras consultas sin convertir, clientes inactivos sin reactivar. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "abogados",
+      "despacho",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-despachos-abogados/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-despachos-abogados.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-despachos-abogados",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de un despacho de abogados",
+      "Cómo medir cada fuga con datos de tu CRM y agenda",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares jurídicos",
+      "Plantillas genéricas de contratos",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-clinicas-esteticas",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para clínicas estéticas",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una clínica estética cada mes: pacientes que no vuelven al mantenimiento, ex-pacientes sin reactivar, primeras consultas sin convertir. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "esteticas",
+      "clinica",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-clinicas-esteticas/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-esteticas.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-clinicas-esteticas",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una clínica estética",
+      "Cómo medir cada fuga con datos de tu CRM y agenda",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de gestión clínica",
+      "Plantillas genéricas de email",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-gestorias",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para gestorías y asesorías",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una gestoría cada mes: nuevos clientes sin cualificar, cross-selling de servicios olvidado, ex-clientes sin reactivar. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "gestoria",
+      "asesoria",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-gestorias/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-gestorias.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-gestorias",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una gestoría o asesoría",
+      "Cómo medir cada fuga con datos de tu CRM y software fiscal",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares fiscales",
+      "Plantillas genéricas de comunicación",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-reformas",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para empresas de reformas",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una empresa de reformas cada mes: presupuestos enviados sin seguimiento, visitas sin cierre, ex-clientes sin reactivar. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "reformas",
+      "construccion",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-reformas/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-reformas.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-reformas",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una empresa de reformas",
+      "Cómo medir cada fuga con datos de tu CRM y agenda comercial",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de gestión de obra",
+      "Plantillas genéricas de presupuesto",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-talleres-mecanicos",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para talleres mecánicos",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a un taller mecánico cada mes: ITVs y revisiones olvidadas, presupuestos sin seguimiento, clientes que pasan a la competencia. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "talleres",
+      "automoción",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-talleres-mecanicos/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-talleres-mecanicos.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-talleres-mecanicos",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de un taller mecánico",
+      "Cómo medir cada fuga con datos de tu software de taller",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de taller",
+      "Plantillas genéricas de presupuesto",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-veterinarias",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para clínicas veterinarias",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una clínica veterinaria cada mes: vacunas y desparasitaciones olvidadas, pacientes inactivos sin reactivar, cross-selling sin sistema. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "veterinarias",
+      "clinica",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-veterinarias/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-veterinarias.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-veterinarias",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una clínica veterinaria",
+      "Cómo medir cada fuga con datos de tu software de gestión clínica",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de gestión veterinaria",
+      "Plantillas genéricas de email",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-11",
+    "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-academias",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para academias y centros de formación",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una academia cada mes: leads que no se matriculan, alumnos que no terminan, ex-alumnos sin reactivar para nuevos cursos. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "academias",
+      "formacion",
+      "educacion",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-academias/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-academias.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-academias",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una academia o centro de formación",
+      "Cómo medir cada fuga con datos de tu CRM y campañas",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de plataformas LMS o e-learning",
+      "Plantillas genéricas de email a alumnos",
       "Teoría sobre el sector"
     ],
     "updated_at": "2026-05-11",

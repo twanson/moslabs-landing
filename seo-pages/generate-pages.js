@@ -62,8 +62,32 @@ function generateSitemap(keywords) {
     const staticPages = [
         { url: 'https://www.mos-labs.com/', changefreq: 'weekly', priority: '1.0' },
         { url: 'https://www.mos-labs.com/privacidad/', changefreq: 'monthly', priority: '0.3' },
-        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' }
+        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' },
+        { url: 'https://www.mos-labs.com/blog/', changefreq: 'weekly', priority: '0.7' }
     ];
+
+    // Load lead magnet resources from data/recursos.json (if exists)
+    let recursos = [];
+    const recursosPath = path.join(__dirname, '..', 'data', 'recursos.json');
+    if (fs.existsSync(recursosPath)) {
+        try {
+            recursos = JSON.parse(fs.readFileSync(recursosPath, 'utf8'));
+        } catch (e) {
+            console.warn('Could not parse data/recursos.json:', e.message);
+        }
+    }
+
+    // Load blog posts from data/blog-posts.json (if exists)
+    let blogPosts = [];
+    const blogPath = path.join(__dirname, '..', 'data', 'blog-posts.json');
+    if (fs.existsSync(blogPath)) {
+        try {
+            const blogData = JSON.parse(fs.readFileSync(blogPath, 'utf8'));
+            blogPosts = Array.isArray(blogData) ? blogData : (blogData.posts || []);
+        } catch (e) {
+            console.warn('Could not parse data/blog-posts.json:', e.message);
+        }
+    }
 
     let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -94,6 +118,42 @@ function generateSitemap(keywords) {
 `;
     });
 
+    // Add lead magnet landings (recursos)
+    if (recursos.length > 0) {
+        sitemap += `
+  <!-- Lead Magnets / Recursos -->
+`;
+        recursos.forEach(r => {
+            if (r.listed === false) return;
+            sitemap += `  <url>
+    <loc>https://www.mos-labs.com/recursos/${r.slug}/</loc>
+    <lastmod>${r.updated_at || new Date().toISOString().slice(0, 10)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+`;
+        });
+    }
+
+    // Add blog posts
+    if (blogPosts.length > 0) {
+        sitemap += `
+  <!-- Blog posts -->
+`;
+        blogPosts.forEach(p => {
+            if (p.published === false || p.draft === true) return;
+            const slug = p.slug || p.id;
+            if (!slug) return;
+            sitemap += `  <url>
+    <loc>https://www.mos-labs.com/blog/${slug}/</loc>
+    <lastmod>${p.updated_at || p.published_at || new Date().toISOString().slice(0, 10)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+`;
+        });
+    }
+
     sitemap += `</urlset>`;
 
     return sitemap;
@@ -101,6 +161,19 @@ function generateSitemap(keywords) {
 
 // Generate each page
 keywords.forEach(keyword => {
+    // Safety: if the vertical already has custom LM banner or other
+    // manual customizations, do not overwrite. Marker: <!-- LM-BANNER-CUSTOM -->
+    // or presence of a "lm-banner-section" block.
+    const existingPath = path.join(__dirname, '..', keyword.slug, 'index.html');
+    if (fs.existsSync(existingPath)) {
+        const existing = fs.readFileSync(existingPath, 'utf8');
+        if (existing.indexOf('LM-BANNER-CUSTOM') !== -1 ||
+            existing.indexOf('lm-banner-section') !== -1) {
+            console.log(`SKIP (has custom LM banner): /${keyword.slug}/`);
+            return;
+        }
+    }
+
     let page = template;
 
     // Replace all placeholders
