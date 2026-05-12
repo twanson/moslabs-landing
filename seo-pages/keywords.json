@@ -449,6 +449,24 @@
       ],
       "volumen": 210,
       "dificultad": 2
+    },
+    {
+      "keyword": "automatización despacho abogados",
+      "slug": "automatizacion-despacho-abogados",
+      "titulo": "Automatización para Despachos de Abogados",
+      "h1": "Automatiza la captación y gestión de tu despacho de abogados",
+      "sector": "Despachos de abogados",
+      "sector_lower": "despachos de abogados",
+      "problema": "Los despachos pierden clientes potenciales porque tardan horas en contestar consultas, y los socios pasan más tiempo cualificando leads que facturando. El cross-selling entre áreas se queda en buenas intenciones.",
+      "solucion": "Implemento un sistema que responde consultas web en minutos, cualifica el caso antes de que llegue al socio, hace seguimiento automático de honorarios enviados y reactiva ex-clientes con asuntos potenciales en sus áreas relevantes.",
+      "beneficios": [
+        "Respuesta automática a consultas en menos de 5 minutos",
+        "Cualificación previa del caso por área (laboral, fiscal, mercantil, contencioso)",
+        "Seguimiento automatizado de honorarios sin perder propuestas",
+        "Reactivación de ex-clientes con cross-selling segmentado"
+      ],
+      "volumen": 210,
+      "dificultad": 3
     }
   ]
 }

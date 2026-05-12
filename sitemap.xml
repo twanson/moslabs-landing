@@ -158,6 +158,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mos-labs.com/automatizacion-despacho-abogados/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Lead Magnets / Recursos -->
   <url>

@@ -1,0 +1,177 @@
+/* ============================================================
+ * MOS Labs · Aesthetic overlay (namespaced 'aes-*')
+ * Componentes visuales de la home aplicables a subpaginas como
+ * capa de fondo sin colisionar con CSS existente.
+ * Cero reglas a body, html, :root, .hero, .navbar, .footer.
+ * ============================================================ */
+
+/* Tokens locales (con valores por defecto; se respetan vars del tema si existen) */
+.aes-bg-layer {
+  --aes-cyan: #53ddfc;
+  --aes-blue: #3b82f6;
+  --aes-purple: #7c3aed;
+  --aes-pink: #ec4899;
+  --aes-amber: #f59e0b;
+  --aes-orange: #f97316;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aes-bg-layer + * { position: relative; z-index: 1; }
+
+/* Blobs */
+.aes-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  animation: aesBlobFloat 20s ease-in-out infinite;
+  will-change: transform;
+}
+.aes-blob.aes-warm {
+  width: 520px; height: 520px;
+  top: -80px; left: -120px;
+  background: radial-gradient(circle, var(--aes-orange), transparent 60%);
+}
+.aes-blob.aes-cool {
+  width: 480px; height: 480px;
+  top: 20%; right: -120px;
+  background: radial-gradient(circle, var(--aes-blue), transparent 60%);
+  animation-delay: -7s;
+}
+.aes-blob.aes-indigo {
+  width: 560px; height: 560px;
+  bottom: -160px; left: 20%;
+  background: radial-gradient(circle, var(--aes-purple), transparent 60%);
+  animation-delay: -14s;
+}
+
+@keyframes aesBlobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.05); }
+  66% { transform: translate(-30px, 40px) scale(0.95); }
+}
+
+/* Organic shapes */
+.aes-shape {
+  position: absolute;
+  opacity: 0.06;
+  background: var(--aes-cyan);
+  filter: blur(40px);
+  animation: aesShapeFloat 30s ease-in-out infinite;
+}
+.aes-shape.aes-shape-1 {
+  width: 380px; height: 380px;
+  top: 10%; right: 15%;
+  border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+}
+.aes-shape.aes-shape-2 {
+  width: 320px; height: 320px;
+  bottom: 10%; left: 8%;
+  border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%;
+  background: var(--aes-purple);
+  animation-delay: -15s;
+}
+@keyframes aesShapeFloat {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+}
+
+/* Particles */
+.aes-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.aes-particle {
+  position: absolute;
+  background: var(--aes-cyan);
+  border-radius: 50%;
+  opacity: 0;
+  animation: aesParticleDrift 14s linear infinite;
+}
+@keyframes aesParticleDrift {
+  0% { opacity: 0; transform: translateY(0) translateX(0); }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(-120px) translateX(40px); }
+}
+
+/* Video placeholder (no toca el seo-hero existente, se mete como bloque hijo) */
+.aes-video-placeholder {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16 / 10;
+  margin: 32px auto 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(83,221,252,0.12), rgba(124,58,237,0.12));
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+.aes-video-placeholder::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(83,221,252,0.06), transparent 50%);
+  animation: aesGradientPulse 6s ease-in-out infinite;
+}
+.aes-video-play {
+  position: relative;
+  width: 76px; height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--aes-cyan, #53ddfc), var(--aes-purple, #7c3aed));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 40px rgba(83,221,252,0.35);
+  transition: transform 0.3s ease;
+}
+.aes-video-play::after {
+  content: "";
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent #08080d;
+  margin-left: 5px;
+}
+.aes-video-placeholder:hover .aes-video-play { transform: scale(1.08); }
+.aes-video-label {
+  position: absolute;
+  bottom: 16px; left: 18px;
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(244,240,251,0.6);
+}
+@keyframes aesGradientPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* Mejora tipografica del seo-hero existente sin reemplazar layout */
+.aes-headline {
+  font-family: 'Newsreader', 'Inter', serif !important;
+  font-weight: 500 !important;
+  font-size: clamp(2.2rem, 5vw, 3.6rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.02em;
+}
+.aes-headline .aes-accent {
+  background: linear-gradient(120deg, #53ddfc 0%, #7c3aed 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .aes-blob { filter: blur(50px); opacity: 0.35; }
+  .aes-blob.aes-warm { width: 320px; height: 320px; }
+  .aes-blob.aes-cool { width: 280px; height: 280px; }
+  .aes-blob.aes-indigo { width: 360px; height: 360px; }
+  .aes-shape { display: none; }
+  .aes-video-placeholder { max-width: 100%; }
+}
