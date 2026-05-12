@@ -219,6 +219,8 @@
   .lm-author-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .lm-author-name { font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 6px; }
   .lm-author-role { color: var(--color-primary); font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 16px; }
+  .lm-form-cover { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 28px; border-radius: var(--radius-md); box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
+  @media (max-width: 900px) { .lm-form-cover { max-width: 280px; } }
   .lm-author-bio { color: var(--color-text-secondary); font-size: 0.96rem; line-height: 1.7; margin: 0; }
   @media (max-width: 900px) {
     .lm-hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -283,7 +285,8 @@
 
       <!-- Columna derecha: form Tally -->
       <div>
-        <div class="lm-form-card">
+        <img src="/recursos/auditoria-6-fugas-clinicas-esteticas/cover.png" alt="Portada de la guía" class="lm-form-cover" width="565" height="800" loading="lazy" />
+          <div class="lm-form-card">
           <h2 class="lm-form-card-title">Descarga gratis</h2>
           <p class="lm-form-card-sub">Te lo enviamos al email en menos de un minuto. Sin newsletter ni spam.</p>
 
