@@ -1,46 +1,31 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Drop shadow filter -->
     <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3" flood-color="#000000"/>
     </filter>
-
-    <!-- Blue gradient -->
     <linearGradient id="blueGradientIcon" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#99aaff;stop-opacity:1" />
       <stop offset="33%" style="stop-color:#6677ff;stop-opacity:1" />
       <stop offset="66%" style="stop-color:#3344ee;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#1a22aa;stop-opacity:1" />
     </linearGradient>
-
-    <!-- Orange gradient -->
     <linearGradient id="orangeGradientIcon" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#ffcc77;stop-opacity:1" />
       <stop offset="33%" style="stop-color:#ffaa44;stop-opacity:1" />
       <stop offset="66%" style="stop-color:#ee7722;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#bb4400;stop-opacity:1" />
     </linearGradient>
-
-    <!-- Gloss overlay gradient -->
     <linearGradient id="glossGradientIcon" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:rgba(255,255,255,0.28);stop-opacity:1" />
       <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" />
     </linearGradient>
   </defs>
-
-  <!-- Blue rounded square with drop shadow -->
   <g filter="url(#dropShadow)">
     <rect x="6" y="4" width="52" height="52" rx="13" fill="url(#blueGradientIcon)" stroke="white" stroke-width="0.18" stroke-opacity="1"/>
-
-    <!-- Gloss overlay for blue square -->
     <rect x="6" y="4" width="52" height="26" rx="13" fill="url(#glossGradientIcon)"/>
   </g>
-
-  <!-- Orange rounded square with drop shadow -->
   <g filter="url(#dropShadow)">
     <rect x="38" y="40" width="52" height="52" rx="13" fill="url(#orangeGradientIcon)" stroke="white" stroke-width="0.12" stroke-opacity="1"/>
-
-    <!-- Gloss overlay for orange square -->
     <rect x="38" y="40" width="52" height="26" rx="13" fill="url(#glossGradientIcon)"/>
   </g>
 </svg>
