@@ -116,9 +116,9 @@
 .aes-video-placeholder {
   position: relative;
   width: 100%;
-  max-width: 520px;
-  aspect-ratio: 16 / 10;
-  margin: 32px auto 0;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
+  margin: 40px auto 0;
   border-radius: 18px;
   background: linear-gradient(135deg, rgba(83,221,252,0.12), rgba(124,58,237,0.12));
   border: 1px solid rgba(255,255,255,0.08);
