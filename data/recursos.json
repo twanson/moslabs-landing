@@ -287,5 +287,37 @@
     ],
     "updated_at": "2026-05-11",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-clinicas-dentales",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para clínicas dentales",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una clínica dental cada mes: leads de la web sin contestar, presupuestos enviados sin seguimiento, no-shows que vacían el sillón, pacientes inactivos sin reactivar. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "dentales",
+      "clinica",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-clinicas-dentales/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-clinicas-dentales.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-clinicas-dentales",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de una clínica dental",
+      "Cómo medir cada fuga con datos de tu software de gestión y agenda",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de gestión dental",
+      "Plantillas genéricas de email",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-05-13",
+    "listed": true
   }
 ]
