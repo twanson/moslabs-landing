@@ -345,5 +345,31 @@
     ],
     "updated_at": "2026-05-14",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-logistica",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing, ventas y operaciones para PYMEs de logística y transporte",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una PYME de logística cada mes: RFQs sin contestar, cotizaciones sin cierre, pedidos sin trazabilidad (WISMO), POD sin digitalizar, cross-sell sin gestionar e incidencias sin proceso. 20 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "logistica", "transporte", "3pl", "freight-forwarding", "operaciones"],
+    "cover": "/recursos/auditoria-6-fugas-logistica/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-logistica.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-logistica",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial y operativo de una PYME logística (FTL/LTL, paquetería, 3PL e-commerce, freight forwarding)",
+      "Cómo medir cada fuga con datos de tu TMS (Dashdoc, Cargoson, Acteos, Fieldeas) y el WMS de almacén",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara — incluyendo e-CMR readiness antes de octubre 2026"
+    ],
+    "what_you_dont_get": [
+      "Comparativas exhaustivas de TMS y WMS",
+      "Plantillas genéricas de email comercial",
+      "Teoría sobre cadena de suministro"
+    ],
+    "updated_at": "2026-05-14",
+    "listed": true
   }
 ]
