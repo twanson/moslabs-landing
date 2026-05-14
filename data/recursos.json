@@ -423,5 +423,31 @@
     ],
     "updated_at": "2026-05-14",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-consultorias-profesionales",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de captación, propuestas y delivery para consultoras profesionales boutique",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una consultora boutique cada mes: leads/referrals sin contestar, propuestas sin follow-up, clientes cerrados sin cross-sell entre áreas, casos de éxito sin testimonial ni referral, LinkedIn orgánico sin nurturing y cliente en delivery sin update proactivo. 20 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "consultoria-profesional", "consultora-boutique", "transformacion-operativa", "advisory", "servicios-profesionales"],
+    "cover": "/recursos/auditoria-6-fugas-consultorias-profesionales/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-consultorias-profesionales.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-consultorias-profesionales",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo de venta y delivery de una consultora boutique de 10-50 personas (transformación operativa, estrategia, RRHH, advisory financiero, M&A, IT consulting, sostenibilidad)",
+      "Cómo medir cada fuga con datos de tu CRM (HubSpot, Salesforce, Pipedrive) y tu PSA (Kantata, Replicon, Scoro, BigTime, Productive)",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara — incluyendo cómo subir el win rate desde 'propuesta enviada'"
+    ],
+    "what_you_dont_get": [
+      "Comparativas exhaustivas de PSA y CRMs",
+      "Plantillas genéricas de email a clientes",
+      "Teoría sobre business development en consultoría"
+    ],
+    "updated_at": "2026-05-14",
+    "listed": true
   }
 ]
