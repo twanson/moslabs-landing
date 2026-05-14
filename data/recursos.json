@@ -319,5 +319,31 @@
     ],
     "updated_at": "2026-05-13",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-gimnasios",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y operaciones para gimnasios",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a un gimnasio cada mes: leads sin contestar, tours sin cierre, socios nuevos que abandonan al mes 3, socios fantasma que pagan sin venir, ex-socios sin reactivar. 20 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "gimnasios", "fitness", "marketing", "operaciones", "retencion"],
+    "cover": "/recursos/auditoria-6-fugas-gimnasios/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-gimnasios.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-gimnasios",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial de un gimnasio (low-cost, mid-market, boutique, funcional, CrossFit, wellness femenino)",
+      "Cómo medir cada fuga con datos de tu software de gestión (Trainingym, Resasports, Mindbody, Glofox) y log de accesos",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de softwares de gestión deportiva",
+      "Plantillas genéricas de email a socios",
+      "Teoría sobre el sector fitness"
+    ],
+    "updated_at": "2026-05-14",
+    "listed": true
   }
 ]
