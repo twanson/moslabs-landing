@@ -371,5 +371,31 @@
     ],
     "updated_at": "2026-05-14",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-manufactura-industrial",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de ingeniería comercial y operaciones para PYMEs industriales",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una PYME industrial cada mes: RFQs sin cotizar a tiempo, ingeniería-comercial desincronizada, pipeline mal priorizado, aftermarket invisible, cross-sell entre familias ausente y marketing industrial pasivo. 20 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "industrial", "manufactura", "aftermarket", "rfq", "operaciones"],
+    "cover": "/recursos/auditoria-6-fugas-manufactura-industrial/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-manufactura-industrial.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-manufactura-industrial",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo comercial y operativo de una PYME industrial (mecanizado CNC, OEM equipos, Tier 2 automoción, química, alimentaria, bienes de equipo)",
+      "Cómo medir cada fuga con datos de tu ERP (SAP B1, Dynamics 365 BC, Sage 200, Odoo) y tu CRM comercial",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara — incluyendo cómo capturar el aftermarket dormido (BCG: 25-30% revenue, 50% beneficios)"
+    ],
+    "what_you_dont_get": [
+      "Comparativas exhaustivas de ERPs y MES (SAP, Dynamics, Sage, Odoo, Hexagon, PTC, Siemens)",
+      "Plantillas genéricas de email comercial",
+      "Teoría sobre Industria 4.0 o digital twins"
+    ],
+    "updated_at": "2026-05-14",
+    "listed": true
   }
 ]
