@@ -397,5 +397,31 @@
     ],
     "updated_at": "2026-05-14",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-hoteles-rurales",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de reservas, ocupación y experiencia para alojamientos rurales",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a un hotel rural cada mes: consultas sin contestar, disponibilidad mal sincronizada entre canales, no-shows sin política, huéspedes sin upsell, reseñas no pedidas y ex-huéspedes sin reactivar. 20 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": ["auditoria", "hoteles-rurales", "casa-rural", "turismo-rural", "ocupacion", "reservas"],
+    "cover": "/recursos/auditoria-6-fugas-hoteles-rurales/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-hoteles-rurales.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-hoteles-rurales",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo de reservas y estancia de un alojamiento rural (casa rural, hotel rural pequeño/medio, posada, agroturismo, glamping)",
+      "Cómo medir cada fuga con datos de tu PMS (Avirato, Sirvoy, Octorate, Lodgify, Tesipro, Mews) y tus extranets Booking/Airbnb",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara — incluyendo cómo reducir comisión OTA pasando reservas al canal directo"
+    ],
+    "what_you_dont_get": [
+      "Comparativas exhaustivas de PMS y channel managers",
+      "Plantillas genéricas de email a huéspedes",
+      "Teoría sobre revenue management hotelero"
+    ],
+    "updated_at": "2026-05-14",
+    "listed": true
   }
 ]
