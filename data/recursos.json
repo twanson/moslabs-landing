@@ -449,5 +449,38 @@
     ],
     "updated_at": "2026-05-14",
     "listed": true
+  },
+  {
+    "slug": "auditoria-6-fugas-clinicas-salud",
+    "title": "Las 6 fugas",
+    "subtitle": "Auditoría operativa de marketing y ventas para clínicas de salud",
+    "type": "auditoria",
+    "summary": "Las 6 fugas operativas que sangran a una clínica de salud cada mes: consultas sin contestar, planes de tratamiento sin cerrar, no-shows que vacían la agenda, tratamientos a medias y pacientes sin reactivar. 15 minutos para saber, en euros, cuánto pierdes y cuál arreglar primero.",
+    "tags": [
+      "auditoria",
+      "clinicas-salud",
+      "podologia",
+      "fisioterapia",
+      "marketing",
+      "ventas"
+    ],
+    "cover": "/recursos/auditoria-6-fugas-clinicas-salud/cover.png",
+    "pdf": "/downloads/mos-labs-auditoria-6-fugas-clinicas-salud.pdf",
+    "form_tally_id": "0Q1oW9",
+    "cta": "Descargar la auditoría",
+    "lm_id": "auditoria-6-fugas-clinicas-salud",
+    "what_you_get": [
+      "Las 6 fugas adaptadas al ciclo de una clínica de salud (podología, fisioterapia, oftalmología, medicina privada, nutrición)",
+      "Cómo medir cada fuga con datos de tu software de gestión y agenda",
+      "Tabla de scoring para priorizar cuál arreglar primero",
+      "Plan de 5 días para tapar la fuga más cara"
+    ],
+    "what_you_dont_get": [
+      "Comparativas de software de gestión clínica",
+      "Plantillas genéricas de email a pacientes",
+      "Teoría sobre el sector"
+    ],
+    "updated_at": "2026-06-25",
+    "listed": true
   }
 ]
