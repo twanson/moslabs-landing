@@ -60,12 +60,12 @@ function generateMetaDescription(keyword) {
 // Generate sitemap
 function generateSitemap(keywords) {
     const staticPages = [
-        { url: 'https://www.mos-labs.com/', changefreq: 'weekly', priority: '1.0' },
-        { url: 'https://www.mos-labs.com/recursos/', changefreq: 'weekly', priority: '0.9' },
-        { url: 'https://www.mos-labs.com/sectores/', changefreq: 'weekly', priority: '0.8' },
-        { url: 'https://www.mos-labs.com/blog/', changefreq: 'weekly', priority: '0.7' },
-        { url: 'https://www.mos-labs.com/privacidad/', changefreq: 'monthly', priority: '0.3' },
-        { url: 'https://www.mos-labs.com/aviso-legal/', changefreq: 'monthly', priority: '0.3' }
+        { url: 'https://moslab.org/', changefreq: 'weekly', priority: '1.0' },
+        { url: 'https://moslab.org/recursos/', changefreq: 'weekly', priority: '0.9' },
+        { url: 'https://moslab.org/sectores/', changefreq: 'weekly', priority: '0.8' },
+        { url: 'https://moslab.org/blog/', changefreq: 'weekly', priority: '0.7' },
+        { url: 'https://moslab.org/privacidad/', changefreq: 'monthly', priority: '0.3' },
+        { url: 'https://moslab.org/aviso-legal/', changefreq: 'monthly', priority: '0.3' }
     ];
 
     // Load lead magnet resources from data/recursos.json (if exists)
@@ -113,7 +113,7 @@ function generateSitemap(keywords) {
     // Add SEO pages
     keywords.forEach(keyword => {
         sitemap += `  <url>
-    <loc>https://www.mos-labs.com/${keyword.slug}/</loc>
+    <loc>https://moslab.org/${keyword.slug}/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -128,7 +128,7 @@ function generateSitemap(keywords) {
         recursos.forEach(r => {
             if (r.listed === false) return;
             sitemap += `  <url>
-    <loc>https://www.mos-labs.com/recursos/${r.slug}/</loc>
+    <loc>https://moslab.org/recursos/${r.slug}/</loc>
     <lastmod>${r.updated_at || new Date().toISOString().slice(0, 10)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -147,7 +147,7 @@ function generateSitemap(keywords) {
             const slug = p.slug || p.id;
             if (!slug) return;
             sitemap += `  <url>
-    <loc>https://www.mos-labs.com/blog/${slug}/</loc>
+    <loc>https://moslab.org/blog/${slug}/</loc>
     <lastmod>${p.updated_at || p.published_at || new Date().toISOString().slice(0, 10)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

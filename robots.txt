@@ -1,5 +1,5 @@
 # robots.txt — Mos Labs
-# https://www.mos-labs.com/
+# https://moslab.org/
 
 User-agent: *
 Allow: /
@@ -9,4 +9,4 @@ Allow: /
 # Disallow: /downloads/
 
 # Sitemap
-Sitemap: https://www.mos-labs.com/sitemap.xml
+Sitemap: https://moslab.org/sitemap.xml
