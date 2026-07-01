@@ -1,4 +1,4 @@
-// ===== MOS Labs Landing Page JavaScript =====
+// ===== MosLab Landing Page JavaScript =====
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
@@ -253,5 +253,5 @@ function initLazyImages() {
 }
 
 // ===== Console message =====
-console.log('%c MOS Labs ', 'background: linear-gradient(135deg, #00D4FF, #8B5CF6); color: #0a0a0f; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
+console.log('%c MosLab ', 'background: linear-gradient(135deg, #00D4FF, #8B5CF6); color: #0a0a0f; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
 console.log('%c Automatización de Marketing y Ventas para PYMEs ', 'color: #9CA3AF; font-size: 12px;');

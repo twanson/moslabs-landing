@@ -1,4 +1,4 @@
-# robots.txt — Mos Labs
+# robots.txt — MosLab
 # https://moslab.org/
 
 User-agent: *

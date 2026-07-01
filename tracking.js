@@ -1,4 +1,4 @@
-// ===== MOS Labs — Booking CTA Tracking =====
+// ===== MosLab — Booking CTA Tracking =====
 // Detecta clicks a Zoho Bookings, dispara evento GA4 'book_call_click' con
 // cta_location (nav/hero/footer/cta-final/mid) y reescribe el href con UTMs
 // únicos por página + posición. Permite saber qué CTA pulsó cada visitante.
@@ -104,7 +104,7 @@
     }, true);
 })();
 
-// ===== MOS Labs — Lead Magnet Tracking =====
+// ===== MosLab — Lead Magnet Tracking =====
 // Detecta clicks a /recursos/auditoria-6-fugas/ y dispara evento GA4
 // 'lm_banner_click' con placement extraído del utm_content del href.
 // El submit del form Tally se trackea desde la propia landing del LM

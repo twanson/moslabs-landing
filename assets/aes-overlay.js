@@ -1,4 +1,4 @@
-/* MOS Labs · Aesthetic particles (namespaced) */
+/* MosLab · Aesthetic particles (namespaced) */
 (function () {
   function generate(containerId, count) {
     var el = document.getElementById(containerId);
