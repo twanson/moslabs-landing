@@ -2281,5 +2281,23 @@ generateParticles('particles');
 </script>
 
 <script src="/tracking.js" defer></script>
+<script>
+// ===== Back-to-top con isotipo MosLab =====
+(function () {
+  if (document.getElementById('ml-top')) return;
+  var css = '#ml-top{position:fixed;right:22px;bottom:22px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;border-radius:50%;background:rgba(14,14,21,0.72);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.35),inset 0 0 0 1px rgba(83,221,252,0.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease,visibility .3s ease;z-index:900;padding:0;}#ml-top.show{opacity:1;visibility:visible;transform:translateY(0);}#ml-top:hover{box-shadow:0 6px 26px rgba(83,221,252,0.25),inset 0 0 0 1px rgba(83,221,252,0.7);}#ml-top svg{width:20px;height:20px;display:block;transition:transform .3s ease;}#ml-top:hover svg{transform:translateY(-2px);}';
+  var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+  var btn = document.createElement('button');
+  btn.id = 'ml-top'; btn.type = 'button'; btn.setAttribute('aria-label', 'Volver arriba');
+  btn.innerHTML = '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M60,69.22l59.99-34.67v73.23c0,1.36,1.1,2.47,2.47,2.47h21.54v6.71l-84,48.5v-96.23Z" fill="#f4f0fb"/></svg>';
+  btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); document.body.scrollTo({ top: 0, behavior: 'smooth' }); });
+  document.body.appendChild(btn);
+  var getY = function () { return Math.max(window.pageYOffset || 0, document.body.scrollTop || 0, document.documentElement.scrollTop || 0); };
+  var onScroll = function () { (getY() > 600) ? btn.classList.add('show') : btn.classList.remove('show'); };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+  onScroll();
+})();
+</script>
 </body>
 </html>
