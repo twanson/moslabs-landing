@@ -1485,27 +1485,24 @@ a.contact-item:hover {
         justify-content: center;
     }
 
+    /* El nav ya no usa drawer móvil (el reskin DS 2026 quitó el hamburguesa):
+       el nav-menu queda inline y solo muestra el CTA (los .nav-link se ocultan
+       en el reskin). Se neutraliza el drawer legacy para que el CTA sea visible. */
     .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 320px;
-        height: 100vh;
-        background: var(--color-bg-elevated);
-        border-left: 1px solid var(--color-border);
-        flex-direction: column;
-        padding: 80px 32px 32px;
-        gap: 24px;
-        transition: right var(--transition-normal);
+        position: static;
+        right: auto;
+        width: auto;
+        max-width: none;
+        height: auto;
+        background: none;
+        border-left: none;
+        flex-direction: row;
+        padding: 0;
+        gap: 10px;
     }
 
     .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-link {
-        font-size: 1.125rem;
+        right: auto;
     }
 
     .nav-cta {
@@ -2351,4 +2348,14 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 }
 @media(max-width:520px){
   .home .steps{grid-template-columns:1fr}
+}
+
+/* Fix nav móvil: que el logo + selector + CTA quepan sin cortarse en 380px */
+@media(max-width:560px){
+  .home .nav-inner{padding:12px 14px;gap:10px}
+  .home .lang-switch{padding:5px 8px;font-size:11px}
+  .home .btn-primary.sm{padding:8px 13px;font-size:12.5px}
+}
+@media(max-width:400px){
+  .home .lang-switch{display:none}
 }
