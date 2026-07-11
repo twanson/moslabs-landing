@@ -89,10 +89,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/styles.css"/>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap');
+  /* Nav/footer + glow al DS 2026 (reskin Fase 3, sin tocar el form Tally) */
+  .navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,13,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border)}
+  .nav-container{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+  .nav-logo .logo-img{height:34px;display:block}
+  .nav-menu{display:flex;align-items:center;gap:22px;margin-left:auto}
+  .nav-link{font-size:14px;color:var(--color-text-secondary);transition:color .2s}
+  .nav-link:hover{color:var(--color-text)}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gradient-primary);color:#050509;font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:12px;box-shadow:var(--shadow-glow);transition:transform .25s}
+  .nav-cta:hover{transform:translateY(-2px);color:#050509}
+  .nav-toggle{display:none}
+  @media(max-width:900px){.nav-menu .nav-link{display:none}}
+  .footer{background:var(--color-bg-elevated);border-top:1px solid var(--color-border)}
+  .footer-title{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .footer-nav a:hover,.contact-info .contact-item:hover,.legal-links a:hover{color:var(--color-primary)}
+  .lm-hero{position:relative;overflow:hidden}
+  .lm-hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;top:-240px;right:-120px;background:radial-gradient(circle at 36% 32%,rgba(174,241,255,.26) 0%,rgba(83,221,252,.16) 32%,rgba(124,58,237,.10) 58%,transparent 74%);pointer-events:none;z-index:0}
+  .lm-hero .container{position:relative;z-index:1}
+
   .lm-hero { padding: 140px 0 60px; }
   .lm-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
   .lm-badge { display: inline-block; padding: 6px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 0.78rem; color: var(--color-primary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
-  .lm-title { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; margin: 0 0 16px; }
+  .lm-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1.1; margin: 0 0 16px; }
   .lm-subtitle { font-family: var(--font-heading); font-style: italic; font-size: 1.4rem; color: var(--color-text-secondary); margin: 0 0 32px; }
   .lm-summary { font-size: 1.05rem; line-height: 1.7; color: var(--color-text-secondary); margin: 0 0 36px; }
   .lm-list-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary); font-weight: 600; margin: 28px 0 14px; }
@@ -103,7 +122,7 @@
   .lm-list-no li::before { content: "×"; color: var(--color-text-muted); }
   .lm-list-no li { color: var(--color-text-secondary); }
   .lm-form-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 36px; position: sticky; top: 100px; }
-  .lm-form-card-title { font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 8px; }
+  .lm-form-card-title { font-family: var(--font-display); font-size: 1.4rem; margin: 0 0 8px; }
   .lm-form-card-sub { color: var(--color-text-secondary); font-size: 0.92rem; margin: 0 0 24px; line-height: 1.5; }
   .lm-tally-mount iframe { background: transparent !important; border: none !important; }
   .lm-meta { font-size: 0.82rem; color: var(--color-text-muted); margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-border); }
@@ -111,7 +130,7 @@
   .lm-author-grid { display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start; max-width: 760px; margin: 0 auto; }
   .lm-author-photo { width: 120px; height: 120px; border-radius: 50%; background: var(--color-bg-elevated); border: 1px solid var(--color-border); overflow: hidden; flex-shrink: 0; }
   .lm-author-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .lm-author-name { font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 6px; }
+  .lm-author-name { font-family: var(--font-display); font-size: 1.4rem; margin: 0 0 6px; }
   .lm-author-role { color: var(--color-primary); font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 0 0 16px; }
   .lm-form-cover { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 28px; border-radius: var(--radius-md); box-shadow: 0 24px 60px rgba(0,0,0,0.45); transform: rotate(-2deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; will-change: transform; }
   .lm-form-cover:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 32px 80px rgba(0,0,0,0.6); }
@@ -137,11 +156,13 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
-      <a href="/#servicios" class="nav-link">Servicios</a>
-      <a href="/#proceso" class="nav-link">Proceso</a>
-      <a href="/#sobre-mi" class="nav-link">Sobre nosotros</a>
+      <a href="/automatizaciones/" class="nav-link">Automatizaciones</a>
+      <a href="/sectores/" class="nav-link">Sectores</a>
+      <a href="/precios/" class="nav-link">Precios</a>
+      <a href="/para-agencias/" class="nav-link">Para agencias</a>
+      <a href="/recursos/" class="nav-link">Recursos</a>
       <a href="/blog/" class="nav-link">Blog</a>
-      <a href="/#contacto" class="nav-link">Contacto</a>
+      
       <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Diagnóstico gratis</a>
     </nav>
   </div>
@@ -232,12 +253,12 @@
       <div class="footer-links">
         <h4 class="footer-title">Enlaces</h4>
         <nav class="footer-nav">
-          <a href="/#servicios">Servicios</a>
-          <a href="/#proceso">Proceso</a>
-          <a href="/#sobre-mi">Sobre nosotros</a>
-          <a href="/blog/">Blog</a>
-          <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener">Contacto</a>
-        </nav>
+                        <a href="/automatizaciones/">Automatizaciones</a>
+                        <a href="/precios/">Precios</a>
+                        <a href="/para-agencias/">Para agencias</a>
+                        <a href="/recursos/">Recursos</a>
+                        <a href="/blog/">Blog</a>
+                    </nav>
       </div>
       <div class="footer-links">
         <h4 class="footer-title">Sectores</h4>
