@@ -233,7 +233,24 @@
           .lm-banner-cover img { max-width: 200px; }
         }
 
-    </style>
+    
+/* ===== Reskin DS 2026 (Fase 3) — nav/footer/headings ===== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,13,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border)}
+.nav-container{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+.nav-logo .logo-img,.nav-logo img{height:34px;display:block}
+.nav-menu{display:flex;align-items:center;gap:22px;margin-left:auto}
+.nav-link{font-size:14px;color:var(--color-text-secondary);font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--color-text)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gradient-primary);color:#050509;font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:12px;box-shadow:var(--shadow-glow);transition:transform .25s}
+.nav-cta:hover{transform:translateY(-2px);color:#050509}
+.nav-toggle{display:none}
+@media(max-width:900px){.nav-menu .nav-link{display:none}}
+.footer{background:var(--color-bg-elevated);border-top:1px solid var(--color-border)}
+.footer-title{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.footer-nav a:hover,.contact-info .contact-item:hover,.legal-links a:hover{color:var(--color-primary)}
+h1,h2,h3,h4,.article-header h1,.article-content h2,.article-content h3,.blog-card-title,.recurso-title,.recursos-hero h1{font-family:'Space Grotesk',sans-serif !important;letter-spacing:-.02em}
+.recursos-hero .recursos-sub,.recurso-subtitle{font-family:'Newsreader',serif !important}
+</style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -266,12 +283,13 @@
                     <span class="hamburger"></span>
                 </button>
                 <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
-                    <a href="/#servicios" class="nav-link">Servicios</a>
-                    <a href="/#proceso" class="nav-link">Proceso</a>
-                    <a href="/#sobre-mi" class="nav-link">Sobre nosotros</a>
-                    <a href="/blog/" class="nav-link">Blog</a>
-                    <a href="/#contacto" class="nav-link">Contacto</a>
-                    <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
+                <a href="/automatizaciones/" class="nav-link">Automatizaciones</a>
+                <a href="/sectores/" class="nav-link">Sectores</a>
+                <a href="/precios/" class="nav-link">Precios</a>
+                <a href="/para-agencias/" class="nav-link">Para agencias</a>
+                <a href="/recursos/" class="nav-link">Recursos</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Hablemos</a>
                 </nav>
             </div>
         </nav>
@@ -479,11 +497,11 @@
                 <div class="footer-links">
                     <h4 class="footer-title">Enlaces</h4>
                     <nav class="footer-nav">
-                        <a href="/#servicios">Servicios</a>
-                        <a href="/#proceso">Proceso</a>
-                        <a href="/#sobre-mi">Sobre nosotros</a>
+                        <a href="/automatizaciones/">Automatizaciones</a>
+                        <a href="/precios/">Precios</a>
+                        <a href="/para-agencias/">Para agencias</a>
+                        <a href="/recursos/">Recursos</a>
                         <a href="/blog/">Blog</a>
-                        <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener">Contacto</a>
                     </nav>
                 </div>
                 <div class="footer-links">
