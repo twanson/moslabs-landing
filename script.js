@@ -345,9 +345,9 @@ function initHome() {
         }
     });
 
-    // Parallax suave de orbes al hacer scroll
+    // Parallax suave de orbes al hacer scroll (desactivado con reduce-motion)
     const orbs = [...document.querySelectorAll('.home [data-parallax]')];
-    if (orbs.length) {
+    if (orbs.length && !reduceMotion) {
         let ticking = false;
         const parallax = () => {
             orbs.forEach(o => {

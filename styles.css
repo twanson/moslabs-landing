@@ -1949,6 +1949,8 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .home .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0;will-change:transform;animation:orbFloat 14s ease-in-out infinite}
 .home .orb.indigo{background:radial-gradient(circle at 34% 30%,rgba(143,134,255,.5) 0%,rgba(43,33,201,.4) 34%,rgba(43,33,201,.14) 58%,transparent 72%)}
 .home .orb.cyanviolet{background:radial-gradient(circle at 36% 32%,rgba(174,241,255,.45) 0%,rgba(83,221,252,.3) 30%,rgba(124,58,237,.18) 58%,transparent 74%)}
+.home .orb.amber{background:radial-gradient(circle at 35% 30%,rgba(255,214,140,.4) 0%,rgba(251,191,36,.22) 35%,rgba(180,90,20,.10) 58%,transparent 74%)}
+.home .orb.celeste{background:radial-gradient(circle at 36% 32%,rgba(220,245,255,.5) 0%,rgba(140,220,250,.28) 32%,rgba(83,221,252,.12) 58%,transparent 74%)}
 @keyframes orbFloat{0%,100%{margin-top:0}50%{margin-top:-26px}}
 .home .blur-glow{position:absolute;border-radius:50%;filter:blur(110px);pointer-events:none}
 
@@ -1978,8 +1980,10 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .home .lm-bullets li::before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:700}
 .home .lm-cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .home .lm-meta{font-size:12.5px;color:var(--text-muted)}
-.home .lm-cover{position:relative;z-index:1}
-.home .lm-cover img{width:100%;border-radius:12px;box-shadow:0 26px 60px rgba(0,0,0,.55);transform:rotate(2.5deg);transition:.3s}
+.home .lm-cover{position:relative;z-index:1;align-self:center;max-width:280px}
+/* aspect-ratio + height:auto + object-fit evitan que la portada se estire a la
+   altura de la card (mismo fix que la foto del founder). Ratio real 565x800. */
+.home .lm-cover img{width:100%;height:auto;aspect-ratio:565/800;object-fit:cover;border-radius:12px;box-shadow:0 26px 60px rgba(0,0,0,.55);transform:rotate(2.5deg);transition:.3s}
 .home .lm-cover img:hover{transform:rotate(0) scale(1.02)}
 
 /* ===== Founder ===== */
