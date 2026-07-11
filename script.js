@@ -139,6 +139,11 @@ function createParticle(container) {
 
 // ===== Scroll Animations =====
 function initScrollAnimations() {
+    // La home usa su propio sistema `.reveal` (initHome); evitar que este
+    // observer legacy añada `.animate-on-scroll` a sus .faq-item y duplique
+    // el control de opacidad.
+    if (document.body.classList.contains('home')) return;
+
     const animatedElements = document.querySelectorAll(
         '.problem-card, .service-card, .process-step, .result-card, .metric, .faq-item'
     );
@@ -264,31 +269,39 @@ function initHome() {
     const track = document.getElementById('track');
     if (track) track.innerHTML += track.innerHTML;
 
-    // Reveal + stagger por hermanos
+    // Reveal + stagger por hermanos, con red de seguridad anti-saltos.
     const revealEls = document.querySelectorAll('.home .reveal');
     if (revealEls.length) {
-        const io = new IntersectionObserver((entries) => {
+        const io = new IntersectionObserver((entries, obs) => {
             entries.forEach(e => {
                 if (!e.isIntersecting) return;
                 const sib = [...e.target.parentElement.querySelectorAll(':scope > .reveal')];
                 const i = sib.indexOf(e.target);
-                e.target.style.transitionDelay = (i > 0 ? i * 0.09 : 0) + 's';
+                e.target.style.transitionDelay = (i > 0 ? Math.min(i, 6) * 0.09 : 0) + 's';
                 e.target.classList.add('visible');
-                io.unobserve(e.target);
+                obs.unobserve(e.target);
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
         revealEls.forEach(el => io.observe(el));
 
-        // Fallback anti-pestaña-oculta: el IntersectionObserver difiere sus
-        // callbacks si la pestaña carga en segundo plano. Este timer garantiza
-        // que el contenido above-the-fold (hero) nunca se quede en blanco.
-        // Los elementos below-the-fold conservan su animación al hacer scroll.
-        setTimeout(() => {
+        // Red de seguridad: revela cualquier .reveal que ya esté en o por encima
+        // del viewport aunque el IntersectionObserver no dispare (pestaña en 2º
+        // plano, scroll con saltos/anchors, carga lenta o elementos muy altos).
+        // Lo que queda por debajo del fold conserva su animación al hacer scroll.
+        const sweep = () => {
             revealEls.forEach(el => {
                 if (el.classList.contains('visible')) return;
-                if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+                if (el.getBoundingClientRect().top < window.innerHeight * 0.95) el.classList.add('visible');
             });
-        }, 1000);
+        };
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) { requestAnimationFrame(() => { sweep(); ticking = false; }); ticking = true; }
+        }, { passive: true });
+        window.addEventListener('resize', sweep, { passive: true });
+        sweep();
+        setTimeout(sweep, 300);
+        setTimeout(sweep, 1200);
     }
 
     // KPIs: gauge + ecg + barras al entrar en viewport

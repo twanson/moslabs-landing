@@ -1984,7 +1984,10 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 
 /* ===== Founder ===== */
 .home .founder-card{display:grid;grid-template-columns:280px 1fr;gap:46px;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:24px;padding:42px;margin-top:52px}
-.home .founder-photo img{width:100%;border-radius:18px;display:block;box-shadow:0 20px 60px rgba(43,33,201,.3)}
+.home .founder-photo{max-width:280px;align-self:center}
+/* aspect-ratio + height:auto + object-fit evitan que la foto se estire a la
+   altura de la card (cara deformada); mantiene la proporción original 600x704. */
+.home .founder-photo img{width:100%;height:auto;aspect-ratio:600/704;object-fit:cover;border-radius:18px;display:block;box-shadow:0 20px 60px rgba(43,33,201,.3)}
 .home .founder-bio p{color:var(--text-secondary);font-size:15px;margin-bottom:12px}
 .home .founder-bio strong{color:var(--text);font-weight:600}
 .home .founder-quote{font-family:var(--font-accent);font-style:italic;font-size:19px;color:var(--cream);margin:18px 0 6px}
@@ -2005,7 +2008,10 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .home .chat-avatar svg{width:16px;height:16px}
 
 /* ===== HERO centrado ===== */
-.home .hero{position:relative;padding:168px 0 70px;text-align:center;overflow:hidden}
+/* display:block + min-height:0 neutralizan la regla legacy global `.hero`
+   (min-height:100vh; display:flex; align-items/justify-content:center) que
+   comparten las 48 páginas y se filtraba al home rompiendo el layout. */
+.home .hero{position:relative;display:block;min-height:0;padding:168px 0 70px;text-align:center;overflow:hidden}
 .home .hero .blur-glow.c{width:640px;height:640px;background:rgba(83,221,252,.13);top:-220px;left:50%;transform:translateX(-50%)}
 .home .hero .orb.indigo{width:380px;height:380px;left:-140px;top:340px}
 .home .hero .orb.cyanviolet{width:300px;height:300px;right:-110px;top:150px}
@@ -2139,7 +2145,7 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .home .auto-cta{margin-top:16px;font-size:13.5px;font-weight:600;color:var(--primary)}
 
 /* ===== Pricing ===== */
-.home .pricing{background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.home .pricing{background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
 .home .free-banner{margin:44px 0 0;background:linear-gradient(135deg,rgba(83,221,252,.10),rgba(124,58,237,.10));border:1px solid rgba(83,221,252,.28);border-radius:var(--radius);padding:20px 28px;display:flex;align-items:center;gap:16px;font-size:15px}
 .home .free-banner .gift{font:700 13px var(--font-mono);color:#050509;background:var(--primary);border-radius:8px;padding:6px 12px;letter-spacing:.06em;white-space:nowrap}
 .home .free-banner b{color:var(--primary)}
