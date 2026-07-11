@@ -16,10 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
 function initCalculator() {
     const calc = document.getElementById('calc');
     if (!calc) return;
+    const isEN = document.documentElement.lang === 'en';
     const $ = id => document.getElementById(id);
-    // Formato español con punto de millar SIEMPRE (incl. 4 cifras: 1.990 €).
-    // toLocaleString('es-ES') no agrupa los 4 dígitos en algunos entornos.
-    const eur = n => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
+    // Formato de euro consciente del idioma. En ES: "1.990 €" (punto de millar,
+    // € al final). En EN: "€1,990" (coma de millar, € delante). Agrupamos a mano
+    // porque toLocaleString no agrupa los 4 dígitos en algunos entornos.
+    const eur = n => {
+        const num = Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, isEN ? ',' : '.');
+        return isEN ? '€' + num : num + ' €';
+    };
 
     function recalc() {
         const personas = Math.max(0, +$('calc-personas').value || 0);
@@ -28,7 +33,7 @@ function initCalculator() {
         const leads    = Math.max(0, +$('calc-leads').value || 0);
         const ticket   = Math.max(0, +$('calc-ticket').value || 0);
 
-        if ($('calc-coste-out')) $('calc-coste-out').textContent = coste + ' €';
+        if ($('calc-coste-out')) $('calc-coste-out').textContent = isEN ? '€' + coste : coste + ' €';
 
         const horasMes = personas * horas * 4.33;      // semanas/mes
         const eurHoras = horasMes * coste;
@@ -50,11 +55,12 @@ function initCalculator() {
 
         if (mes > 0) {
             const meses = Math.max(1, Math.ceil(precio / mes));
-            $('calc-roi-meses').textContent = meses + (meses === 1 ? ' mes' : ' meses');
+            const unit = isEN ? (meses === 1 ? ' month' : ' months') : (meses === 1 ? ' mes' : ' meses');
+            $('calc-roi-meses').textContent = meses + unit;
         } else {
             $('calc-roi-meses').textContent = '—';
         }
-        if ($('calc-cta-eur')) $('calc-cta-eur').textContent = eur(anual) + '/año';
+        if ($('calc-cta-eur')) $('calc-cta-eur').textContent = eur(anual) + (isEN ? '/year' : '/año');
     }
 
     calc.querySelectorAll('input').forEach(i => i.addEventListener('input', recalc));
