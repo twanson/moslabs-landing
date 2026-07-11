@@ -2062,15 +2062,23 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .home .visible-kpis .roi-bars rect:nth-child(3){transition-delay:.5s}
 
 /* ===== Marquee logos ===== */
-.home .marquee-section{padding:36px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-elevated);margin-top:80px}
+.home .marquee-section{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-elevated);margin-top:80px}
 .home .marquee-label{text-align:center;font:500 11px var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:24px}
 .home .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
 .home .marquee-track{display:flex;gap:56px;width:max-content;animation:mqScroll 36s linear infinite;align-items:center}
 .home .marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes mqScroll{to{transform:translateX(-50%)}}
-.home .m-logo{display:flex;align-items:center;gap:10px;font:600 16px var(--font-display);color:rgba(244,240,251,.6);white-space:nowrap;transition:.25s;filter:grayscale(.4)}
+.home .m-logo{display:flex;align-items:center;gap:12px;font:600 19px var(--font-display);color:rgba(244,240,251,.6);white-space:nowrap;transition:.25s;filter:grayscale(.4)}
 .home .m-logo:hover{color:var(--text);filter:none}
-.home .m-logo img{width:26px;height:26px;object-fit:contain}
+.home .m-logo img{width:36px;height:36px;object-fit:contain}
+
+/* Enlace terciario del hero: play + "Mira cómo funciona" → scroll al vídeo */
+.home .hero-play{display:inline-flex;align-items:center;gap:11px;margin-top:16px;font-size:14px;color:var(--text-secondary);transition:color .25s}
+.home .hero-play:hover{color:var(--text)}
+.home .hero-play-btn{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:rgba(83,221,252,.12);border:1px solid rgba(83,221,252,.35);display:flex;align-items:center;justify-content:center;transition:.25s}
+.home .hero-play:hover .hero-play-btn{background:rgba(83,221,252,.2);box-shadow:0 0 18px rgba(83,221,252,.3)}
+.home .hero-play-btn svg{margin-left:2px}
+.home #demo-video{scroll-margin-top:90px}
 
 /* ===== Secciones ===== */
 .home section{position:relative;padding:110px 0}
