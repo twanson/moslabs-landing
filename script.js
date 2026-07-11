@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollAnimations();
     initSmoothScroll();
+    initHome();
 });
 
 // ===== Navbar Scroll Effect =====
@@ -66,6 +67,7 @@ function initFAQ() {
 
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
+        if (!question) return; // FAQ nativa (<details>/<summary>) no necesita JS
 
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
@@ -249,6 +251,101 @@ function initLazyImages() {
         images.forEach(img => {
             img.src = img.dataset.src;
         });
+    }
+}
+
+// ===== Home 2026 (mockup v2) =====
+// Solo se ejecuta en <body class="home"> (index.html). Cada bloque va
+// guardado para no afectar a las páginas legacy que también cargan script.js.
+function initHome() {
+    if (!document.body.classList.contains('home')) return;
+
+    // Marquee: duplicar contenido para loop infinito
+    const track = document.getElementById('track');
+    if (track) track.innerHTML += track.innerHTML;
+
+    // Reveal + stagger por hermanos
+    const revealEls = document.querySelectorAll('.home .reveal');
+    if (revealEls.length) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const sib = [...e.target.parentElement.querySelectorAll(':scope > .reveal')];
+                const i = sib.indexOf(e.target);
+                e.target.style.transitionDelay = (i > 0 ? i * 0.09 : 0) + 's';
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => io.observe(el));
+
+        // Fallback anti-pestaña-oculta: el IntersectionObserver difiere sus
+        // callbacks si la pestaña carga en segundo plano. Este timer garantiza
+        // que el contenido above-the-fold (hero) nunca se quede en blanco.
+        // Los elementos below-the-fold conservan su animación al hacer scroll.
+        setTimeout(() => {
+            revealEls.forEach(el => {
+                if (el.classList.contains('visible')) return;
+                if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+            });
+        }, 1000);
+    }
+
+    // KPIs: gauge + ecg + barras al entrar en viewport
+    const kpis = document.getElementById('kpis');
+    if (kpis) {
+        const kio = new IntersectionObserver((es) => {
+            es.forEach(e => {
+                if (!e.isIntersecting) return;
+                kpis.classList.add('visible-kpis');
+                const ring = document.getElementById('ring');
+                if (ring) ring.style.strokeDashoffset = 188.5 * (1 - 0.75);
+                const t = document.getElementById('ringTxt');
+                if (t) { let v = 0; const iv = setInterval(() => { v++; t.textContent = v + 'h'; if (v >= 18) clearInterval(iv); }, 60); }
+                kio.disconnect();
+            });
+        }, { threshold: 0.4 });
+        kio.observe(kpis);
+    }
+
+    // Punto que recorre el pipeline (respeta reduce-motion)
+    const dot = document.getElementById('pulseDot');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (dot && !reduceMotion) {
+        let x = 10, dir = 1;
+        setInterval(() => { x += 3.2 * dir; if (x > 670) x = 10; dot.setAttribute('cx', x); }, 30);
+    }
+
+    // Partículas flotantes + estrellas fugaces
+    document.querySelectorAll('.home .fx-layer').forEach(layer => {
+        const n = parseInt(layer.dataset.fx || 20, 10);
+        for (let i = 0; i < n; i++) {
+            const p = document.createElement('div'); p.className = 'particle';
+            const s = 1.5 + Math.random() * 3, r = Math.random();
+            p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;width:${s}px;height:${s}px;opacity:${.12 + Math.random() * .3};background:${r < .4 ? '#ffffff' : r < .7 ? '#53ddfc' : '#8B5CF6'};animation-duration:${15 + Math.random() * 20}s;animation-delay:${-Math.random() * 20}s`;
+            layer.appendChild(p);
+        }
+        for (let i = 0; i < 3; i++) {
+            const st = document.createElement('div'); st.className = 'shooting';
+            st.style.cssText = `left:${20 + Math.random() * 70}%;top:${Math.random() * 55}%;animation-duration:${6 + Math.random() * 8}s;animation-delay:${Math.random() * 9}s`;
+            layer.appendChild(st);
+        }
+    });
+
+    // Parallax suave de orbes al hacer scroll
+    const orbs = [...document.querySelectorAll('.home [data-parallax]')];
+    if (orbs.length) {
+        let ticking = false;
+        const parallax = () => {
+            orbs.forEach(o => {
+                const rct = o.parentElement.getBoundingClientRect();
+                const offset = (rct.top + rct.height / 2 - window.innerHeight / 2) * parseFloat(o.dataset.parallax);
+                o.style.transform = `translateY(${-offset}px)`;
+            });
+            ticking = false;
+        };
+        window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(parallax); ticking = true; } }, { passive: true });
+        parallax();
     }
 }
 
