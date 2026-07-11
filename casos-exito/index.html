@@ -77,6 +77,33 @@
             nav a { margin-left: 14px; }
             .container { padding: 0 16px; }
         }
+        /* Menú móvil (drawer overlay) — casos-exito no enlaza styles.css */
+        .m-burger { display: none; }
+        .m-drawer { display: none; }
+        body.m-drawer-open { overflow: hidden; }
+        @media (max-width: 768px) {
+          .m-burger { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 42px; height: 42px; margin-left: 10px; padding: 0; background: none; border: none; cursor: pointer; flex: 0 0 auto; position: relative; z-index: 210; }
+          .m-burger span { display: block; width: 24px; height: 2px; border-radius: 2px; background: #f4f0fb; margin: 0 auto; transition: transform .25s ease, opacity .2s ease; }
+          .m-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+          .m-burger.open span:nth-child(2) { opacity: 0; }
+          .m-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+          header .container nav { margin-left: auto; }
+          .m-drawer { display: flex; flex-direction: column; position: fixed; inset: 0; z-index: 1000; background: #08080d; padding: 0 24px 40px; transform: translateX(100%); transition: transform .3s cubic-bezier(.2,.7,.3,1); overflow-y: auto; overscroll-behavior: contain; }
+          .m-drawer.open { transform: none; }
+          .m-drawer nav, .m-drawer .m-drawer-links { position: static; background: none; border: none; }
+          .m-drawer-head { display: flex; align-items: center; justify-content: space-between; height: 66px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.08); }
+          .m-drawer-logo { display: flex; align-items: center; }
+          .m-drawer-logo img { height: 30px; width: auto; display: block; }
+          .m-drawer-close { width: 44px; height: 44px; margin-right: -9px; display: flex; align-items: center; justify-content: center; background: none; border: none; color: #f4f0fb; cursor: pointer; }
+          .m-drawer-close svg { width: 28px; height: 28px; }
+          .m-drawer-links { display: flex; flex-direction: column; }
+          .m-drawer-links a { font: 700 21px 'Space Grotesk', sans-serif; letter-spacing: -.02em; color: #f4f0fb; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.08); text-decoration: none; }
+          .m-drawer-links a:hover, .m-drawer-links a:active { color: #53ddfc; }
+          .m-drawer-lang { margin: 24px 0 4px; font: 500 14px 'JetBrains Mono', monospace; letter-spacing: .08em; color: #8a8899; }
+          .m-drawer-lang a { color: #8a8899; text-decoration: none; }
+          .m-drawer-lang b { color: #53ddfc; font-weight: 700; }
+          .m-drawer-cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 16px; background: linear-gradient(135deg,#53ddfc,#7c3aed); color: #050509; font: 600 15px 'Inter', sans-serif; padding: 15px 24px; border-radius: 12px; text-decoration: none; }
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
     <script>
@@ -108,6 +135,7 @@
                 <a href="/automatizaciones/">Automatizaciones</a>
                 <a href="/sectores/">Sectores</a>
                 <a href="/precios/">Precios</a>
+                <a href="/calculadora-ahorro/">Calculadora</a>
                 <a href="/para-agencias/">Para agencias</a>
                 <a href="/recursos/">Recursos</a>
                 <a href="/blog/">Blog</a>
@@ -349,5 +377,6 @@
         <p>&copy; 2026 MosLab. Marketing y Automatización para PYMEs en España.</p>
         <p><a href="/">Inicio</a> | <a href="/blog/">Blog</a> | <a href="/calculadora-ahorro/">Calculadora de ahorro</a> | <a href="/#contacto">Contacto</a></p>
     </footer>
+    <script src="/script.js"></script>
 </body>
 </html>

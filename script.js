@@ -24,14 +24,16 @@ function initMobileNav() {
 
     const en = document.documentElement.lang === 'en';
     const zoho = 'https://moslabs.zohobookings.eu/#/moslabs';
+    const logo = '/assets/logo-moslabs-horizontal-dark.svg';
+    const home = en ? '/en/' : '/';
     const links = en ? [
         ['/en/automations/', 'Automations'], ['/sectores/', 'Sectors'], ['/en/pricing/', 'Pricing'],
-        ['/en/for-agencies/', 'For agencies'], ['/recursos/', 'Resources'], ['/blog/', 'Blog'],
-        ['/en/savings-calculator/', 'Savings calculator']
+        ['/en/savings-calculator/', 'Savings calculator'], ['/en/for-agencies/', 'For agencies'],
+        ['/recursos/', 'Resources'], ['/blog/', 'Blog']
     ] : [
         ['/automatizaciones/', 'Automatizaciones'], ['/sectores/', 'Sectores'], ['/precios/', 'Precios'],
-        ['/para-agencias/', 'Para agencias'], ['/recursos/', 'Recursos'], ['/blog/', 'Blog'],
-        ['/calculadora-ahorro/', 'Calculadora de ahorro']
+        ['/calculadora-ahorro/', 'Calculadora de ahorro'], ['/para-agencias/', 'Para agencias'],
+        ['/recursos/', 'Recursos'], ['/blog/', 'Blog']
     ];
     const t = en
         ? { open: 'Open menu', close: 'Close menu', menu: 'Menu', cta: 'Free diagnosis' }
@@ -56,8 +58,11 @@ function initMobileNav() {
         ? `<a href="${altEs}">ES</a> <span>/</span> <b aria-current="true">EN</b>`
         : `<b aria-current="true">ES</b> <span>/</span> <a href="${altEn}">EN</a>`;
     drawer.innerHTML =
-        `<button class="m-drawer-close" type="button" aria-label="${t.close}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`
-        + `<nav class="m-drawer-links" aria-label="${t.menu}">${linksHtml}</nav>`
+        `<div class="m-drawer-head">`
+        + `<a class="m-drawer-logo" href="${home}"><img src="${logo}" alt="MosLab"/></a>`
+        + `<button class="m-drawer-close" type="button" aria-label="${t.close}"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`
+        + `</div>`
+        + `<div class="m-drawer-links" role="navigation" aria-label="${t.menu}">${linksHtml}</div>`
         + `<div class="m-drawer-lang">${langHtml}</div>`
         + `<a class="m-drawer-cta" href="${zoho}">${t.cta}</a>`;
     document.body.appendChild(drawer);

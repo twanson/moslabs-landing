@@ -2387,24 +2387,38 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 .m-drawer{display:none}
 body.m-drawer-open{overflow:hidden}
 @media(max-width:768px){
-  .m-burger{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;margin-left:auto;padding:0;background:none;border:none;cursor:pointer;flex:0 0 auto;position:relative;z-index:210}
+  /* Hamburguesa — a la derecha del header, junto al CTA */
+  .m-burger{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;margin-left:10px;padding:0;background:none;border:none;cursor:pointer;flex:0 0 auto;position:relative;z-index:210}
   .m-burger span{display:block;width:24px;height:2px;border-radius:2px;background:#f4f0fb;margin:0 auto;transition:transform .25s ease, opacity .2s ease}
   .m-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .m-burger.open span:nth-child(2){opacity:0}
   .m-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  /* El CTA y el selector inline se mueven al drawer en móvil */
-  .home .nav-inner .btn-primary.sm,.home .nav-inner .lang-switch,
-  .nav-container .nav-cta,header nav .nav-cta-btn{display:none!important}
-  /* Drawer a pantalla completa */
-  .m-drawer{display:flex;flex-direction:column;position:fixed;inset:0;z-index:300;background:rgba(8,8,13,.98);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:78px 26px 40px;transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.3,1);overflow-y:auto;overscroll-behavior:contain}
+  /* En móvil se ocultan los enlaces de escritorio y el selector inline (van al
+     drawer); el CTA "Diagnóstico gratuito" permanece SIEMPRE visible y compacto. */
+  .home .nav-inner .lang-switch{display:none!important}
+  .home .nav-inner .btn-primary.sm{display:inline-flex!important;margin-left:auto}
+  .nav-container .nav-menu{margin-left:auto}
+  header .container nav{margin-left:auto}
+  .home .nav-inner .btn-primary.sm,
+  .nav-container .nav-cta,
+  header nav .nav-cta-btn{display:inline-flex!important;align-items:center;justify-content:center;width:auto;padding:9px 14px;font-size:13px;line-height:1;white-space:nowrap;border-radius:10px}
+  /* Drawer: overlay real, fondo sólido, slide-in desde la derecha */
+  .m-drawer{display:flex;flex-direction:column;position:fixed;inset:0;z-index:1000;background:#08080d;padding:0 24px calc(40px + env(safe-area-inset-bottom));transform:translateX(100%);transition:transform .3s cubic-bezier(.2,.7,.3,1);overflow-y:auto;overscroll-behavior:contain}
   .m-drawer.open{transform:none}
-  .m-drawer-close{position:absolute;top:18px;right:18px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:none;border:none;color:#f4f0fb;cursor:pointer}
+  /* Los descendientes del drawer nunca deben heredar posicionamiento fijo de reglas
+     de elemento como `.home nav` (que fijaría el bloque de enlaces arriba). */
+  .m-drawer nav,.m-drawer .m-drawer-links,.m-drawer section{position:static;background:none;border:none;z-index:auto;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .m-drawer-head{display:flex;align-items:center;justify-content:space-between;height:66px;margin-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .m-drawer-logo{display:flex;align-items:center}
+  .m-drawer-logo img{height:30px;width:auto;display:block}
+  .m-drawer-close{width:44px;height:44px;margin-right:-9px;display:flex;align-items:center;justify-content:center;background:none;border:none;color:#f4f0fb;cursor:pointer}
+  .m-drawer-close svg{width:28px;height:28px}
   .m-drawer-links{display:flex;flex-direction:column}
-  .m-drawer-links a{font:700 22px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f4f0fb;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;transition:color .2s}
+  .m-drawer-links a{font:700 21px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f4f0fb;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.08);text-decoration:none;transition:color .2s}
   .m-drawer-links a:hover,.m-drawer-links a:active{color:#53ddfc}
-  .m-drawer-lang{margin:26px 0 8px;font:500 14px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#8a8899}
+  .m-drawer-lang{margin:24px 0 4px;font:500 14px 'JetBrains Mono',monospace;letter-spacing:.08em;color:#8a8899}
   .m-drawer-lang a{color:#8a8899;text-decoration:none}
   .m-drawer-lang a:hover{color:#f4f0fb}
   .m-drawer-lang b{color:#53ddfc;font-weight:700}
-  .m-drawer-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;background:linear-gradient(135deg,#53ddfc,#7c3aed);color:#050509;font:600 15px 'Inter',sans-serif;padding:15px 24px;border-radius:12px;text-decoration:none;box-shadow:0 0 30px rgba(83,221,252,.25)}
+  .m-drawer-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;background:linear-gradient(135deg,#53ddfc,#7c3aed);color:#050509;font:600 15px 'Inter',sans-serif;padding:15px 24px;border-radius:12px;text-decoration:none;box-shadow:0 0 30px rgba(83,221,252,.25)}
 }
