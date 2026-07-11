@@ -1,4 +1,21 @@
-/* ===== Legal Pages Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+/* ===== Legal Pages Styles — pasada de coherencia DS 2026 ===== */
+
+/* Nav y footer al estilo DS (estas páginas no cargan seo-page-styles.css) */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(8,8,13,.75); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-border); }
+.nav-container { max-width: 1180px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; gap: 24px; }
+.nav-logo .logo-img { height: 34px; display: block; }
+.nav-menu { display: flex; align-items: center; gap: 22px; margin-left: auto; }
+.nav-link { font-size: 14px; color: var(--color-text-secondary); transition: color .2s; }
+.nav-link:hover { color: var(--color-text); }
+.nav-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--gradient-primary); color: #050509; font-weight: 600; font-size: 13.5px; padding: 9px 18px; border-radius: 12px; box-shadow: var(--shadow-glow); transition: transform .25s, box-shadow .25s; }
+.nav-cta:hover { transform: translateY(-2px); color: #050509; }
+.nav-toggle { display: none; }
+@media (max-width: 900px) { .nav-menu .nav-link { display: none; } }
+.footer { background: var(--color-bg-elevated); border-top: 1px solid var(--color-border); }
+.footer-title { font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.footer-nav a:hover, .contact-info .contact-item:hover, .legal-links a:hover { color: var(--color-primary); }
 
 /* Page Layout */
 .legal-page {
@@ -16,12 +33,12 @@
 }
 
 .legal-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 16px;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text);
 }
 
 .legal-updated {
@@ -44,6 +61,9 @@
 }
 
 .legal-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--color-text);
