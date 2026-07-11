@@ -386,19 +386,23 @@ function initHome() {
         setInterval(() => { x += 3.2 * dir; if (x > 670) x = 10; dot.setAttribute('cx', x); }, 30);
     }
 
-    // Partículas flotantes + estrellas fugaces
+    // Partículas flotantes + estrellas fugaces. En móvil (≤768px): la mitad de
+    // partículas y sin estrellas fugaces (rendimiento).
+    const mobileFx = window.innerWidth <= 768;
     document.querySelectorAll('.home .fx-layer').forEach(layer => {
-        const n = parseInt(layer.dataset.fx || 20, 10);
+        const n = Math.round(parseInt(layer.dataset.fx || 20, 10) * (mobileFx ? 0.5 : 1));
         for (let i = 0; i < n; i++) {
             const p = document.createElement('div'); p.className = 'particle';
             const s = 1.5 + Math.random() * 3, r = Math.random();
             p.style.cssText = `left:${Math.random() * 100}%;top:${Math.random() * 100}%;width:${s}px;height:${s}px;opacity:${.12 + Math.random() * .3};background:${r < .4 ? '#ffffff' : r < .7 ? '#53ddfc' : '#8B5CF6'};animation-duration:${15 + Math.random() * 20}s;animation-delay:${-Math.random() * 20}s`;
             layer.appendChild(p);
         }
-        for (let i = 0; i < 3; i++) {
-            const st = document.createElement('div'); st.className = 'shooting';
-            st.style.cssText = `left:${20 + Math.random() * 70}%;top:${Math.random() * 55}%;animation-duration:${6 + Math.random() * 8}s;animation-delay:${Math.random() * 9}s`;
-            layer.appendChild(st);
+        if (!mobileFx) {
+            for (let i = 0; i < 3; i++) {
+                const st = document.createElement('div'); st.className = 'shooting';
+                st.style.cssText = `left:${20 + Math.random() * 70}%;top:${Math.random() * 55}%;animation-duration:${6 + Math.random() * 8}s;animation-delay:${Math.random() * 9}s`;
+                layer.appendChild(st);
+            }
         }
     });
 

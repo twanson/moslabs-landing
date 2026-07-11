@@ -2359,3 +2359,23 @@ body.home{font-family:var(--font-body);background:var(--bg);color:var(--text);li
 @media(max-width:400px){
   .home .lang-switch{display:none}
 }
+
+/* ==========================================================================
+   Ajustes MÓVIL (≤768px) — el desktop no se toca
+   ========================================================================== */
+.home .hero-badge .badge-short{display:none}
+@media(max-width:768px){
+  /* 1. Sin overflow horizontal: recorta los transforms de reveal + orbes/glows */
+  .home header,.home section{overflow-x:clip}
+  /* 3. Rendimiento: fuera los watermarks del isotipo en móvil */
+  .home .watermark{display:none}
+  /* 4. Badge del hero corto en móvil (cabe en una línea) */
+  .home .hero-badge .badge-long{display:none}
+  .home .hero-badge .badge-short{display:inline}
+  /* 2. "Funciona.": los 3 mockups pasan a carrusel horizontal con scroll-snap
+     y hint de swipe (asoma ~14% de la siguiente tarjeta) */
+  .home .demo-grid{grid-template-columns:none;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:2px;gap:14px;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .home .demo-grid::-webkit-scrollbar{display:none}
+  .home .demo-grid>*{flex:0 0 86%;scroll-snap-align:start;margin:0}
+  .home .demo-grid .phone{max-width:none}
+}
