@@ -23,6 +23,9 @@
         .logo { display: flex; align-items: center; }
         nav a { margin-left: 22px; color: #8a8899; font-size: 14px; transition: color .2s; }
         nav a:hover { color: #f4f0fb; }
+        nav a.nav-cta-btn { color: #050509; background: linear-gradient(135deg,#53ddfc,#7c3aed); padding: 9px 18px; border-radius: 12px; font-weight: 600; font-size: 13.5px; box-shadow: 0 0 30px rgba(83,221,252,.25); transition: transform .25s, box-shadow .25s; }
+        nav a.nav-cta-btn:hover { color: #050509; transform: translateY(-2px); box-shadow: 0 0 44px rgba(83,221,252,.4); }
+        @media (max-width: 900px) { nav a:not(.nav-cta-btn) { display: none; } }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
         .hero { padding: 150px 0 60px; text-align: center; position: relative; overflow: hidden; }
         .hero::before { content:""; position:absolute; width:520px; height:520px; border-radius:50%; top:-220px; left:50%; transform:translateX(-50%); background:rgba(83,221,252,.13); filter:blur(110px); pointer-events:none; }
@@ -105,8 +108,10 @@
                 <a href="/automatizaciones/">Automatizaciones</a>
                 <a href="/sectores/">Sectores</a>
                 <a href="/precios/">Precios</a>
+                <a href="/para-agencias/">Para agencias</a>
                 <a href="/recursos/">Recursos</a>
                 <a href="/blog/">Blog</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" class="nav-cta-btn">Diagnóstico gratuito</a>
             </nav>
         </div>
     </header>
