@@ -9,7 +9,78 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initHome();
     initCalculator();
+    initMobileNav();
 });
+
+// ===== Menú móvil (hamburguesa + drawer a pantalla completa) =====
+// Funciona en todas las páginas (comparten la navbar fija): .home (#navbar >
+// .nav-inner), .navbar legacy (#navbar > .nav-container) y el <header> de
+// /casos-exito/. Los enlaces se generan según document.lang (ES/EN). Sin librerías.
+function initMobileNav() {
+    if (document.getElementById('mBurger')) return;
+    const bar = document.getElementById('navbar') || document.querySelector('body > header');
+    if (!bar) return;
+    const inner = bar.querySelector('.nav-inner, .nav-container, .container') || bar;
+
+    const en = document.documentElement.lang === 'en';
+    const zoho = 'https://moslabs.zohobookings.eu/#/moslabs';
+    const links = en ? [
+        ['/en/automations/', 'Automations'], ['/sectores/', 'Sectors'], ['/en/pricing/', 'Pricing'],
+        ['/en/for-agencies/', 'For agencies'], ['/recursos/', 'Resources'], ['/blog/', 'Blog'],
+        ['/en/savings-calculator/', 'Savings calculator']
+    ] : [
+        ['/automatizaciones/', 'Automatizaciones'], ['/sectores/', 'Sectores'], ['/precios/', 'Precios'],
+        ['/para-agencias/', 'Para agencias'], ['/recursos/', 'Recursos'], ['/blog/', 'Blog'],
+        ['/calculadora-ahorro/', 'Calculadora de ahorro']
+    ];
+    const t = en
+        ? { open: 'Open menu', close: 'Close menu', menu: 'Menu', cta: 'Free diagnosis' }
+        : { open: 'Abrir menú', close: 'Cerrar menú', menu: 'Menú', cta: 'Diagnóstico gratuito' };
+    const altEn = (document.querySelector('link[hreflang="en"]') || {}).href || '/en/';
+    const altEs = (document.querySelector('link[hreflang="es"]') || {}).href || '/';
+
+    const burger = document.createElement('button');
+    burger.id = 'mBurger'; burger.className = 'm-burger'; burger.type = 'button';
+    burger.setAttribute('aria-label', t.open);
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-controls', 'mDrawer');
+    burger.innerHTML = '<span></span><span></span><span></span>';
+    inner.appendChild(burger);
+
+    const drawer = document.createElement('div');
+    drawer.id = 'mDrawer'; drawer.className = 'm-drawer';
+    drawer.setAttribute('role', 'dialog'); drawer.setAttribute('aria-modal', 'true');
+    drawer.setAttribute('aria-hidden', 'true'); drawer.setAttribute('aria-label', t.menu);
+    const linksHtml = links.map(([h, x]) => `<a href="${h}">${x}</a>`).join('');
+    const langHtml = en
+        ? `<a href="${altEs}">ES</a> <span>/</span> <b aria-current="true">EN</b>`
+        : `<b aria-current="true">ES</b> <span>/</span> <a href="${altEn}">EN</a>`;
+    drawer.innerHTML =
+        `<button class="m-drawer-close" type="button" aria-label="${t.close}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`
+        + `<nav class="m-drawer-links" aria-label="${t.menu}">${linksHtml}</nav>`
+        + `<div class="m-drawer-lang">${langHtml}</div>`
+        + `<a class="m-drawer-cta" href="${zoho}">${t.cta}</a>`;
+    document.body.appendChild(drawer);
+
+    const closeEl = drawer.querySelector('.m-drawer-close');
+    const openDrawer = () => {
+        drawer.classList.add('open'); drawer.setAttribute('aria-hidden', 'false');
+        burger.classList.add('open'); burger.setAttribute('aria-expanded', 'true');
+        burger.setAttribute('aria-label', t.close);
+        document.body.classList.add('m-drawer-open');
+        closeEl.focus();
+    };
+    const closeDrawer = () => {
+        drawer.classList.remove('open'); drawer.setAttribute('aria-hidden', 'true');
+        burger.classList.remove('open'); burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', t.open);
+        document.body.classList.remove('m-drawer-open');
+    };
+    burger.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+    closeEl.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('.m-drawer-links a, .m-drawer-lang a, .m-drawer-cta').forEach(a => a.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+}
 
 // ===== Calculadora de ahorro (Fase 2) =====
 // Se ejecuta solo si existe #calc (en /precios y /calculadora-ahorro).
