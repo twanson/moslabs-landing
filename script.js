@@ -8,7 +8,58 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initSmoothScroll();
     initHome();
+    initCalculator();
 });
+
+// ===== Calculadora de ahorro (Fase 2) =====
+// Se ejecuta solo si existe #calc (en /precios y /calculadora-ahorro).
+function initCalculator() {
+    const calc = document.getElementById('calc');
+    if (!calc) return;
+    const $ = id => document.getElementById(id);
+    // Formato español con punto de millar SIEMPRE (incl. 4 cifras: 1.990 €).
+    // toLocaleString('es-ES') no agrupa los 4 dígitos en algunos entornos.
+    const eur = n => Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
+
+    function recalc() {
+        const personas = Math.max(0, +$('calc-personas').value || 0);
+        const horas    = Math.max(0, +$('calc-horas').value || 0);
+        const coste    = Math.max(0, +$('calc-coste').value || 0);
+        const leads    = Math.max(0, +$('calc-leads').value || 0);
+        const ticket   = Math.max(0, +$('calc-ticket').value || 0);
+
+        if ($('calc-coste-out')) $('calc-coste-out').textContent = coste + ' €';
+
+        const horasMes = personas * horas * 4.33;      // semanas/mes
+        const eurHoras = horasMes * coste;
+        const eurLeads = leads * ticket * 0.20;         // 20% de recuperación estimada
+        const mes  = eurHoras + eurLeads;
+        const anual = mes * 12;
+
+        $('calc-horas-eur').textContent = eur(eurHoras);
+        $('calc-leads-eur').textContent = eur(eurLeads);
+        $('calc-anual').textContent = eur(anual);
+
+        // Paquete recomendado según ahorro mensual
+        let precio, nombre;
+        if (mes >= 2000)      { precio = 3900; nombre = 'Motor completo'; }
+        else if (mes >= 800)  { precio = 1990; nombre = 'Sistema'; }
+        else                  { precio = 890;  nombre = 'Arranque'; }
+        $('calc-paquete').textContent = nombre;
+        $('calc-precio').textContent = eur(precio);
+
+        if (mes > 0) {
+            const meses = Math.max(1, Math.ceil(precio / mes));
+            $('calc-roi-meses').textContent = meses + (meses === 1 ? ' mes' : ' meses');
+        } else {
+            $('calc-roi-meses').textContent = '—';
+        }
+        if ($('calc-cta-eur')) $('calc-cta-eur').textContent = eur(anual) + '/año';
+    }
+
+    calc.querySelectorAll('input').forEach(i => i.addEventListener('input', recalc));
+    recalc();
+}
 
 // ===== Navbar Scroll Effect =====
 function initNavbar() {

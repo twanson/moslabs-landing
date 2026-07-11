@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL0B19YBLX');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calculadora de ahorro con automatización | Cuánto pierdes cada mes · MosLab</title>
+<meta name="description" content="Calcula en 30 segundos cuánto dinero pierdes cada mes en tareas repetitivas y leads sin responder, y en cuántos meses se paga un sistema de automatización. Gratis, sin registro."/>
+<meta name="keywords" content="calculadora ahorro automatización, cuánto ahorro automatizando, ROI automatización marketing ventas, calculadora productividad PYME"/>
+<meta name="author" content="Jose María Moscardó - MosLab"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Calculadora de ahorro con automatización | MosLab"/>
+<meta property="og:description" content="Cuánto pierdes cada mes en horas y leads fríos, y en cuántos meses se paga el sistema. Gratis, sin registro."/>
+<meta property="og:image" content="https://moslab.org/assets/og-image.png"/>
+<meta property="og:url" content="https://moslab.org/calculadora-ahorro/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:site_name" content="MosLab"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Calculadora de ahorro con automatización | MosLab"/>
+<meta name="twitter:description" content="Cuánto pierdes cada mes y en cuántos meses se paga el sistema. Gratis, sin registro."/>
+<meta name="twitter:image" content="https://moslab.org/assets/og-image.png"/>
+<link rel="canonical" href="https://moslab.org/calculadora-ahorro/"/>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,400..600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body class="home">
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/"><img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab"/></a>
+    <div class="nav-links">
+      <a href="/automatizaciones/">Automatizaciones</a>
+      <a href="/sectores/">Sectores</a>
+      <a href="/precios/">Precios</a>
+      <a href="/para-agencias/">Para agencias</a>
+      <a href="/recursos/">Recursos</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="lang-switch"><b>ES</b> / EN</span>
+    <a class="btn-primary sm" href="https://moslabs.zohobookings.eu/#/moslabs">Diagnóstico gratuito</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO + CALCULADORA -->
+<header class="page-hero" style="padding-bottom:0">
+  <div class="blur-glow c"></div>
+  <div class="orb celeste" data-parallax="0.12" style="width:360px;height:360px;left:-130px;top:200px"></div>
+  <div class="orb cyanviolet" data-parallax="0.18" style="width:260px;height:260px;right:-90px;top:120px"></div>
+  <div class="fx-layer" data-fx="16"></div>
+  <div class="container">
+    <div class="breadcrumbs reveal from-top"><a href="/">Inicio</a> / Calculadora de ahorro</div>
+    <div class="eyebrow reveal from-top" style="justify-content:center">Gratis · Sin registro</div>
+    <h1 class="reveal from-bottom">Calcula lo que <em>pierdes cada mes.</em></h1>
+    <p class="page-sub reveal from-bottom">Ajusta los datos de tu negocio y mira, en euros, cuánto se va en tareas repetitivas y leads sin responder — y en cuántos meses se paga un sistema de automatización.</p>
+  </div>
+</header>
+
+<section style="padding-top:30px">
+  <div class="container">
+    <div class="calc reveal from-bottom" id="calc">
+      <div class="calc-inputs">
+        <label class="calc-field"><span class="lab">Personas en tareas administrativas/comerciales</span><input type="number" id="calc-personas" value="3" min="0" max="100"/></label>
+        <label class="calc-field"><span class="lab">Horas/semana en tareas repetitivas (por persona)</span><input type="number" id="calc-horas" value="8" min="0" max="40"/></label>
+        <label class="calc-field"><span class="lab">Coste/hora medio <output id="calc-coste-out">20 €</output></span><input type="range" id="calc-coste" value="20" min="10" max="60" step="1"/></label>
+        <label class="calc-field"><span class="lab">Leads/mes sin responder a tiempo</span><input type="number" id="calc-leads" value="15" min="0" max="1000"/></label>
+        <label class="calc-field"><span class="lab">Ticket medio por cliente (€)</span><input type="number" id="calc-ticket" value="800" min="0" step="50"/></label>
+      </div>
+      <div class="calc-results">
+        <div class="calc-result"><span>Perdido en horas / mes</span><b id="calc-horas-eur">—</b></div>
+        <div class="calc-result"><span>Perdido en leads fríos / mes</span><b id="calc-leads-eur">—</b></div>
+        <div class="calc-result total"><span>Ahorro estimado / año</span><b id="calc-anual">—</b></div>
+        <div class="calc-roi"><span>ROI del paquete <b id="calc-paquete">Sistema</b> (<b id="calc-precio">1.990 €</b>)</span><span class="roi-val" id="calc-roi-meses">—</span></div>
+        <a class="btn-primary" id="calc-cta" href="https://moslabs.zohobookings.eu/#/moslabs">Recupera <span id="calc-cta-eur">—</span> → Agenda diagnóstico</a>
+        <a class="btn-ghost" href="/recursos/auditoria-6-fugas/?utm_source=calculadora&utm_medium=internal&utm_campaign=lm-6-fugas&utm_content=widget">O calcula tus 6 fugas con la guía gratuita</a>
+      </div>
+    </div>
+    <p class="calc-disclaimer reveal from-bottom">Estimación orientativa (4,33 semanas/mes, recuperación del 20 % de los leads fríos). El diagnóstico gratuito ajusta las cifras a tu caso real.</p>
+  </div>
+</section>
+
+<!-- CÓMO SE CALCULA -->
+<section class="demo" style="padding-top:70px">
+  <div class="container" style="position:relative">
+    <div class="eyebrow reveal from-top"><span class="num">01</span>Cómo se calcula</div>
+    <h2 class="reveal from-left">De dónde salen <em>los números.</em></h2>
+    <div class="grid-3">
+      <div class="card reveal from-left"><h4>Horas repetitivas</h4><p>Personas × horas/semana × 4,33 semanas × coste/hora. Es el dinero que se va en tareas que un sistema haría solo.</p></div>
+      <div class="card reveal from-bottom"><h4>Leads fríos</h4><p>Leads sin responder × ticket medio × 20 % de recuperación estimada. Lo que se pierde por no contestar a tiempo.</p></div>
+      <div class="card reveal from-right"><h4>Meses hasta ROI</h4><p>Precio del paquete recomendado ÷ ahorro mensual. Cuándo el sistema se ha pagado solo y empieza a darte beneficio.</p></div>
+    </div>
+    <p class="channel-note reveal from-bottom">¿Quieres verlo con tus cifras reales? El <a href="https://moslabs.zohobookings.eu/#/moslabs">diagnóstico gratuito</a> lo ajusta a tu negocio en 30 minutos.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="orb cyanviolet" data-parallax="0.1" style="width:460px;height:460px;left:50%;top:55%;margin-left:-230px;margin-top:-230px;opacity:.6"></div>
+  <div class="fx-layer" data-fx="14"></div>
+  <div class="container">
+    <div class="kinetic-word kinetic reveal from-bottom">Ahora<span class="dot">.</span></div>
+    <h2 class="reveal from-bottom">¿Recuperamos <em>ese dinero?</em></h2>
+    <p class="reveal from-bottom">Agenda 30 minutos. Vemos qué automatización te devuelve más — con un plan claro y precio cerrado.</p>
+    <div class="cta-row reveal from-bottom">
+      <a class="btn-primary" href="https://moslabs.zohobookings.eu/#/moslabs">Agenda tu diagnóstico gratuito →</a>
+      <a class="btn-ghost" href="/precios/">Ver precios</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/"><img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab"/></a>
+      <p>Automatización de marketing y ventas para PYMEs.</p>
+    </div>
+    <div>
+      <h4>Enlaces</h4>
+      <div class="footer-links">
+        <a href="/automatizaciones/">Automatizaciones</a>
+        <a href="/precios/">Precios</a>
+        <a href="/para-agencias/">Para agencias</a>
+        <a href="/recursos/">Recursos</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </div>
+    <div>
+      <h4>Sectores</h4>
+      <div class="footer-links">
+        <a href="/automatizacion-ventas-crm-inmobiliarias/">Inmobiliarias</a>
+        <a href="/crm-clinica-dental-automatizado/">Clínicas dentales</a>
+        <a href="/automatizacion-comercial-clinicas-esteticas/">Clínicas estéticas</a>
+        <a href="/automatizacion-atencion-cliente-gimnasios/">Gimnasios</a>
+        <a href="/crm-taller-mecanico-automatizado/">Talleres mecánicos</a>
+        <a href="/sectores/"><strong>Ver todos los sectores →</strong></a>
+      </div>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <div class="footer-contact">
+        <a href="mailto:jose.moscardo@moslab.org">jose.moscardo@moslab.org</a>
+        <a href="https://linkedin.com/in/josemariamoscardo">LinkedIn</a>
+        <p>Málaga, España</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 MosLab. Todos los derechos reservados.</div>
+    <div class="footer-legal">
+      <a href="/privacidad/">Política de Privacidad</a>
+      <a href="/aviso-legal/">Aviso Legal</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script src="/tracking.js" defer></script>
+</body>
+</html>
