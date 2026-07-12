@@ -54,5 +54,6 @@ Core pages (EN):
 - [Pricing](https://moslab.org/en/pricing/): the 3 packages, maintenance and a services catalog.
 - [Savings calculator](https://moslab.org/en/savings-calculator/): estimate how much you lose each month and the ROI of automating.
 - [For agencies](https://moslab.org/en/for-agencies/): white-label automation and AI for agencies.
+- [The 6 Leaks — free audit](https://moslab.org/en/resources/6-leaks-audit/): a free 15-minute marketing & sales audit (PDF) to find the 6 operational leaks draining your cash and which to fix first.
 
 Contact: jose.moscardo@moslab.org · Book a free diagnosis: https://moslabs.zohobookings.eu/#/moslabs
