@@ -6,12 +6,12 @@ Fundador: Jose María Moscardó. Trabajamos con n8n, Make, Claude y otras IAs, y
 
 ## Las 6 automatizaciones indispensables (precio cerrado, "desde")
 
-- Captador de leads — desde 690 €: capta y cualifica leads de web, redes y WhatsApp hacia un CRM ordenado, con respuesta en menos de 5 minutos.
-- Asistente WhatsApp 24/7 — desde 990 €: asistente con IA sobre WhatsApp Business API que responde, cualifica y agenda fuera de horario.
-- Seguimiento comercial — desde 690 €: secuencias multicanal que persiguen presupuestos y leads fríos hasta el cierre.
-- Email y reactivación — desde 590 €: bienvenida, nurturing y campañas que reactivan tu base de datos dormida.
-- Contenido multicanal — desde 790 €: repurposing automático de una pieza a blog, LinkedIn, Instagram y newsletter.
-- Citas y recordatorios — desde 490 €: reserva, confirmación, recordatorio y reprogramación automáticas para reducir no-shows.
+- [Captador de leads](https://moslab.org/automatizaciones/captador-de-leads/) — desde 690 €: capta y cualifica leads de web, redes y WhatsApp hacia un CRM ordenado, con respuesta en menos de 5 minutos.
+- [Asistente WhatsApp 24/7](https://moslab.org/automatizaciones/asistente-whatsapp/) — desde 990 €: asistente con IA sobre WhatsApp Business API que responde, cualifica y agenda fuera de horario.
+- [Seguimiento comercial](https://moslab.org/automatizaciones/seguimiento-comercial/) — desde 690 €: secuencias multicanal que persiguen presupuestos y leads fríos hasta el cierre.
+- [Email y reactivación](https://moslab.org/automatizaciones/email-marketing/) — desde 590 €: bienvenida, nurturing y campañas que reactivan tu base de datos dormida.
+- [Contenido multicanal](https://moslab.org/automatizaciones/contenido-multicanal/) — desde 790 €: repurposing automático de una pieza a blog, LinkedIn, Instagram y newsletter.
+- [Citas y recordatorios](https://moslab.org/automatizaciones/citas-y-recordatorios/) — desde 490 €: reserva, confirmación, recordatorio y reprogramación automáticas para reducir no-shows.
 
 ## Paquetes (pago único, sin permanencia)
 

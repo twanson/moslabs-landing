@@ -62,6 +62,12 @@ function generateSitemap(keywords) {
     const staticPages = [
         { url: 'https://moslab.org/', changefreq: 'weekly', priority: '1.0' },
         { url: 'https://moslab.org/automatizaciones/', changefreq: 'monthly', priority: '0.9' },
+        { url: 'https://moslab.org/automatizaciones/captador-de-leads/', changefreq: 'monthly', priority: '0.85' },
+        { url: 'https://moslab.org/automatizaciones/asistente-whatsapp/', changefreq: 'monthly', priority: '0.85' },
+        { url: 'https://moslab.org/automatizaciones/seguimiento-comercial/', changefreq: 'monthly', priority: '0.85' },
+        { url: 'https://moslab.org/automatizaciones/citas-y-recordatorios/', changefreq: 'monthly', priority: '0.85' },
+        { url: 'https://moslab.org/automatizaciones/email-marketing/', changefreq: 'monthly', priority: '0.85' },
+        { url: 'https://moslab.org/automatizaciones/contenido-multicanal/', changefreq: 'monthly', priority: '0.85' },
         { url: 'https://moslab.org/precios/', changefreq: 'monthly', priority: '0.9' },
         { url: 'https://moslab.org/para-agencias/', changefreq: 'monthly', priority: '0.8' },
         { url: 'https://moslab.org/calculadora-ahorro/', changefreq: 'monthly', priority: '0.7' },
