@@ -1,0 +1,58 @@
+# MosLab
+
+> MosLab es una consultora española (Málaga) que automatiza el marketing y las ventas de PYMEs con IA. Montamos sistemas sobre tu stack actual —sin migraciones— con precio cerrado, sin permanencia y garantía de entrega: tu marketing y tus ventas, funcionando solos.
+
+Fundador: Jose María Moscardó. Trabajamos con n8n, Make, Claude y otras IAs, y CRMs como Zoho, HubSpot o Pipedrive. Ámbito: España. Todo empieza con un diagnóstico gratuito de 30 minutos.
+
+## Las 6 automatizaciones indispensables (precio cerrado, "desde")
+
+- Captador de leads — desde 690 €: capta y cualifica leads de web, redes y WhatsApp hacia un CRM ordenado, con respuesta en menos de 5 minutos.
+- Asistente WhatsApp 24/7 — desde 990 €: asistente con IA sobre WhatsApp Business API que responde, cualifica y agenda fuera de horario.
+- Seguimiento comercial — desde 690 €: secuencias multicanal que persiguen presupuestos y leads fríos hasta el cierre.
+- Email y reactivación — desde 590 €: bienvenida, nurturing y campañas que reactivan tu base de datos dormida.
+- Contenido multicanal — desde 790 €: repurposing automático de una pieza a blog, LinkedIn, Instagram y newsletter.
+- Citas y recordatorios — desde 490 €: reserva, confirmación, recordatorio y reprogramación automáticas para reducir no-shows.
+
+## Paquetes (pago único, sin permanencia)
+
+- Arranque — 890 €: tu primera automatización funcionando en 2 semanas (3 flujos, hasta 2 integraciones).
+- Sistema — 1.990 €: marketing y ventas conectados en 1 mes (6 flujos, CRM, asistente IA, email).
+- Motor completo — 3.900 €: el sistema completo que funciona solo (10+ flujos, dashboard, contenido multicanal).
+- Mantenimiento — desde 90 €/mes: opcional y sin permanencia.
+
+## Páginas principales (ES)
+
+- [Inicio](https://moslab.org/): qué hace MosLab y cómo funciona el sistema.
+- [Automatizaciones](https://moslab.org/automatizaciones/): las 6 indispensables en detalle, con precios.
+- [Precios](https://moslab.org/precios/): los 3 paquetes, mantenimiento y catálogo de servicios.
+- [Calculadora de ahorro](https://moslab.org/calculadora-ahorro/): estima cuánto pierdes cada mes y el retorno de automatizar.
+- [Para agencias](https://moslab.org/para-agencias/): automatización e IA white-label para agencias.
+- [Sectores](https://moslab.org/sectores/): soluciones por sector.
+- [Recursos](https://moslab.org/recursos/): auditorías y guías gratuitas de "las 6 fugas" por sector.
+- [Casos de éxito](https://moslab.org/casos-exito/): resultados reales.
+- [Blog](https://moslab.org/blog/): guías de automatización de marketing y ventas.
+
+## Sectores cubiertos
+
+Inmobiliarias, despachos de abogados, gestorías y asesorías, clínicas dentales, clínicas estéticas, clínicas de salud, veterinarias, talleres mecánicos, empresas de reformas, gimnasios, academias y formación, consultorías, hoteles rurales, logística y transporte, manufactura industrial, y más.
+
+## Contacto
+
+- Email: jose.moscardo@moslab.org
+- Agenda un diagnóstico gratuito: https://moslabs.zohobookings.eu/#/moslabs
+
+## English
+
+> MosLab is a Spanish consultancy (Málaga) that automates marketing and sales for SMBs with AI. We build systems on your current stack —no migrations— at a fixed price, no lock-in and with a delivery guarantee: your marketing and sales, running themselves.
+
+Services (fixed "from" price): Lead catcher from €690 · WhatsApp assistant 24/7 from €990 · Sales follow-up from €690 · Email & reactivation from €590 · Multichannel content from €790 · Bookings & reminders from €490. One-off packages: Starter €890 · System €1,990 · Full engine €3,900. Optional maintenance from €90/month.
+
+Core pages (EN):
+
+- [Home](https://moslab.org/en/): what MosLab does and how the system works.
+- [Automations](https://moslab.org/en/automations/): the 6 essential automations, with pricing.
+- [Pricing](https://moslab.org/en/pricing/): the 3 packages, maintenance and a services catalog.
+- [Savings calculator](https://moslab.org/en/savings-calculator/): estimate how much you lose each month and the ROI of automating.
+- [For agencies](https://moslab.org/en/for-agencies/): white-label automation and AI for agencies.
+
+Contact: jose.moscardo@moslab.org · Book a free diagnosis: https://moslabs.zohobookings.eu/#/moslabs
