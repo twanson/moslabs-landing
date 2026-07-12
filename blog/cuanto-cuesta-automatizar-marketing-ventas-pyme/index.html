@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Precios reales de automatización de marketing y ventas para PYMEs en 2026: rangos de mercado, qué incluye cada uno y cuándo NO automatizar.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="Jose María Moscardó - MosLab">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cuánto cuesta automatizar el marketing y las ventas de una PYME (2026)">
+    <meta property="og:description" content="Rangos reales del mercado español, qué incluye cada uno y cuándo NO automatizar. Con precios propios como ejemplo transparente.">
+    <meta property="og:url" content="https://moslab.org/blog/cuanto-cuesta-automatizar-marketing-ventas-pyme/">
+    <meta property="og:image" content="https://moslab.org/assets/og/blog-cuanto-cuesta.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://moslab.org/assets/og/blog-cuanto-cuesta.png">
+    <meta property="og:site_name" content="MosLab">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cuánto cuesta automatizar el marketing y las ventas de una PYME (2026)">
+    <meta name="twitter:description" content="Rangos reales del mercado español, qué incluye cada uno y cuándo NO automatizar. Con precios propios como ejemplo transparente.">
+    <link rel="canonical" href="https://moslab.org/blog/cuanto-cuesta-automatizar-marketing-ventas-pyme/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg">
+    <title>Cuánto cuesta automatizar una empresa (2026) | MosLab</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #E5E7EB;
+            line-height: 1.6;
+            background-color: #0a0a0f;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            height: 70px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; height: 50px; z-index: 1001; }
+        .logo-img { height: 100%; width: auto; max-width: 150px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; padding: 10px; }
+        .hamburger { display: block; width: 25px; height: 20px; position: relative; }
+        .hamburger::before, .hamburger::after {
+            content: ''; position: absolute; width: 100%; height: 2px; background: #00D4FF;
+            transition: all 150ms ease;
+        }
+        .hamburger::before { top: 0; }
+        .hamburger::after { bottom: 0; }
+        .nav-menu { display: flex; align-items: center; gap: 30px; }
+        .nav-link { color: #E5E7EB; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: color 150ms ease; }
+        .nav-link:hover { color: #00D4FF; }
+        .nav-cta {
+            background: linear-gradient(135deg, #00D4FF, #00a8cc); color: #0a0a0f;
+            padding: 10px 20px; border-radius: 12px; font-weight: 600; white-space: nowrap;
+            text-decoration: none; transition: all 150ms ease;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-menu {
+                position: absolute; top: 70px; left: 0; right: 0;
+                background: rgba(10, 10, 15, 0.98); backdrop-filter: blur(10px);
+                flex-direction: column; gap: 15px; padding: 20px;
+                max-height: 0; overflow: hidden; transition: max-height 300ms ease;
+                border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+            }
+            .nav-menu.active { max-height: 500px; }
+            .nav-link { display: block; width: 100%; }
+        }
+
+        /* Content container */
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Article header */
+        .article-header {
+            padding: 140px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem; margin-bottom: 1rem; color: #fff; line-height: 1.2;
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .article-meta {
+            display: flex; justify-content: center; gap: 2rem;
+            margin-bottom: 1rem; font-size: 0.9rem; color: #9CA3AF;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Article content */
+        .article-content {
+            background: rgba(18, 18, 26, 0.8);
+            border: 1px solid #2D2D3D;
+            padding: 3rem; border-radius: 16px;
+            margin: 3rem auto; max-width: 800px;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem;
+            color: #00D4FF;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2); padding-bottom: 0.5rem;
+        }
+        .article-content h2:first-child { margin-top: 0; }
+
+        .article-content h3 {
+            font-size: 1.3rem; margin-top: 1.8rem; margin-bottom: 0.8rem; color: #fff;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem; color: #9CA3AF; text-align: justify;
+        }
+
+        .article-content ul, .article-content ol { margin-left: 2rem; margin-bottom: 1.5rem; color: #9CA3AF; }
+        .article-content li { margin-bottom: 0.8rem; }
+
+        .article-content strong { color: #E5E7EB; }
+
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00D4FF;
+            padding: 1.5rem; margin: 2rem 0; border-radius: 8px;
+        }
+        .highlight-box strong { color: #00D4FF; }
+
+        .internal-link {
+            color: #00D4FF; text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 212, 255, 0.5);
+        }
+        .internal-link:hover { border-bottom: 1px solid #00D4FF; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid #2D2D3D;
+            color: white; padding: 3rem; border-radius: 16px;
+            text-align: center; margin: 3rem 0;
+        }
+        .cta-section h3 { color: white; margin-bottom: 1rem; font-size: 1.5rem; }
+        .cta-section p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #9CA3AF; }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00D4FF, #00a8cc);
+            color: #0a0a0f; padding: 1rem 2rem; border-radius: 12px;
+            text-decoration: none; font-weight: bold;
+            transition: all 300ms ease; border: none;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+
+        /* Footer */
+        .footer {
+            background: #12121a; border-top: 1px solid #2D2D3D;
+            padding: 60px 20px 20px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px; max-width: 1200px; margin: 0 auto 40px;
+        }
+        .footer-brand { }
+        .footer-logo { display: flex; align-items: center; height: 40px; margin-bottom: 16px; text-decoration: none; }
+        .footer-logo .logo-img { height: 100%; width: auto; }
+        .footer-tagline { color: #9CA3AF; font-size: 0.95rem; line-height: 1.6; }
+        .footer-title { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-nav { display: flex; flex-direction: column; gap: 12px; }
+        .footer-nav a { color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .footer-nav a:hover { color: #00D4FF; }
+        .contact-info { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .contact-item:hover { color: #00D4FF; }
+        .contact-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 20px; border-top: 1px solid #2D2D3D;
+            max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;
+        }
+        .copyright { color: #9CA3AF; font-size: 0.85rem; }
+        .legal-links { display: flex; gap: 20px; }
+        .legal-links a { color: #9CA3AF; font-size: 0.85rem; text-decoration: none; transition: color 150ms ease; }
+        .legal-links a:hover { color: #00D4FF; }
+
+        @media (max-width: 768px) {
+            .article-header { padding: 120px 1rem 40px; }
+            .article-header h1 { font-size: 1.8rem; }
+            .article-meta { flex-direction: column; gap: 0.5rem; }
+            .article-content { padding: 2rem 1.5rem; }
+            .container { padding: 0 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; justify-content: center; text-align: center; }
+        }
+
+        /* ===== LM Banner — "Las 6 fugas" ===== */
+        .lm-banner-section { padding: 80px 24px; background: radial-gradient(ellipse 900px 500px at 50% 50%, rgba(83, 221, 252, 0.08), transparent 70%); position: relative; }
+        .lm-banner-card { max-width: 1120px; margin: 0 auto; padding: 56px 56px; background: #0e0e15; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 80px rgba(83, 221, 252, 0.12); position: relative; overflow: hidden; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+        .lm-banner-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(135deg, #53ddfc, #7c3aed); opacity: 0.8; }
+        .lm-banner-content { min-width: 0; }
+        .lm-banner-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #53ddfc; margin-bottom: 16px; }
+        .lm-banner-title { font-family: 'Newsreader', serif; font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 400; line-height: 1.15; color: #f4f0fb; margin: 0 0 16px; }
+        .lm-banner-subtitle { font-size: 1.0625rem; line-height: 1.5; color: #8a8899; margin: 0 0 24px; }
+        .lm-banner-bullets { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; }
+        .lm-banner-bullets li { position: relative; padding-left: 28px; font-size: 0.9375rem; color: #f4f0fb; }
+        .lm-banner-bullets li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #53ddfc; font-weight: 700; font-size: 1rem; }
+        .lm-banner-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 20px; }
+        .lm-banner-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 18px 36px; font-size: 1.125rem; font-weight: 600; border-radius: 12px; background: linear-gradient(135deg, #53ddfc, #7c3aed); color: #08080d; box-shadow: 0 0 30px rgba(83,221,252,0.2); text-decoration: none; transition: all 0.3s ease; white-space: nowrap; }
+        .lm-banner-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(83,221,252,0.4); color: #08080d; }
+        .lm-banner-cta .btn-icon { transition: transform 0.15s ease; }
+        .lm-banner-cta:hover .btn-icon { transform: translateX(4px); }
+        .lm-banner-meta { font-size: 0.8125rem; color: #6B7280; }
+        .lm-banner-cover { display: flex; justify-content: center; align-items: center; }
+        .lm-banner-cover-link { display: block; line-height: 0; transform: rotate(-2deg); transition: transform 0.4s ease, box-shadow 0.4s ease; border-radius: 4px; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06); }
+        .lm-banner-cover-link:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 40px 80px -15px rgba(0,0,0,0.8), 0 0 40px rgba(83,221,252,0.2), 0 0 0 1px rgba(83,221,252,0.3); }
+        .lm-banner-cover img { display: block; width: 100%; max-width: 340px; height: auto; border-radius: 4px; }
+        @media (max-width: 900px) {
+          .lm-banner-card { grid-template-columns: 1fr; gap: 40px; padding: 48px 36px; }
+          .lm-banner-cover { order: -1; }
+          .lm-banner-cover img { max-width: 240px; }
+        }
+        @media (max-width: 640px) {
+          .lm-banner-section { padding: 56px 20px; }
+          .lm-banner-card { padding: 40px 24px; gap: 32px; }
+          .lm-banner-cta-row { flex-direction: column; align-items: flex-start; }
+          .lm-banner-cta-row .lm-banner-cta { width: 100%; }
+          .lm-banner-cover img { max-width: 200px; }
+        }
+
+    
+/* ===== Reskin DS 2026 (Fase 3) — nav/footer/headings ===== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,13,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border)}
+.nav-container{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+.nav-logo .logo-img,.nav-logo img{height:34px;display:block}
+.nav-menu{display:flex;align-items:center;gap:22px;margin-left:auto}
+.nav-link{font-size:14px;color:var(--color-text-secondary);font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--color-text)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gradient-primary);color:#050509;font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:12px;box-shadow:var(--shadow-glow);transition:transform .25s}
+.nav-cta:hover{transform:translateY(-2px);color:#050509}
+.nav-toggle{display:none}
+@media(max-width:900px){.nav-menu .nav-link{display:none}}
+.footer{background:var(--color-bg-elevated);border-top:1px solid var(--color-border)}
+.footer-title{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.footer-nav a:hover,.contact-info .contact-item:hover,.legal-links a:hover{color:var(--color-primary)}
+h1,h2,h3,h4,.article-header h1,.article-content h2,.article-content h3,.blog-card-title,.recurso-title,.recursos-hero h1{font-family:'Space Grotesk',sans-serif !important;letter-spacing:-.02em}
+.recursos-hero .recursos-sub,.recurso-subtitle{font-family:'Newsreader',serif !important}
+</style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RL0B19YBLX');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cuánto cuesta automatizar el marketing y las ventas de una PYME (precios reales 2026)",
+  "description": "Precios reales de automatización de marketing y ventas para PYMEs en 2026: rangos de mercado, qué incluye cada uno y cuándo NO automatizar.",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-07-12",
+  "author": {
+    "@type": "Person",
+    "name": "Jose María Moscardó",
+    "url": "https://moslab.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MosLab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moslab.org/assets/logo-moslabs-horizontal-dark.svg"
+    }
+  },
+  "image": "https://moslab.org/assets/og/blog-cuanto-cuesta.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moslab.org/blog/cuanto-cuesta-automatizar-marketing-ventas-pyme/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta automatizar una empresa pequeña?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Una automatización puntual suele costar entre 400 y 1.000 € y un sistema con varios procesos conectados entre 1.500 y 4.000 €, con precio cerrado. Los proyectos grandes a medida superan esas cifras. El coste real depende del alcance, no del tamaño de la empresa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es mejor pago único o cuota mensual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende. El montaje suele ser un pago único (tú te quedas el sistema), y el mantenimiento es una cuota mensual opcional (90-390 €) para mejoras y soporte. Desconfía de quien te ata a una cuota alta obligatoria solo por dejarte usar algo que ya pagaste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sale más barato hacerlo con un freelance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un freelance puede ser más barato en el precio por hora, pero el riesgo es la continuidad y la documentación. Lo importante no es la tarifa, sino el precio cerrado, la garantía de entrega y que te quede documentado para no depender de nadie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo NO merece la pena automatizar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando el proceso que quieres automatizar apenas te ocurre, cuando aún no tienes el proceso claro a mano, o cuando lo que falla es la estrategia y no la ejecución. Automatizar el caos solo te da caos más rápido."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">
+                    <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
+                <a href="/automatizaciones/" class="nav-link">Automatizaciones</a>
+                <a href="/sectores/" class="nav-link">Sectores</a>
+                <a href="/precios/" class="nav-link">Precios</a>
+                <a href="/calculadora-ahorro/" class="nav-link">Calculadora</a>
+                <a href="/para-agencias/" class="nav-link">Para agencias</a>
+                <a href="/recursos/" class="nav-link">Recursos</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Diagnóstico gratuito</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <div class="container">
+            <h1>Cuánto cuesta automatizar el marketing y las ventas de una PYME (precios reales 2026)</h1>
+            <div class="article-meta">
+                <span>📅 12 de julio de 2026</span>
+                <span>⏱️ 9 min de lectura</span>
+                <span>✍️ Jose María Moscardó</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <article class="article-content">
+            <p>Es la primera pregunta que hace casi todo el mundo, y la respuesta honesta incomoda: <strong>depende</strong>. No porque queramos escurrir el bulto, sino porque "automatizar una empresa" puede significar un flujo de 400 € o un sistema de 15.000 €. En este artículo te doy los <strong>precios reales de 2026</strong> del mercado español, qué incluye cada rango, nuestras propias cifras como ejemplo transparente, y —lo más importante— cuándo <em>no</em> deberías automatizar todavía.</p>
+
+            <h2>Por qué no hay un precio único</h2>
+            <p>El precio de automatizar depende de tres cosas: cuántos procesos vas a automatizar, lo conectados que estén entre sí, y lo a medida que sea tu operativa. Conectar un formulario web con tu CRM y una respuesta automática es un trabajo de días. Montar un sistema que capta, cualifica, hace seguimiento, agenda y reactiva —todo hablando entre sí y con tus herramientas— es un proyecto de semanas. Por eso cualquiera que te dé un precio sin preguntarte primero qué quieres resolver, está adivinando.</p>
+            <p>La forma sana de plantearlo no es "¿cuánto cuesta automatizar?", sino "¿qué me está costando <em>no</em> hacerlo?". Si un proceso manual te come quince horas a la semana o pierdes leads por no contestar a tiempo, el marco cambia: no es un gasto, es una inversión que se paga sola en semanas. Volveremos a eso al final.</p>
+
+            <h2>Los rangos reales del mercado español (2026)</h2>
+            <p>Estos son los tramos que se ven hoy en el mercado para PYMEs, con precio cerrado y sin contar grandes corporaciones:</p>
+            <h3>Automatización puntual: 400 – 1.000 €</h3>
+            <p>Un solo proceso resuelto: un captador de leads, un recordatorio de citas por WhatsApp, una secuencia de seguimiento. Es la puerta de entrada ideal para probar sin comprometerte. Suele estar funcionando en una o dos semanas.</p>
+            <h3>Sistema conectado: 1.500 – 4.000 €</h3>
+            <p>Varios procesos que hablan entre sí: captación + cualificación + CRM + seguimiento + un asistente o email marketing. Aquí es donde el retorno se dispara, porque los flujos se refuerzan unos a otros. Es el tramo más habitual para una PYME que va en serio.</p>
+            <h3>Proyecto grande o a medida continuada: 4.000 € en adelante</h3>
+            <p>Operativas complejas, integraciones con software propio, varios departamentos. Puede llegar a cinco cifras y se suele fasear. No es lo que necesita la mayoría de las PYMEs para empezar.</p>
+            <h3>Mantenimiento mensual: 90 – 390 €/mes</h3>
+            <p>Opcional. Cubre soporte, ajustes y mejoras cuando cambian tus herramientas o tu operativa. Es una cuota razonable por tener a alguien que cuida el sistema; desconfía de cuotas altas obligatorias solo por dejarte usar algo que ya has pagado.</p>
+
+            <h2>Freelance, agencia o plataforma: qué cambia el precio</h2>
+            <p>El mismo resultado puede costar muy distinto según quién lo haga. Una <strong>plataforma SaaS</strong> (contratas una herramienta y la configuras tú) es barata en cuota pero te deja todo el trabajo y el mantenimiento encima. Un <strong>freelance</strong> suele tener la tarifa más baja, a cambio de más riesgo en continuidad y documentación. Una <strong>consultora o agencia</strong> cuesta más, pero te da precio cerrado, garantía de entrega y un sistema documentado que no depende de una sola persona. Ninguna opción es "la mejor": depende de cuánto riesgo y cuánto trabajo interno quieras asumir.</p>
+
+            <h2>Qué debe incluir (y de qué desconfiar)</h2>
+            <p>Sea cual sea el rango, un buen presupuesto de automatización incluye: un diagnóstico previo, un alcance cerrado y escrito, el montaje sobre las herramientas que ya usas (sin migraciones forzadas), formación a tu equipo y documentación para que no dependas del proveedor. Desconfía de tres cosas: precios por hora sin techo, cuotas obligatorias desproporcionadas, y promesas de resultados concretos ("te triplico las ventas") que nadie puede garantizar de antemano.</p>
+
+            <h2>Nuestros precios, como ejemplo transparente</h2>
+            <p>Para que no te quedes solo con rangos abstractos, aquí están los nuestros. No para venderte, sino para que tengas una referencia real y comparable:</p>
+            <ul>
+              <li>Las <a href="/automatizaciones/">automatizaciones indispensables</a> sueltas van de <strong>490 a 990 €</strong> según cuál sea: desde <a href="/automatizaciones/citas-y-recordatorios/">citas y recordatorios</a> (490 €) hasta el <a href="/automatizaciones/asistente-whatsapp/">asistente de WhatsApp con IA</a> (990 €), pasando por el <a href="/automatizaciones/captador-de-leads/">captador de leads</a> (690 €).</li>
+              <li>Los <a href="/precios/">paquetes</a> de pago único van de <strong>890 € (Arranque)</strong> a <strong>3.900 € (Motor completo)</strong>, con el Sistema completo en 1.990 €.</li>
+              <li>El mantenimiento es opcional, desde <strong>90 €/mes</strong> y sin permanencia.</li>
+            </ul>
+            <p>Todo con precio cerrado antes de empezar. La cifra final para tu caso se concreta en el diagnóstico, según el alcance real.</p>
+
+            <h2>El coste de no automatizar</h2>
+            <p>La comparación justa no es "gastar X o no gastar nada". Es "gastar X una vez, o seguir pagando cada mes el coste invisible del proceso manual": las horas de tu equipo en tareas repetitivas, los leads que se enfrían sin respuesta, los presupuestos que nadie persigue, las citas que no se presentan. Ese coste no aparece en ninguna factura, pero está ahí todos los meses. Cuando lo pones en euros, la decisión suele ser evidente.</p>
+
+            <h2>Cuándo NO automatizar (todavía)</h2>
+            <p>Automatizar no siempre es la respuesta, y te lo decimos incluso cuando podríamos vendértelo. No merece la pena si el proceso apenas te ocurre (automatizar algo que pasa dos veces al mes es tirar dinero), si aún no tienes el proceso claro a mano (automatizar el caos solo te da caos más rápido), o si lo que falla es la estrategia comercial y no la ejecución. Primero se ordena el proceso; después se automatiza. En ese orden.</p>
+
+            <h2>Qué hace que un presupuesto suba o baje</h2>
+            <p>Dentro de cada rango, varios factores mueven la cifra final. El número de integraciones es el principal: conectar dos herramientas es sencillo; orquestar seis que se pasan datos entre sí lleva más trabajo. También pesa si usas software estándar (Zoho, HubSpot, n8n, WhatsApp Business) o herramientas propias que exigen desarrollo a medida. Y pesa el punto de partida: si tu proceso está claro y documentado, se automatiza rápido; si hay que descubrirlo sobre la marcha, el proyecto se alarga.</p>
+            <p>Otros factores que suben el precio son el volumen de datos a migrar y limpiar, la necesidad de cumplir requisitos concretos de tu sector y la urgencia. Por el contrario, empezar por una sola automatización bien elegida y ampliar desde ahí es casi siempre la forma más barata de entrar: pruebas con poco riesgo, ves el retorno y decides con datos si conectas más piezas.</p>
+
+            <h2>Cómo se estructura un presupuesto sano</h2>
+            <p>Un presupuesto de automatización del que puedes fiarte tiene siempre las mismas partes: una fase de diagnóstico y diseño (entender el proceso y dejarlo por escrito), el desarrollo y montaje de los flujos, una fase de pruebas con tus datos reales, y la entrega con formación y documentación. Si además hay mantenimiento, va aparte y es opcional. Cuando un presupuesto mezcla todo en una cifra opaca "por automatizar tu empresa", pide que lo desglose: la transparencia en el alcance es la mejor señal de que no habrá sorpresas después.</p>
+
+            <h2>Cómo calcular tu caso concreto</h2>
+            <p>Antes de pedir ningún presupuesto, haz el cálculo al revés: mira cuánto te cuesta hoy el problema. Nuestra <a href="/calculadora-ahorro/">calculadora de ahorro</a> te estima, con los datos de tu propio negocio, cuánto pierdes cada mes en tareas repetitivas y leads sin responder, y en cuántos meses se paga un sistema. Con esa cifra en la mano, cualquier presupuesto deja de ser un número abstracto y se convierte en una decisión de retorno. Y si quieres que lo aterricemos juntos, el <a href="https://moslabs.zohobookings.eu/#/moslabs">diagnóstico gratuito</a> de 30 minutos te da un plan claro y una cifra cerrada — aunque después no trabajemos juntos.</p>
+
+            <h2>Preguntas frecuentes</h2>
+            <h3>¿Cuánto cuesta automatizar una empresa pequeña?</h3>
+            <p>Una automatización puntual suele costar entre 400 y 1.000 € y un sistema con varios procesos conectados entre 1.500 y 4.000 €, con precio cerrado. Los proyectos grandes a medida superan esas cifras. El coste real depende del alcance, no del tamaño de la empresa.</p>
+            <h3>¿Es mejor pago único o cuota mensual?</h3>
+            <p>Depende. El montaje suele ser un pago único (tú te quedas el sistema), y el mantenimiento es una cuota mensual opcional (90-390 €) para mejoras y soporte. Desconfía de quien te ata a una cuota alta obligatoria solo por dejarte usar algo que ya pagaste.</p>
+            <h3>¿Sale más barato hacerlo con un freelance?</h3>
+            <p>Un freelance puede ser más barato en el precio por hora, pero el riesgo es la continuidad y la documentación. Lo importante no es la tarifa, sino el precio cerrado, la garantía de entrega y que te quede documentado para no depender de nadie.</p>
+            <h3>¿Cuándo NO merece la pena automatizar?</h3>
+            <p>Cuando el proceso que quieres automatizar apenas te ocurre, cuando aún no tienes el proceso claro a mano, o cuando lo que falla es la estrategia y no la ejecución. Automatizar el caos solo te da caos más rápido.</p>
+        </article>
+    </div>
+
+        <!-- LM BANNER · Las 6 fugas -->
+        <aside class="lm-banner-section" aria-label="Recurso gratuito: Las 6 fugas">
+          <div class="lm-banner-card">
+            <div class="lm-banner-content">
+              <div class="lm-banner-eyebrow">Auditoría gratuita · Para PYMEs</div>
+              <h2 class="lm-banner-title">Antes de invertir un euro más, audita las 6 fugas que vacían tu caja</h2>
+              <p class="lm-banner-subtitle">Auditoría operativa para PYMEs. En 15 minutos sabrás, en euros, cuánto pierdes cada mes en marketing y ventas — y por dónde empezar a taparlo mañana.</p>
+              <ul class="lm-banner-bullets">
+                <li>Marco de las 6 fugas con ejemplos reales de PYMEs</li>
+                <li>Tabla de scoring para identificar tu fuga más cara</li>
+                <li>Plan de 5 días listo para arreglar la peor</li>
+              </ul>
+              <div class="lm-banner-cta-row">
+                <a href="https://moslab.org/recursos/auditoria-6-fugas/?utm_source=banner&utm_medium=internal&utm_campaign=lm-6-fugas&utm_content=blog-cuanto-cuesta-automatizar-marketing-ventas-pyme" class="lm-banner-cta">Descargar gratis <span class="btn-icon" aria-hidden="true">→</span></a>
+                <span class="lm-banner-meta">12 páginas · PDF · Te lo enviamos al email</span>
+              </div>
+            </div>
+            <div class="lm-banner-cover">
+              <a href="https://moslab.org/recursos/auditoria-6-fugas/?utm_source=banner&utm_medium=internal&utm_campaign=lm-6-fugas&utm_content=blog-cuanto-cuesta-automatizar-marketing-ventas-pyme" class="lm-banner-cover-link" aria-label="Ver portada de la guía">
+                <img src="/assets/auditoria-6-fugas-cover.png" alt="Portada de la guía 'Las 6 fugas' por Jose María Moscardó" loading="lazy" width="565" height="800" />
+              </a>
+            </div>
+          </div>
+        </aside>
+
+<footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Automatización de marketing y ventas para PYMEs</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <nav class="footer-nav">
+                        <a href="/automatizaciones/">Automatizaciones</a>
+                        <a href="/precios/">Precios</a>
+                        <a href="/para-agencias/">Para agencias</a>
+                        <a href="/recursos/">Recursos</a>
+                        <a href="/blog/">Blog</a>
+                        <a href="/calculadora-ahorro/">Calculadora de ahorro</a>
+                    </nav>
+                </div>
+                <div class="footer-links">
+                  <h4 class="footer-title">Sectores</h4>
+                  <nav class="footer-nav">
+                    <a href="/automatizacion-ventas-crm-inmobiliarias/">Inmobiliarias</a>
+                    <a href="/automatizacion-marketing-manufactura-industrial/">Manufactura industrial</a>
+                    <a href="/automatizacion-leads-consultorias-profesionales/">Consultorías y despachos</a>
+                    <a href="/automatizacion-leads-educacion-formacion/">Educación y formación</a>
+                    <a href="/automatizacion-ventas-logistica-transporte/">Logística y transporte</a>
+                    <a href="/crm-clinica-dental-automatizado/">Clínicas dentales</a>
+                    <a href="/automatizacion-comercial-clinicas-esteticas/">Clínicas estéticas</a>
+                    <a href="/automatizacion-atencion-cliente-gimnasios/">Gimnasios</a>
+                    <a href="/automatizacion-clinica-veterinaria/">Clínicas veterinarias</a>
+                    <a href="/crm-taller-mecanico-automatizado/">Talleres mecánicos</a>
+                    <a href="/sectores/"><strong>Ver todos los sectores →</strong></a>
+                  </nav>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <div class="contact-info">
+                        <a href="mailto:jose.moscardo@moslab.org" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            jose.moscardo@moslab.org
+                        </a>
+                        <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            LinkedIn
+                        </a>
+                        <span class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Málaga, España
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 MosLab. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="/privacidad/">Política de Privacidad</a>
+                    <a href="/aviso-legal/">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="/tracking.js" defer></script>
+</body>
+</html>

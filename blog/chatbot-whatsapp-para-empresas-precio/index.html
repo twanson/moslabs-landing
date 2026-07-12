@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qué hace y qué no hace un chatbot de WhatsApp para empresas, comparativa honesta DIY vs SaaS vs done-for-you, precios reales y casos por sector.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="author" content="Jose María Moscardó - MosLab">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Chatbot de WhatsApp para empresas: qué hace, cuánto cuesta y cuándo no lo necesitas">
+    <meta property="og:description" content="Qué puede y qué no, DIY vs SaaS vs done-for-you, rangos de precio y casos por sector. Sin humo.">
+    <meta property="og:url" content="https://moslab.org/blog/chatbot-whatsapp-para-empresas-precio/">
+    <meta property="og:image" content="https://moslab.org/assets/og/blog-chatbot-whatsapp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://moslab.org/assets/og/blog-chatbot-whatsapp.png">
+    <meta property="og:site_name" content="MosLab">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chatbot de WhatsApp para empresas: qué hace, cuánto cuesta y cuándo no lo necesitas">
+    <meta name="twitter:description" content="Qué puede y qué no, DIY vs SaaS vs done-for-you, rangos de precio y casos por sector. Sin humo.">
+    <link rel="canonical" href="https://moslab.org/blog/chatbot-whatsapp-para-empresas-precio/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg">
+    <title>Chatbot de WhatsApp para empresas: precio y usos | MosLab</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #E5E7EB;
+            line-height: 1.6;
+            background-color: #0a0a0f;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            height: 70px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { display: flex; align-items: center; height: 50px; z-index: 1001; }
+        .logo-img { height: 100%; width: auto; max-width: 150px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; z-index: 1001; padding: 10px; }
+        .hamburger { display: block; width: 25px; height: 20px; position: relative; }
+        .hamburger::before, .hamburger::after {
+            content: ''; position: absolute; width: 100%; height: 2px; background: #00D4FF;
+            transition: all 150ms ease;
+        }
+        .hamburger::before { top: 0; }
+        .hamburger::after { bottom: 0; }
+        .nav-menu { display: flex; align-items: center; gap: 30px; }
+        .nav-link { color: #E5E7EB; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: color 150ms ease; }
+        .nav-link:hover { color: #00D4FF; }
+        .nav-cta {
+            background: linear-gradient(135deg, #00D4FF, #00a8cc); color: #0a0a0f;
+            padding: 10px 20px; border-radius: 12px; font-weight: 600; white-space: nowrap;
+            text-decoration: none; transition: all 150ms ease;
+        }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: block; }
+            .nav-menu {
+                position: absolute; top: 70px; left: 0; right: 0;
+                background: rgba(10, 10, 15, 0.98); backdrop-filter: blur(10px);
+                flex-direction: column; gap: 15px; padding: 20px;
+                max-height: 0; overflow: hidden; transition: max-height 300ms ease;
+                border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+            }
+            .nav-menu.active { max-height: 500px; }
+            .nav-link { display: block; width: 100%; }
+        }
+
+        /* Content container */
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Article header */
+        .article-header {
+            padding: 140px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            border-bottom: 1px solid rgba(45, 45, 61, 0.3);
+        }
+
+        .article-header h1 {
+            font-size: 2.5rem; margin-bottom: 1rem; color: #fff; line-height: 1.2;
+            background: linear-gradient(135deg, #00D4FF, #8B5CF6);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+
+        .article-meta {
+            display: flex; justify-content: center; gap: 2rem;
+            margin-bottom: 1rem; font-size: 0.9rem; color: #9CA3AF;
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Article content */
+        .article-content {
+            background: rgba(18, 18, 26, 0.8);
+            border: 1px solid #2D2D3D;
+            padding: 3rem; border-radius: 16px;
+            margin: 3rem auto; max-width: 800px;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem;
+            color: #00D4FF;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2); padding-bottom: 0.5rem;
+        }
+        .article-content h2:first-child { margin-top: 0; }
+
+        .article-content h3 {
+            font-size: 1.3rem; margin-top: 1.8rem; margin-bottom: 0.8rem; color: #fff;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem; color: #9CA3AF; text-align: justify;
+        }
+
+        .article-content ul, .article-content ol { margin-left: 2rem; margin-bottom: 1.5rem; color: #9CA3AF; }
+        .article-content li { margin-bottom: 0.8rem; }
+
+        .article-content strong { color: #E5E7EB; }
+
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid #00D4FF;
+            padding: 1.5rem; margin: 2rem 0; border-radius: 8px;
+        }
+        .highlight-box strong { color: #00D4FF; }
+
+        .internal-link {
+            color: #00D4FF; text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 212, 255, 0.5);
+        }
+        .internal-link:hover { border-bottom: 1px solid #00D4FF; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid #2D2D3D;
+            color: white; padding: 3rem; border-radius: 16px;
+            text-align: center; margin: 3rem 0;
+        }
+        .cta-section h3 { color: white; margin-bottom: 1rem; font-size: 1.5rem; }
+        .cta-section p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #9CA3AF; }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00D4FF, #00a8cc);
+            color: #0a0a0f; padding: 1rem 2rem; border-radius: 12px;
+            text-decoration: none; font-weight: bold;
+            transition: all 300ms ease; border: none;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+
+        /* Footer */
+        .footer {
+            background: #12121a; border-top: 1px solid #2D2D3D;
+            padding: 60px 20px 20px;
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px; max-width: 1200px; margin: 0 auto 40px;
+        }
+        .footer-brand { }
+        .footer-logo { display: flex; align-items: center; height: 40px; margin-bottom: 16px; text-decoration: none; }
+        .footer-logo .logo-img { height: 100%; width: auto; }
+        .footer-tagline { color: #9CA3AF; font-size: 0.95rem; line-height: 1.6; }
+        .footer-title { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-nav { display: flex; flex-direction: column; gap: 12px; }
+        .footer-nav a { color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .footer-nav a:hover { color: #00D4FF; }
+        .contact-info { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { display: flex; align-items: center; gap: 12px; color: #9CA3AF; font-size: 0.9rem; text-decoration: none; transition: color 150ms ease; }
+        .contact-item:hover { color: #00D4FF; }
+        .contact-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 20px; border-top: 1px solid #2D2D3D;
+            max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;
+        }
+        .copyright { color: #9CA3AF; font-size: 0.85rem; }
+        .legal-links { display: flex; gap: 20px; }
+        .legal-links a { color: #9CA3AF; font-size: 0.85rem; text-decoration: none; transition: color 150ms ease; }
+        .legal-links a:hover { color: #00D4FF; }
+
+        @media (max-width: 768px) {
+            .article-header { padding: 120px 1rem 40px; }
+            .article-header h1 { font-size: 1.8rem; }
+            .article-meta { flex-direction: column; gap: 0.5rem; }
+            .article-content { padding: 2rem 1.5rem; }
+            .container { padding: 0 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; justify-content: center; text-align: center; }
+        }
+
+        /* ===== LM Banner — "Las 6 fugas" ===== */
+        .lm-banner-section { padding: 80px 24px; background: radial-gradient(ellipse 900px 500px at 50% 50%, rgba(83, 221, 252, 0.08), transparent 70%); position: relative; }
+        .lm-banner-card { max-width: 1120px; margin: 0 auto; padding: 56px 56px; background: #0e0e15; border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 80px rgba(83, 221, 252, 0.12); position: relative; overflow: hidden; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+        .lm-banner-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(135deg, #53ddfc, #7c3aed); opacity: 0.8; }
+        .lm-banner-content { min-width: 0; }
+        .lm-banner-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #53ddfc; margin-bottom: 16px; }
+        .lm-banner-title { font-family: 'Newsreader', serif; font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 400; line-height: 1.15; color: #f4f0fb; margin: 0 0 16px; }
+        .lm-banner-subtitle { font-size: 1.0625rem; line-height: 1.5; color: #8a8899; margin: 0 0 24px; }
+        .lm-banner-bullets { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; }
+        .lm-banner-bullets li { position: relative; padding-left: 28px; font-size: 0.9375rem; color: #f4f0fb; }
+        .lm-banner-bullets li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #53ddfc; font-weight: 700; font-size: 1rem; }
+        .lm-banner-cta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 20px; }
+        .lm-banner-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 18px 36px; font-size: 1.125rem; font-weight: 600; border-radius: 12px; background: linear-gradient(135deg, #53ddfc, #7c3aed); color: #08080d; box-shadow: 0 0 30px rgba(83,221,252,0.2); text-decoration: none; transition: all 0.3s ease; white-space: nowrap; }
+        .lm-banner-cta:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(83,221,252,0.4); color: #08080d; }
+        .lm-banner-cta .btn-icon { transition: transform 0.15s ease; }
+        .lm-banner-cta:hover .btn-icon { transform: translateX(4px); }
+        .lm-banner-meta { font-size: 0.8125rem; color: #6B7280; }
+        .lm-banner-cover { display: flex; justify-content: center; align-items: center; }
+        .lm-banner-cover-link { display: block; line-height: 0; transform: rotate(-2deg); transition: transform 0.4s ease, box-shadow 0.4s ease; border-radius: 4px; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06); }
+        .lm-banner-cover-link:hover { transform: rotate(0deg) translateY(-4px); box-shadow: 0 40px 80px -15px rgba(0,0,0,0.8), 0 0 40px rgba(83,221,252,0.2), 0 0 0 1px rgba(83,221,252,0.3); }
+        .lm-banner-cover img { display: block; width: 100%; max-width: 340px; height: auto; border-radius: 4px; }
+        @media (max-width: 900px) {
+          .lm-banner-card { grid-template-columns: 1fr; gap: 40px; padding: 48px 36px; }
+          .lm-banner-cover { order: -1; }
+          .lm-banner-cover img { max-width: 240px; }
+        }
+        @media (max-width: 640px) {
+          .lm-banner-section { padding: 56px 20px; }
+          .lm-banner-card { padding: 40px 24px; gap: 32px; }
+          .lm-banner-cta-row { flex-direction: column; align-items: flex-start; }
+          .lm-banner-cta-row .lm-banner-cta { width: 100%; }
+          .lm-banner-cover img { max-width: 200px; }
+        }
+
+    
+/* ===== Reskin DS 2026 (Fase 3) — nav/footer/headings ===== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,13,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border)}
+.nav-container{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px}
+.nav-logo .logo-img,.nav-logo img{height:34px;display:block}
+.nav-menu{display:flex;align-items:center;gap:22px;margin-left:auto}
+.nav-link{font-size:14px;color:var(--color-text-secondary);font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--color-text)}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gradient-primary);color:#050509;font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:12px;box-shadow:var(--shadow-glow);transition:transform .25s}
+.nav-cta:hover{transform:translateY(-2px);color:#050509}
+.nav-toggle{display:none}
+@media(max-width:900px){.nav-menu .nav-link{display:none}}
+.footer{background:var(--color-bg-elevated);border-top:1px solid var(--color-border)}
+.footer-title{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.footer-nav a:hover,.contact-info .contact-item:hover,.legal-links a:hover{color:var(--color-primary)}
+h1,h2,h3,h4,.article-header h1,.article-content h2,.article-content h3,.blog-card-title,.recurso-title,.recursos-hero h1{font-family:'Space Grotesk',sans-serif !important;letter-spacing:-.02em}
+.recursos-hero .recursos-sub,.recurso-subtitle{font-family:'Newsreader',serif !important}
+</style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RL0B19YBLX');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Chatbot de WhatsApp para empresas: qué hace, cuánto cuesta y cuándo no lo necesitas",
+  "description": "Qué hace y qué no hace un chatbot de WhatsApp para empresas, comparativa honesta DIY vs SaaS vs done-for-you, precios reales y casos por sector.",
+  "datePublished": "2026-07-12",
+  "dateModified": "2026-07-12",
+  "author": {
+    "@type": "Person",
+    "name": "Jose María Moscardó",
+    "url": "https://moslab.org"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MosLab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://moslab.org/assets/logo-moslabs-horizontal-dark.svg"
+    }
+  },
+  "image": "https://moslab.org/assets/og/blog-chatbot-whatsapp.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://moslab.org/blog/chatbot-whatsapp-para-empresas-precio/"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un chatbot de WhatsApp para empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El montaje profesional (done-for-you) suele partir de unos 900-1.000 € con precio cerrado. A eso se suma el coste por conversación que cobra Meta a través de la API oficial, que son céntimos y van a tu cuenta. Las plataformas SaaS cobran una cuota mensual desde ~20-50 €, pero la configuración la haces tú."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es legal y seguro usar un bot en WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, si se monta sobre la API oficial de WhatsApp Business. Las apps no oficiales sí pueden hacer que te bloqueen el número. Con la API oficial cumples las normas de Meta y tratas los datos conforme al RGPD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El chatbot sustituye a mi equipo de atención?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, lo complementa. Resuelve lo repetitivo y lo de fuera de horario, y deriva a una persona cuando hace falta criterio. Un buen bot sabe cuándo callarse y pasar la conversación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirve para mi sector?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Funciona especialmente bien donde hay muchas consultas repetitivas: clínicas, inmobiliarias, talleres, gimnasios, hostelería. Si tu volumen de mensajes es bajo o cada consulta es muy distinta, quizá aún no lo necesites."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="/" class="nav-logo">
+                    <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                    <span class="hamburger"></span>
+                </button>
+                <nav class="nav-menu" id="navMenu" aria-label="Menú principal">
+                <a href="/automatizaciones/" class="nav-link">Automatizaciones</a>
+                <a href="/sectores/" class="nav-link">Sectores</a>
+                <a href="/precios/" class="nav-link">Precios</a>
+                <a href="/calculadora-ahorro/" class="nav-link">Calculadora</a>
+                <a href="/para-agencias/" class="nav-link">Para agencias</a>
+                <a href="/recursos/" class="nav-link">Recursos</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://moslabs.zohobookings.eu/#/moslabs" target="_blank" rel="noopener" class="nav-cta">Diagnóstico gratuito</a>
+                </nav>
+            </div>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <div class="container">
+            <h1>Chatbot de WhatsApp para empresas: qué hace, cuánto cuesta y cuándo no lo necesitas</h1>
+            <div class="article-meta">
+                <span>📅 12 de julio de 2026</span>
+                <span>⏱️ 8 min de lectura</span>
+                <span>✍️ Jose María Moscardó</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <article class="article-content">
+            <p>El WhatsApp es, para la mayoría de las PYMEs españolas, el canal donde de verdad hablan sus clientes. Y por eso "poner un bot en el WhatsApp" se ha convertido en una de las peticiones más frecuentes. Pero hay mucho humo alrededor: promesas de que "la IA lo hace todo" y precios que van de gratis a miles de euros. Vamos a aclararlo de forma honesta: qué hace <strong>de verdad</strong> un <strong>chatbot de WhatsApp para empresas</strong>, cuánto cuesta según cómo lo montes, y cuándo directamente no lo necesitas.</p>
+
+            <h2>Qué es (y qué no es) un chatbot de WhatsApp</h2>
+            <p>Un chatbot de WhatsApp para empresas es un asistente que responde automáticamente a los mensajes que llegan a tu número, sobre la infraestructura oficial de WhatsApp Business. Con IA moderna, no se limita a menús rígidos: entiende lenguaje natural, contesta preguntas, cualifica al contacto y puede agendar. Lo que <em>no</em> es: no es una persona, no tiene criterio para todo, y no debería fingir que lo tiene. Un buen asistente automatiza lo repetitivo y escala a un humano lo importante.</p>
+
+            <h2>Qué puede hacer bien</h2>
+            <ul>
+              <li>Responder al instante 24/7, incluida la noche y el fin de semana, que es cuando más consultas se pierden.</li>
+              <li>Contestar preguntas frecuentes: horarios, servicios, precios orientativos, disponibilidad.</li>
+              <li>Cualificar al contacto con las preguntas que definas y registrar la ficha en tu CRM.</li>
+              <li>Agendar citas y llamadas directamente en tu calendario, con confirmación y recordatorio.</li>
+              <li>Derivar a una persona con todo el contexto cuando la conversación lo requiere.</li>
+            </ul>
+
+            <h2>Qué no puede hacer (y dónde falla el humo)</h2>
+            <p>No cierra ventas complejas por sí solo, no sustituye el trato humano en temas delicados y no "aprende tu negocio" por arte de magia: alguien tiene que entrenarlo con tu información real. El error más común es montar un bot que responde a todo sin saber cuándo callarse; el cliente lo detecta en dos mensajes y se frustra. La diferencia entre un asistente útil y uno que daña tu marca está justo ahí: en saber cuándo pasar la conversación a una persona.</p>
+
+            <h2>La parte importante: API oficial vs apps no oficiales</h2>
+            <p>Esto marca la diferencia entre algo serio y un problema. La <strong>API oficial de WhatsApp Business</strong> es la infraestructura homologada por Meta: número estable, cumplimiento de sus normas y tratamiento de datos conforme al RGPD. Las <strong>apps no oficiales</strong> (las que se conectan "por la puerta de atrás") son más baratas de montar, pero pueden hacer que Meta te bloquee el número — y perder tu WhatsApp de empresa de un día para otro es un desastre. Cualquier montaje profesional se hace sobre la API oficial. Sin excepciones.</p>
+
+            <h2>DIY, SaaS o done-for-you: comparativa honesta</h2>
+            <p>Hay tres formas de tener un chatbot de WhatsApp, y cada una tiene su precio y su letra pequeña:</p>
+            <h3>DIY (hazlo tú)</h3>
+            <p>Montas el bot con herramientas de automatización tú mismo. Coste directo bajo, pero necesitas tiempo, conocimiento técnico y asumir tú el mantenimiento. Tiene sentido si tienes perfil técnico y tiempo libre; para la mayoría de las PYMEs, el "gratis" acaba saliendo caro en horas.</p>
+            <h3>SaaS (plataforma de pago)</h3>
+            <p>Contratas una plataforma que te da el chatbot por una cuota mensual (desde ~20-50 €). Rápido de arrancar, pero la configuración, el entrenamiento y la conexión con tu CRM las haces tú, y a menudo te quedas dentro de su ecosistema. Bien para necesidades sencillas y estándar.</p>
+            <h3>Done-for-you (te lo montan)</h3>
+            <p>Alguien diseña, entrena y conecta el asistente a tu operativa, con precio cerrado. Cuesta más de entrada (suele partir de unos 900-1.000 €), pero te ahorra el tiempo y el riesgo, y te queda hecho a la medida de tu negocio y documentado. Es lo que tiene sentido cuando el WhatsApp es un canal serio para ti.</p>
+
+            <h2>Cuánto cuesta, en cifras</h2>
+            <p>Con la API oficial hay dos costes que conviene separar: el <strong>montaje</strong> (una vez) y el <strong>coste por conversación</strong> que cobra Meta (recurrente, unos céntimos por conversación, directamente en tu cuenta). En nuestro caso, el <a href="/automatizaciones/asistente-whatsapp/">asistente de WhatsApp con IA</a> parte de 990 € de montaje con precio cerrado, y el coste de Meta va aparte de forma transparente. Una plataforma SaaS te saldrá más barata en montaje pero con cuota mensual y el trabajo de tu lado. La cuenta honesta es sumar todo —montaje, cuota, tu tiempo y el coste por conversación— y no solo mirar el titular más bajo.</p>
+
+            <h2>Casos por sector</h2>
+            <p>Donde más rinde un chatbot de WhatsApp es en negocios con muchas consultas repetitivas:</p>
+            <ul>
+              <li><strong><a href="/crm-clinica-dental-automatizado/">Clínicas dentales</a></strong> y de salud: peticiones de cita, dudas de tratamientos y precios, recordatorios — con menos carga para recepción.</li>
+              <li><strong><a href="/automatizacion-ventas-crm-inmobiliarias/">Inmobiliarias</a></strong>: preguntas sobre inmuebles, disponibilidad de visitas y cualificación del comprador antes de que llame el comercial.</li>
+              <li><strong><a href="/crm-taller-mecanico-automatizado/">Talleres mecánicos</a></strong>: presupuestos orientativos, estado de la reparación y cita para revisión o ITV.</li>
+            </ul>
+            <p>En todos ellos, el asistente se entrena con la información real del negocio y se conecta al CRM y a la agenda, para que ninguna conversación se quede sin registrar ni sin siguiente paso.</p>
+
+            <h2>Cuándo NO lo necesitas</h2>
+            <p>Si recibes pocos mensajes al día, o cada consulta es tan distinta que ninguna se repite, un chatbot te aportará poco: te saldría más a cuenta responder a mano. Tampoco tiene sentido si aún no tienes claras tus respuestas estándar (precios, servicios, horarios): eso hay que ordenarlo antes. Y si lo que buscas es "vender más" de forma genérica, el chatbot es una pieza, no la solución completa. Te lo decimos aunque signifique no vendértelo: automatizar por moda no sirve de nada.</p>
+
+            <h2>Cómo se monta y se entrena (para que no suene a robot)</h2>
+            <p>La calidad de un asistente de WhatsApp no está en la tecnología, está en el entrenamiento. El proceso serio tiene cuatro pasos: dar de alta el número en la API oficial de WhatsApp Business, recopilar la información real del negocio (servicios, precios orientativos, horarios, las preguntas que más se repiten y cómo las respondes tú), definir los casos en los que debe derivar a una persona, y conectar el asistente con el CRM y la agenda. Cuanto mejor sea esa base, más natural suena y menos veces se equivoca.</p>
+            <p>El objetivo no es que el bot "hable como una IA", sino que hable como tu empresa. Por eso se entrena con tus mejores respuestas y tu tono, y se prueba con conversaciones reales antes de ponerlo en marcha. Un asistente bien entrenado resuelve la mayoría de las consultas sin que el cliente note que hay automatización de por medio — y las que no sabe resolver, las pasa a un humano sin dramas.</p>
+
+            <h2>Errores comunes al poner un bot en WhatsApp</h2>
+            <p>Los tres fallos que más se repiten: montar sobre una app no oficial y arriesgar el número; hacer un bot que responde a todo y nunca deriva, frustrando al cliente; y lanzarlo sin entrenarlo con información real, de modo que da respuestas genéricas o inventadas. Evitar estos tres errores es, en la práctica, la diferencia entre una herramienta que te ahorra horas y una que te cuesta clientes.</p>
+
+            <h2>En resumen</h2>
+            <p>Un chatbot de WhatsApp bien montado —sobre la API oficial, entrenado con tu negocio y con criterio para escalar a un humano— es una de las automatizaciones que antes se notan, sobre todo si atiendes muchas consultas repetitivas. Pero no es magia ni es gratis: elige el formato (DIY, SaaS o done-for-you) según tu tiempo y tu riesgo, suma todos los costes y asegúrate de que sabe cuándo callarse. Si quieres ver cómo quedaría en tu caso, empieza por el <a href="https://moslabs.zohobookings.eu/#/moslabs">diagnóstico gratuito</a> o mira el <a href="/automatizaciones/asistente-whatsapp/">asistente de WhatsApp con IA</a> en detalle.</p>
+
+            <h2>Preguntas frecuentes</h2>
+            <h3>¿Cuánto cuesta un chatbot de WhatsApp para empresas?</h3>
+            <p>El montaje profesional (done-for-you) suele partir de unos 900-1.000 € con precio cerrado. A eso se suma el coste por conversación que cobra Meta a través de la API oficial, que son céntimos y van a tu cuenta. Las plataformas SaaS cobran una cuota mensual desde ~20-50 €, pero la configuración la haces tú.</p>
+            <h3>¿Es legal y seguro usar un bot en WhatsApp?</h3>
+            <p>Sí, si se monta sobre la API oficial de WhatsApp Business. Las apps no oficiales sí pueden hacer que te bloqueen el número. Con la API oficial cumples las normas de Meta y tratas los datos conforme al RGPD.</p>
+            <h3>¿El chatbot sustituye a mi equipo de atención?</h3>
+            <p>No, lo complementa. Resuelve lo repetitivo y lo de fuera de horario, y deriva a una persona cuando hace falta criterio. Un buen bot sabe cuándo callarse y pasar la conversación.</p>
+            <h3>¿Sirve para mi sector?</h3>
+            <p>Funciona especialmente bien donde hay muchas consultas repetitivas: clínicas, inmobiliarias, talleres, gimnasios, hostelería. Si tu volumen de mensajes es bajo o cada consulta es muy distinta, quizá aún no lo necesites.</p>
+        </article>
+    </div>
+
+        <!-- LM BANNER · Las 6 fugas -->
+        <aside class="lm-banner-section" aria-label="Recurso gratuito: Las 6 fugas">
+          <div class="lm-banner-card">
+            <div class="lm-banner-content">
+              <div class="lm-banner-eyebrow">Auditoría gratuita · Para PYMEs</div>
+              <h2 class="lm-banner-title">Antes de invertir un euro más, audita las 6 fugas que vacían tu caja</h2>
+              <p class="lm-banner-subtitle">Auditoría operativa para PYMEs. En 15 minutos sabrás, en euros, cuánto pierdes cada mes en marketing y ventas — y por dónde empezar a taparlo mañana.</p>
+              <ul class="lm-banner-bullets">
+                <li>Marco de las 6 fugas con ejemplos reales de PYMEs</li>
+                <li>Tabla de scoring para identificar tu fuga más cara</li>
+                <li>Plan de 5 días listo para arreglar la peor</li>
+              </ul>
+              <div class="lm-banner-cta-row">
+                <a href="https://moslab.org/recursos/auditoria-6-fugas/?utm_source=banner&utm_medium=internal&utm_campaign=lm-6-fugas&utm_content=blog-chatbot-whatsapp-para-empresas-precio" class="lm-banner-cta">Descargar gratis <span class="btn-icon" aria-hidden="true">→</span></a>
+                <span class="lm-banner-meta">12 páginas · PDF · Te lo enviamos al email</span>
+              </div>
+            </div>
+            <div class="lm-banner-cover">
+              <a href="https://moslab.org/recursos/auditoria-6-fugas/?utm_source=banner&utm_medium=internal&utm_campaign=lm-6-fugas&utm_content=blog-chatbot-whatsapp-para-empresas-precio" class="lm-banner-cover-link" aria-label="Ver portada de la guía">
+                <img src="/assets/auditoria-6-fugas-cover.png" alt="Portada de la guía 'Las 6 fugas' por Jose María Moscardó" loading="lazy" width="565" height="800" />
+              </a>
+            </div>
+          </div>
+        </aside>
+
+<footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">Automatización de marketing y ventas para PYMEs</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <nav class="footer-nav">
+                        <a href="/automatizaciones/">Automatizaciones</a>
+                        <a href="/precios/">Precios</a>
+                        <a href="/para-agencias/">Para agencias</a>
+                        <a href="/recursos/">Recursos</a>
+                        <a href="/blog/">Blog</a>
+                        <a href="/calculadora-ahorro/">Calculadora de ahorro</a>
+                    </nav>
+                </div>
+                <div class="footer-links">
+                  <h4 class="footer-title">Sectores</h4>
+                  <nav class="footer-nav">
+                    <a href="/automatizacion-ventas-crm-inmobiliarias/">Inmobiliarias</a>
+                    <a href="/automatizacion-marketing-manufactura-industrial/">Manufactura industrial</a>
+                    <a href="/automatizacion-leads-consultorias-profesionales/">Consultorías y despachos</a>
+                    <a href="/automatizacion-leads-educacion-formacion/">Educación y formación</a>
+                    <a href="/automatizacion-ventas-logistica-transporte/">Logística y transporte</a>
+                    <a href="/crm-clinica-dental-automatizado/">Clínicas dentales</a>
+                    <a href="/automatizacion-comercial-clinicas-esteticas/">Clínicas estéticas</a>
+                    <a href="/automatizacion-atencion-cliente-gimnasios/">Gimnasios</a>
+                    <a href="/automatizacion-clinica-veterinaria/">Clínicas veterinarias</a>
+                    <a href="/crm-taller-mecanico-automatizado/">Talleres mecánicos</a>
+                    <a href="/sectores/"><strong>Ver todos los sectores →</strong></a>
+                  </nav>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contacto</h4>
+                    <div class="contact-info">
+                        <a href="mailto:jose.moscardo@moslab.org" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            jose.moscardo@moslab.org
+                        </a>
+                        <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            LinkedIn
+                        </a>
+                        <span class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Málaga, España
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 MosLab. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="/privacidad/">Política de Privacidad</a>
+                    <a href="/aviso-legal/">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="/tracking.js" defer></script>
+</body>
+</html>
