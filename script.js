@@ -23,7 +23,9 @@ function initMobileNav() {
     const inner = bar.querySelector('.nav-inner, .nav-container, .container') || bar;
 
     const en = document.documentElement.lang === 'en';
-    const zoho = 'https://moslabs.zohobookings.eu/#/moslabs';
+    // CTA del drawer móvil: pasa por el formulario de contacto, no directo a
+    // Zoho Bookings. tracking.js le añade source + UTMs al vuelo.
+    const contactUrl = en ? '/en/contact/' : '/contacto/';
     const logo = '/assets/logo-moslabs-horizontal-dark.svg';
     const home = en ? '/en/' : '/';
     const links = en ? [
@@ -64,7 +66,7 @@ function initMobileNav() {
         + `</div>`
         + `<div class="m-drawer-links" role="navigation" aria-label="${t.menu}">${linksHtml}</div>`
         + `<div class="m-drawer-lang">${langHtml}</div>`
-        + `<a class="m-drawer-cta" href="${zoho}">${t.cta}</a>`;
+        + `<a class="m-drawer-cta" href="${contactUrl}">${t.cta}</a>`;
     document.body.appendChild(drawer);
 
     const closeEl = drawer.querySelector('.m-drawer-close');

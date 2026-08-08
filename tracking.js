@@ -1,7 +1,13 @@
 // ===== MosLab — Booking CTA Tracking =====
-// Detecta clicks a Zoho Bookings, dispara evento GA4 'book_call_click' con
-// cta_location (nav/hero/footer/cta-final/mid) y reescribe el href con UTMs
-// únicos por página + posición. Permite saber qué CTA pulsó cada visitante.
+// Detecta clicks a las páginas de contacto (/contacto/ ES · /en/contact/ EN),
+// dispara evento GA4 'book_call_click' con cta_location (nav/hero/footer/
+// cta-final/mid) y reescribe el href con UTMs + source únicos por página +
+// posición. Permite saber qué CTA pulsó cada visitante.
+//
+// Los CTAs ya no apuntan directamente a Zoho Bookings: pasan primero por el
+// formulario de contacto (Tally). El valor 'source' viaja por el funnel
+// (/contacto/ → /gracias/) hasta el iframe de Zoho, que lo reinyecta como
+// ?Origen=... — misma atribución que antes, ahora con filtro anti-spam.
 //
 // Autocontenido. Solo requiere que gtag.js esté cargado (lo está en todas
 // las páginas vía Google Tag Manager / GA4). Si no está, el tracking se
@@ -10,7 +16,20 @@
 (function () {
     'use strict';
 
-    var BOOKING_HOST = 'zohobookings.eu';
+    // Enlaces de reserva: ahora son las páginas de contacto, no Zoho.
+    var BOOKING_SELECTOR = 'a[href*="/contacto/"], a[href*="/en/contact/"]';
+    function isBookingLink(href) {
+        return !!href && (href.indexOf('/contacto/') !== -1 || href.indexOf('/en/contact/') !== -1);
+    }
+
+    // Los selectores de idioma apuntan a /contacto/ y /en/contact/, pero son
+    // navegación, no CTAs de reserva. Sin excluirlos ensuciarían el evento
+    // GA4 'book_call_click' y le añadirían UTMs a un enlace de idioma.
+    // .lang-switch = nav de escritorio · .m-drawer-lang = drawer móvil
+    // (este último lo genera script.js en tiempo de ejecución).
+    function isLangSwitch(el) {
+        return !!(el && el.closest && el.closest('.lang-switch, .m-drawer-lang'));
+    }
 
     function detectCtaLocation(el) {
         var node = el;
@@ -37,36 +56,27 @@
 
     function annotateAndTrack(link) {
         if (!link || !link.href) return;
-        if (link.href.indexOf(BOOKING_HOST) === -1) return;
+        if (!isBookingLink(link.href)) return;
+        if (isLangSwitch(link)) return;
 
         var ctaLocation = detectCtaLocation(link);
         var slug = pageSlug();
         var origenValue = slug + '/' + ctaLocation;
 
-        // Reescribir href (idempotente):
-        // - UTMs antes del hash → consumidos por GA4 si hiciera falta
-        // - ?Origen=... DESPUÉS del hash → consumido por Zoho Bookings
-        //   para pre-rellenar el campo "Origen" del formulario.
-        //   Zoho usa hash routing (#/moslabs), por eso los params para Zoho
-        //   van detrás del hash. Doc: help.zoho.com/.../bookings-booking-page
+        // Reescribir href (idempotente). El destino ya NO usa hash routing:
+        // - source=slug/cta → viaja por el funnel (/contacto/ → /gracias/) y
+        //   la página de gracias lo reinyecta en el iframe de Zoho como
+        //   ?Origen=slug/cta (mismo formato que antes generaba este script).
+        // - utm_* → atribución estándar en GA4 + hidden fields del Tally.
         if (!link.dataset.utmSet) {
             try {
                 var url = new URL(link.href);
+                url.searchParams.set('source', origenValue);
                 url.searchParams.set('utm_source', 'web');
                 url.searchParams.set('utm_medium', 'cta');
                 url.searchParams.set('utm_campaign', slug);
                 url.searchParams.set('utm_content', ctaLocation);
-                var newHref = url.toString();
-
-                // Añadir Origen detrás del hash si hay hash routing
-                var hashIdx = newHref.indexOf('#');
-                if (hashIdx !== -1) {
-                    var hashPart = newHref.substring(hashIdx + 1);
-                    var separator = hashPart.indexOf('?') !== -1 ? '&' : '?';
-                    newHref = newHref.substring(0, hashIdx + 1) + hashPart + separator + 'Origen=' + encodeURIComponent(origenValue);
-                }
-
-                link.href = newHref;
+                link.href = url.toString();
                 link.dataset.utmSet = 'true';
             } catch (e) { /* href no parseable, dejamos como estaba */ }
         }
@@ -85,7 +95,7 @@
     }
 
     function preAnnotate() {
-        var links = document.querySelectorAll('a[href*="' + BOOKING_HOST + '"]');
+        var links = document.querySelectorAll(BOOKING_SELECTOR);
         for (var i = 0; i < links.length; i++) annotateAndTrack(links[i]);
     }
 
@@ -99,7 +109,7 @@
     document.addEventListener('click', function (e) {
         var t = e.target;
         if (!t || !t.closest) return;
-        var link = t.closest('a[href*="' + BOOKING_HOST + '"]');
+        var link = t.closest(BOOKING_SELECTOR);
         if (link) annotateAndTrack(link);
     }, true);
 })();

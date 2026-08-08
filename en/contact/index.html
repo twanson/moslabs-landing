@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL0B19YBLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL0B19YBLX');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | MosLab — Let's talk about your project</title>
+<meta name="description" content="Tell us what you need and we'll propose a clear first step. Fill in the form and book your free diagnosis with MosLab."/>
+<meta name="author" content="Jose María Moscardó - MosLab"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Contact | MosLab — Let's talk about your project"/>
+<meta property="og:description" content="Tell us what you need and we'll propose a clear first step."/>
+<meta property="og:image" content="https://moslab.org/assets/og/home-en.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://moslab.org/en/contact/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="es_ES"/>
+<meta property="og:site_name" content="MosLab"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Contact | MosLab — Let's talk about your project"/>
+<meta name="twitter:description" content="Tell us what you need and we'll propose a clear first step."/>
+<meta name="twitter:image" content="https://moslab.org/assets/og/home-en.png"/>
+<link rel="canonical" href="https://moslab.org/en/contact/"/>
+<link rel="alternate" hreflang="es" href="https://moslab.org/contacto/"/>
+<link rel="alternate" hreflang="en" href="https://moslab.org/en/contact/"/>
+<link rel="alternate" hreflang="x-default" href="https://moslab.org/contacto/"/>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon-new.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,400..600&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+</head>
+<body class="home">
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/en/"><img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab"/></a>
+    <div class="nav-links">
+      <a href="/en/automations/">Automations</a>
+      <a href="/sectores/">Sectors</a>
+      <a href="/en/pricing/">Pricing</a>
+      <a href="/en/savings-calculator/">Calculator</a>
+      <a href="/en/for-agencies/">For agencies</a>
+      <a href="/en/resources/6-leaks-audit/">Resources</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <span class="lang-switch"><a href="/contacto/">ES</a> / <b>EN</b></span>
+    <a class="btn-primary sm" href="/en/contact/">Free diagnosis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="blur-glow c"></div>
+  <div class="orb indigo" data-parallax="0.12" style="width:320px;height:320px;left:-120px;top:230px"></div>
+  <div class="fx-layer" data-fx="16"></div>
+  <div class="container">
+    <div class="breadcrumbs reveal from-top"><a href="/en/">Home</a> / Contact</div>
+    <div class="eyebrow reveal from-top" style="justify-content:center">Contact</div>
+    <h1 class="reveal from-bottom">Let's talk about your <em>project.</em></h1>
+    <p class="page-sub reveal from-bottom">Tell us what you need and we'll propose a clear first step.</p>
+  </div>
+</header>
+
+<!-- FORM (Tally) -->
+<section class="contact" style="padding-top:0">
+  <div class="container">
+    <div class="contact-mount reveal from-bottom" id="tally-form-mount"></div>
+    <script>
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+
+      // Tally hidden fields: utm_* + page_url (+ source, in case the form captures it)
+      var tp = new URLSearchParams();
+      ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+        if (params.get(k)) tp.set(k, params.get(k));
+      });
+      if (params.get('source')) tp.set('source', params.get('source'));
+      tp.set('page_url', window.location.href);
+      tp.set('alignLeft','1');
+      tp.set('hideTitle','1');
+      tp.set('dynamicHeight','1');
+      tp.set('theme','dark');
+      tp.set('transparentBackground','1');
+
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://tally.so/embed/vGa5P0?' + tp.toString();
+      iframe.width = '100%';
+      iframe.height = '600';
+      iframe.frameBorder = '0';
+      iframe.title = 'Contact MosLab';
+      iframe.loading = 'lazy';
+      iframe.style.border = 'none';
+      iframe.style.background = 'transparent';
+      document.getElementById('tally-form-mount').appendChild(iframe);
+
+      // On submit, go to /en/thank-you/ preserving source + utm_*
+      function buildThanksUrl(){
+        var out = new URLSearchParams();
+        if (params.get('source')) out.set('source', params.get('source'));
+        ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+          if (params.get(k)) out.set(k, params.get(k));
+        });
+        var qs = out.toString();
+        return '/en/thank-you/' + (qs ? '?' + qs : '');
+      }
+
+      function looksLikeSubmit(payload){
+        if (!payload) return false;
+        if (typeof payload === 'string'){
+          var s = payload.toLowerCase();
+          return s.indexOf('formsubmitted') !== -1 || s.indexOf('submitted') !== -1;
+        }
+        if (typeof payload !== 'object') return false;
+        if (payload.event === 'Tally.FormSubmitted') return true;
+        if (payload.type === 'tally-form-submitted') return true;
+        var fields = [payload.event, payload.type, payload.eventName, payload.name];
+        for (var i = 0; i < fields.length; i++){
+          var v = fields[i];
+          if (typeof v === 'string'){
+            var lv = v.toLowerCase();
+            if (lv.indexOf('formsubmitted') !== -1 || lv.indexOf('submitted') !== -1) return true;
+          }
+        }
+        return false;
+      }
+
+      var redirected = false;
+      window.addEventListener('message', function(e){
+        if (e.origin && e.origin.indexOf('tally.so') === -1) return;
+        var data = e.data;
+        if (typeof data === 'string'){ try { data = JSON.parse(data); } catch (_){} }
+        if (looksLikeSubmit(data)){
+          if (redirected) return;
+          redirected = true;
+          window.location.href = buildThanksUrl();
+        }
+      });
+    })();
+    </script>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/en/"><img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab"/></a>
+      <p>Marketing and sales automation for SMBs.</p>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <div class="footer-links">
+        <a href="/en/automations/">Automations</a>
+        <a href="/en/pricing/">Pricing</a>
+        <a href="/en/for-agencies/">For agencies</a><a href="/casos-exito/">Case studies</a><a href="/en/resources/6-leaks-audit/">The 6 Leaks (free audit)</a>
+        <a href="/en/savings-calculator/">Savings calculator</a>
+        <a href="/">Español</a>
+      </div>
+    </div>
+    <div>
+      <h4>Sectors</h4>
+      <div class="footer-links">
+        <a href="/automatizacion-ventas-crm-inmobiliarias/">Real estate</a>
+        <a href="/crm-clinica-dental-automatizado/">Dental clinics</a>
+        <a href="/automatizacion-comercial-clinicas-esteticas/">Aesthetic clinics</a>
+        <a href="/automatizacion-atencion-cliente-gimnasios/">Gyms</a>
+        <a href="/crm-taller-mecanico-automatizado/">Auto workshops</a>
+        <a href="/sectores/"><strong>See all sectors →</strong></a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact">
+        <a href="mailto:jose.moscardo@moslab.org">jose.moscardo@moslab.org</a>
+        <a href="https://linkedin.com/in/josemariamoscardo">LinkedIn</a>
+        <p>Málaga, Spain</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 MosLab. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="/privacidad/">Privacy Policy</a>
+      <a href="/aviso-legal/">Legal Notice</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+<script src="/tracking.js" defer></script>
+</body>
+</html>
