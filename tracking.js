@@ -54,7 +54,11 @@
         return path.replace(/\//g, '-');
     }
 
-    function annotateAndTrack(link) {
+    // fireEvent=false → solo anota el href (al cargar la página).
+    // fireEvent=true  → anota y además dispara el evento GA4 (al hacer clic).
+    // Separarlos es lo que hace que 'book_call_click' cuente clics reales y no
+    // impresiones de CTA: antes se disparaba también en preAnnotate().
+    function annotateAndTrack(link, fireEvent) {
         if (!link || !link.href) return;
         if (!isBookingLink(link.href)) return;
         if (isLangSwitch(link)) return;
@@ -82,7 +86,7 @@
         }
 
         // Disparar evento GA4 (transport beacon = no bloquea la navegación)
-        if (typeof window.gtag === 'function') {
+        if (fireEvent && typeof window.gtag === 'function') {
             window.gtag('event', 'book_call_click', {
                 cta_location: ctaLocation,
                 cta_text: (link.textContent || '').trim().slice(0, 80),
@@ -96,7 +100,7 @@
 
     function preAnnotate() {
         var links = document.querySelectorAll(BOOKING_SELECTOR);
-        for (var i = 0; i < links.length; i++) annotateAndTrack(links[i]);
+        for (var i = 0; i < links.length; i++) annotateAndTrack(links[i], false);
     }
 
     if (document.readyState === 'loading') {
@@ -110,7 +114,7 @@
         var t = e.target;
         if (!t || !t.closest) return;
         var link = t.closest(BOOKING_SELECTOR);
-        if (link) annotateAndTrack(link);
+        if (link) annotateAndTrack(link, true);
     }, true);
 })();
 
