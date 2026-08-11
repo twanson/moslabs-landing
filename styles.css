@@ -2422,3 +2422,76 @@ body.m-drawer-open{overflow:hidden}
   .m-drawer-lang b{color:#53ddfc;font-weight:700}
   .m-drawer-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;background:linear-gradient(135deg,#53ddfc,#7c3aed);color:#050509;font:600 15px 'Inter',sans-serif;padding:15px 24px;border-radius:12px;text-decoration:none;box-shadow:0 0 30px rgba(83,221,252,.25)}
 }
+
+/* ===== Newsletter opt-in (DS Modo A · tokens) ===== */
+/* Bloque completo: final de landings de recursos. Form compacto: footer. */
+.newsletter-optin{
+  background:var(--bg-elevated);
+  border:1px solid rgba(83,221,252,.15);
+  border-radius:var(--radius);
+  padding:32px 36px;
+  max-width:640px;
+  margin:48px auto;
+}
+.newsletter-eyebrow{
+  font-family:var(--font-body);
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--primary);margin:0 0 8px;
+}
+.newsletter-optin h3{
+  font-family:var(--font-accent);
+  font-size:26px;font-weight:600;line-height:1.2;
+  color:var(--text);margin:0 0 8px;
+}
+.newsletter-optin h3 em{font-family:var(--font-accent);font-style:italic;font-weight:500;color:var(--primary);}
+.newsletter-lede{
+  font-family:var(--font-body);
+  font-size:15px;color:var(--text-secondary);line-height:1.5;margin:0 0 20px;
+}
+/* Honeypot anti-spam: fuera de pantalla, nunca visible ni tabulable. */
+.newsletter-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
+.newsletter-fields{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.newsletter-form input[type="email"]{
+  flex:1;min-width:220px;
+  background:var(--bg);
+  border:1px solid rgba(244,240,251,.2);
+  border-radius:10px;
+  padding:12px 16px;
+  color:var(--text);
+  font-family:var(--font-body);font-size:15px;
+}
+.newsletter-form input[type="email"]::placeholder{color:var(--text-muted);}
+.newsletter-form input[type="email"]:focus{outline:none;border-color:var(--primary);}
+.newsletter-form button[type="submit"]{
+  background:var(--gradient);
+  color:#08080d;border:none;border-radius:10px;
+  padding:12px 24px;
+  font-family:var(--font-body);font-size:15px;font-weight:600;
+  cursor:pointer;box-shadow:var(--glow);
+  transition:transform var(--transition-fast);
+}
+.newsletter-form button[type="submit"]:hover{transform:translateY(-1px);}
+.newsletter-form button[type="submit"]:disabled{opacity:.6;cursor:default;transform:none;}
+.newsletter-fineprint{font-family:var(--font-body);font-size:12px;color:var(--text-muted);margin:12px 0 0;}
+.newsletter-status{font-family:var(--font-body);font-size:14px;margin:12px 0 0;}
+.newsletter-status[data-state="ok"]{color:#4ade80;}
+.newsletter-status[data-state="error"]{color:#f87171;}
+
+/* Variante compacta del footer: reclamo + input + botón en una franja. */
+.footer-newsletter{
+  border-top:1px solid var(--border);
+  padding:24px 0;
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;
+  justify-content:space-between;
+}
+.footer-newsletter-claim{
+  font-family:var(--font-body);font-size:14px;color:var(--text-secondary);margin:0;max-width:420px;
+}
+.footer-newsletter-claim span{color:var(--text);font-weight:600;}
+.footer-newsletter .newsletter-form{flex:1;min-width:280px;max-width:480px;}
+.footer-newsletter .newsletter-fields{flex-wrap:nowrap;}
+.footer-newsletter .newsletter-status{width:100%;margin-top:10px;}
+@media (max-width:600px){
+  .newsletter-optin{padding:24px 22px;}
+  .footer-newsletter .newsletter-fields{flex-wrap:wrap;}
+}

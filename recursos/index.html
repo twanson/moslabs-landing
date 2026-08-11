@@ -496,6 +496,17 @@ h1,h2,h3,h4,.article-header h1,.article-content h2,.article-content h3,.blog-car
         </div>
       </div>
     </div>
+    <div class="footer-newsletter">
+      <p class="footer-newsletter-claim">Una automatización real cada dos semanas. <span>Con números y sin humo.</span></p>
+      <form class="newsletter-form" data-newsletter action="https://n8n.oficioscirculares.com/webhook/moslab-newsletter" method="POST">
+        <input type="text" name="web" value="" class="newsletter-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="source_detail" value="">
+        <div class="newsletter-fields">
+          <input type="email" name="email" required placeholder="tu@email.com" autocomplete="email" aria-label="Tu email">
+          <button type="submit">Apuntarme</button>
+        </div>
+      </form>
+    </div>
     <div class="footer-bottom">
       <p class="copyright">&copy; 2026 MosLab. Todos los derechos reservados.</p>
       <div class="legal-links">
@@ -509,5 +520,6 @@ h1,h2,h3,h4,.article-header h1,.article-content h2,.article-content h3,.blog-car
 <script src="/script.js"></script>
 <script src="/tracking.js" defer></script>
 <script src="/assets/aes-overlay.js" defer></script>
+<script src="/newsletter.js" defer></script>
 </body>
 </html>
