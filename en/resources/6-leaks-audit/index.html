@@ -244,21 +244,26 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-  <!-- Newsletter · compact opt-in (footer top band) -->
-  <div class="footer-newsletter">
-    <div class="footer-newsletter-inner">
-      <p class="footer-newsletter-claim">One real automation every two weeks. <span>With numbers, no fluff.</span></p>
-      <form class="newsletter-form" data-newsletter action="https://n8n.oficioscirculares.com/webhook/moslab-newsletter" method="POST">
-        <input type="text" name="web" value="" class="newsletter-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="source_detail" value="">
-        <div class="newsletter-fields">
-          <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" aria-label="Your email">
-          <button type="submit">Subscribe</button>
-        </div>
-      </form>
-    </div>
+<!-- Newsletter · band -->
+<section class="newsletter-band">
+  <div class="newsletter-band-inner">
+    <svg class="newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    <p class="newsletter-eyebrow">Newsletter · every two weeks</p>
+    <h2>One real <em>automation</em> every two weeks</h2>
+    <p class="newsletter-lede">Every two weeks I'll email you one automation <b>ready to copy</b> into your business. Free, with real numbers, no fluff.</p>
+    <form class="newsletter-form" data-newsletter action="https://n8n.oficioscirculares.com/webhook/moslab-newsletter" method="POST">
+      <input type="text" name="web" value="" class="newsletter-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="source_detail" value="">
+      <div class="newsletter-fields">
+        <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" aria-label="Your email">
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
+    <p class="newsletter-fineprint">Unsubscribe in one click. I'll never share your email.</p>
   </div>
+</section>
+
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">

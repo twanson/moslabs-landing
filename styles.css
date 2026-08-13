@@ -2448,6 +2448,7 @@ body.m-drawer-open{overflow:hidden}
   font-family:var(--font-body);
   font-size:15px;color:var(--text-secondary);line-height:1.5;margin:0 0 20px;
 }
+.newsletter-lede b{color:var(--text);font-weight:600;}
 /* Honeypot anti-spam: fuera de pantalla, nunca visible ni tabulable. */
 .newsletter-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
 .newsletter-fields{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
@@ -2476,6 +2477,11 @@ body.m-drawer-open{overflow:hidden}
 .newsletter-status{font-family:var(--font-body);font-size:14px;margin:12px 0 0;}
 .newsletter-status[data-state="ok"]{color:#4ade80;}
 .newsletter-status[data-state="error"]{color:#f87171;}
+
+/* Icono de sobre (Lucide "mail"): trazo claro con glow cyan sutil. */
+.newsletter-icon{color:var(--text);filter:drop-shadow(0 0 8px rgba(83,221,252,.4));flex:0 0 auto;}
+.footer-newsletter .newsletter-icon{width:22px;height:22px;}
+.newsletter-band .newsletter-icon{width:32px;height:32px;display:block;margin:0 auto 16px;}
 
 /* ===== Banda newsletter a ancho completo =====
    Componente protagonista para paginas donde el visitante viene a aprender
@@ -2531,15 +2537,18 @@ footer:has(> .footer-newsletter){padding-top:0;}
   gap:14px 24px;
 }
 .footer-newsletter-claim{
-  font-family:var(--font-body);font-size:15px;color:var(--text-secondary);margin:0;
+  font-family:var(--font-body);font-size:14.5px;line-height:1.45;
+  color:var(--text-secondary);margin:0;max-width:480px;
+  display:flex;align-items:center;gap:12px;text-align:left;
 }
-.footer-newsletter-claim span{color:var(--text);font-weight:600;}
+.footer-newsletter-claim b{color:var(--text);font-weight:600;}
 .footer-newsletter .newsletter-form{flex:0 1 420px;min-width:280px;}
 .footer-newsletter .newsletter-fields{flex-wrap:nowrap;}
 .footer-newsletter .newsletter-status{width:100%;text-align:center;margin-top:10px;}
 @media (max-width:760px){
   .footer-newsletter-inner{flex-direction:column;align-items:stretch;text-align:center;}
   .footer-newsletter .newsletter-form{flex:1 1 auto;}
+  .footer-newsletter-claim{justify-content:center;max-width:none;}
 }
 @media (max-width:600px){
   .newsletter-optin{padding:24px 22px;}
