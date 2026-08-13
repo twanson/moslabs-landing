@@ -2477,21 +2477,74 @@ body.m-drawer-open{overflow:hidden}
 .newsletter-status[data-state="ok"]{color:#4ade80;}
 .newsletter-status[data-state="error"]{color:#f87171;}
 
-/* Variante compacta del footer: reclamo + input + botón en una franja. */
+/* ===== Banda newsletter a ancho completo =====
+   Componente protagonista para paginas donde el visitante viene a aprender
+   (home, blog, indice de recursos). En las paginas de venta no aparece: alli
+   el unico CTA es el diagnostico y solo queda el opt-in del footer. */
+/* section.* para ganar a `.home section{padding:110px 0}`, que empata en
+   especificidad con .newsletter-band y se aplicaria por orden. */
+section.newsletter-band{
+  background:var(--bg-elevated);
+  border-top:1px solid rgba(83,221,252,.18);
+  padding:64px 24px;
+  text-align:center;
+}
+.newsletter-band-inner{max-width:720px;margin:0 auto;}
+.newsletter-band .newsletter-eyebrow{font-size:12px;letter-spacing:.14em;margin:0 0 12px;}
+.newsletter-band h2{
+  font-family:var(--font-accent);
+  font-size:34px;font-weight:600;line-height:1.15;letter-spacing:0;
+  color:var(--text);margin:0 0 12px;
+}
+.newsletter-band h2 em{font-family:var(--font-accent);font-style:italic;font-weight:500;color:var(--primary);}
+.newsletter-band .newsletter-lede{font-size:16px;max-width:600px;margin:0 auto 28px;}
+.newsletter-band .newsletter-form{max-width:520px;margin:0 auto;}
+.newsletter-band .newsletter-fields{flex-wrap:nowrap;}
+.newsletter-band .newsletter-fineprint{text-align:center;margin-top:14px;}
+.newsletter-band .newsletter-status{text-align:center;}
+@media (max-width:600px){
+  section.newsletter-band{padding:40px 20px;}
+  .newsletter-band h2{font-size:26px;}
+  .newsletter-band .newsletter-lede{font-size:15px;margin-bottom:22px;}
+  /* Apilados en movil: input y boton a ancho completo. */
+  .newsletter-band .newsletter-fields{flex-wrap:wrap;}
+  .newsletter-band .newsletter-form input[type="email"],
+  .newsletter-band .newsletter-form button[type="submit"]{flex:1 1 100%;width:100%;}
+}
+
+/* ===== Opt-in compacto: primera franja DENTRO del footer =====
+   Va antes de las columnas de enlaces y se separa del sitemap con un borde
+   inferior. Claim y campo van juntos y centrados para que se lean como una
+   unidad (antes colgaban sueltos y separados por space-between).
+   :has() deja la banda a ras del borde superior del footer anulando su
+   padding-top; si el navegador no lo soporta solo queda algo mas de aire. */
+footer:has(> .footer-newsletter){padding-top:0;}
 .footer-newsletter{
-  border-top:1px solid var(--border);
-  padding:24px 0;
-  display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;
-  justify-content:space-between;
+  background:rgba(83,221,252,.03);
+  border-bottom:1px solid var(--border);
+  padding:26px 24px;
+  margin-bottom:36px;
+}
+.footer-newsletter-inner{
+  max-width:var(--container);margin:0 auto;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:14px 24px;
 }
 .footer-newsletter-claim{
-  font-family:var(--font-body);font-size:14px;color:var(--text-secondary);margin:0;max-width:420px;
+  font-family:var(--font-body);font-size:15px;color:var(--text-secondary);margin:0;
 }
 .footer-newsletter-claim span{color:var(--text);font-weight:600;}
-.footer-newsletter .newsletter-form{flex:1;min-width:280px;max-width:480px;}
+.footer-newsletter .newsletter-form{flex:0 1 420px;min-width:280px;}
 .footer-newsletter .newsletter-fields{flex-wrap:nowrap;}
-.footer-newsletter .newsletter-status{width:100%;margin-top:10px;}
+.footer-newsletter .newsletter-status{width:100%;text-align:center;margin-top:10px;}
+@media (max-width:760px){
+  .footer-newsletter-inner{flex-direction:column;align-items:stretch;text-align:center;}
+  .footer-newsletter .newsletter-form{flex:1 1 auto;}
+}
 @media (max-width:600px){
   .newsletter-optin{padding:24px 22px;}
+  .footer-newsletter{padding:22px 20px;margin-bottom:28px;}
   .footer-newsletter .newsletter-fields{flex-wrap:wrap;}
+  .footer-newsletter .newsletter-form input[type="email"],
+  .footer-newsletter .newsletter-form button[type="submit"]{flex:1 1 100%;width:100%;}
 }
