@@ -2493,6 +2493,10 @@ section.newsletter-strip{
   border-top:1px solid rgba(83,221,252,.18);
   border-bottom:1px solid rgba(83,221,252,.18);
   padding:20px 24px;
+  /* La seccion de arriba ya deja su padding-bottom (el ritmo de .home section:
+     110px / 70px), pero #sectores lleva padding-top:0 inline y la franja se
+     quedaba pegada abajo. Igualamos ese aire para que respire simetrica. */
+  margin:0 0 110px;
 }
 .newsletter-strip-inner{
   max-width:var(--container);margin:0 auto;
@@ -2510,6 +2514,9 @@ section.newsletter-strip{
   .newsletter-strip-inner{flex-direction:column;align-items:stretch;text-align:center;}
   .newsletter-strip-text{justify-content:center;}
   .newsletter-strip .newsletter-form{flex:1 1 auto;}
+}
+@media (max-width:900px){
+  section.newsletter-strip{margin-bottom:70px;}
 }
 @media (max-width:600px){
   section.newsletter-strip{padding:18px 20px;}
