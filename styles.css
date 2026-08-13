@@ -2482,6 +2482,41 @@ body.m-drawer-open{overflow:hidden}
 .newsletter-icon{color:var(--text);filter:drop-shadow(0 0 8px rgba(83,221,252,.4));flex:0 0 auto;}
 .footer-newsletter .newsletter-icon{width:22px;height:22px;}
 .newsletter-band .newsletter-icon{width:32px;height:32px;display:block;margin:0 auto 16px;}
+.newsletter-optin .newsletter-icon{width:32px;height:32px;display:block;margin:0 0 14px;}
+.newsletter-strip .newsletter-icon{width:20px;height:20px;}
+
+/* ===== Franja slim: un susurro a mitad de pagina, no una seccion =====
+   Una sola linea (icono + texto + form). section.* para ganar a
+   `.home section{padding:110px 0}`, igual que la banda. */
+section.newsletter-strip{
+  background:var(--bg-elevated);
+  border-top:1px solid rgba(83,221,252,.18);
+  border-bottom:1px solid rgba(83,221,252,.18);
+  padding:20px 24px;
+}
+.newsletter-strip-inner{
+  max-width:var(--container);margin:0 auto;
+  display:flex;align-items:center;justify-content:center;gap:12px 20px;flex-wrap:wrap;
+}
+.newsletter-strip-text{
+  font-family:var(--font-body);font-size:14.5px;color:var(--text-secondary);margin:0;
+  display:flex;align-items:center;gap:10px;
+}
+.newsletter-strip-text b{color:var(--text);font-weight:600;}
+.newsletter-strip .newsletter-form{flex:0 1 380px;min-width:260px;}
+.newsletter-strip .newsletter-fields{flex-wrap:nowrap;}
+.newsletter-strip .newsletter-status{width:100%;text-align:center;margin-top:8px;}
+@media (max-width:760px){
+  .newsletter-strip-inner{flex-direction:column;align-items:stretch;text-align:center;}
+  .newsletter-strip-text{justify-content:center;}
+  .newsletter-strip .newsletter-form{flex:1 1 auto;}
+}
+@media (max-width:600px){
+  section.newsletter-strip{padding:18px 20px;}
+  .newsletter-strip .newsletter-fields{flex-wrap:wrap;}
+  .newsletter-strip .newsletter-form input[type="email"],
+  .newsletter-strip .newsletter-form button[type="submit"]{flex:1 1 100%;width:100%;}
+}
 
 /* ===== Banda newsletter a ancho completo =====
    Componente protagonista para paginas donde el visitante viene a aprender

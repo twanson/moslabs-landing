@@ -18,6 +18,9 @@
     <meta property="og:site_name" content="MosLab">
     <link rel="canonical" href="https://moslab.org/casos-exito/">
     <title>Casos de Éxito - Automatización para PYMEs | MosLab</title>
+    <!-- styles.css va ANTES del bloque inline: aporta el footer estandar y los
+         tokens, y el CSS propio de esta pagina sigue ganando donde coinciden. -->
+    <link rel="stylesheet" href="/styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,9 +71,8 @@
         .cta-section p { font-size: 1.1rem; color:#8a8899; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
         .cta-button { display: inline-flex; align-items:center; gap:8px; background: linear-gradient(135deg,#53ddfc,#7c3aed); color: #050509; padding: 13px 28px; border-radius: 12px; font-weight: 600; font-size: 1rem; box-shadow:0 0 30px rgba(83,221,252,.25); transition: transform .25s, box-shadow .25s; }
         .cta-button:hover { transform: translateY(-2px); box-shadow:0 0 44px rgba(83,221,252,.4); color:#050509; }
-        footer { background-color: #0e0e15; color: #8a8899; border-top:1px solid rgba(255,255,255,.08); padding: 2rem; text-align: center; margin-top: 4rem; font-size: .9rem; }
-        footer a { color: #53ddfc; }
-        footer a:hover { text-decoration: underline; }
+        /* El footer legacy (centrado, con margen propio) se retiro al migrar al
+           footer estandar de styles.css. */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .stats-bar { gap: 1.5rem; padding: 2rem 1rem; }
@@ -476,10 +478,80 @@
         <a href="https://moslab.org/#contacto" class="cta-button">Solicita tu Diagnóstico Gratuito</a>
     </div>
 
-    <footer>
-        <p>&copy; 2026 MosLab. Marketing y Automatización para PYMEs en España.</p>
-        <p><a href="/">Inicio</a> | <a href="/blog/">Blog</a> | <a href="/calculadora-ahorro/">Calculadora de ahorro</a> | <a href="/#contacto">Contacto</a></p>
+    <footer class="footer">
+      <!-- Newsletter · opt-in compacto (banda superior del footer) -->
+      <div class="footer-newsletter">
+        <div class="footer-newsletter-inner">
+          <p class="footer-newsletter-claim">
+            <svg class="newsletter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>Cada dos semanas te mando por email una automatización <b>lista para copiar</b> en tu negocio. Gratis, con números y sin humo.</span>
+          </p>
+          <form class="newsletter-form" data-newsletter action="https://n8n.oficioscirculares.com/webhook/moslab-newsletter" method="POST">
+            <input type="text" name="web" value="" class="newsletter-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="source_detail" value="">
+            <div class="newsletter-fields">
+              <input type="email" name="email" required placeholder="tu@email.com" autocomplete="email" aria-label="Tu email">
+              <button type="submit">Apuntarme</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img src="/assets/logo-moslabs-horizontal-dark.svg" alt="MosLab" class="logo-img"/>
+            </a>
+            <p class="footer-tagline">Automatización de marketing y ventas para PYMEs</p>
+          </div>
+          <div class="footer-links">
+            <h4 class="footer-title">Enlaces</h4>
+            <nav class="footer-nav">
+              <a href="/automatizaciones/">Automatizaciones</a>
+              <a href="/precios/">Precios</a>
+              <a href="/para-agencias/">Para agencias</a>
+              <a href="/casos-exito/">Casos de éxito</a>
+              <a href="/recursos/">Recursos</a>
+              <a href="/blog/">Blog</a>
+              <a href="/calculadora-ahorro/">Calculadora de ahorro</a>
+            </nav>
+          </div>
+          <div class="footer-links">
+            <h4 class="footer-title">Sectores</h4>
+            <nav class="footer-nav">
+              <a href="/automatizacion-ventas-crm-inmobiliarias/">Inmobiliarias</a>
+              <a href="/automatizacion-marketing-manufactura-industrial/">Manufactura industrial</a>
+              <a href="/automatizacion-leads-consultorias-profesionales/">Consultorías y despachos</a>
+              <a href="/automatizacion-leads-educacion-formacion/">Educación y formación</a>
+              <a href="/automatizacion-ventas-logistica-transporte/">Logística y transporte</a>
+              <a href="/crm-clinica-dental-automatizado/">Clínicas dentales</a>
+              <a href="/automatizacion-comercial-clinicas-esteticas/">Clínicas estéticas</a>
+              <a href="/automatizacion-atencion-cliente-gimnasios/">Gimnasios</a>
+              <a href="/automatizacion-clinica-veterinaria/">Clínicas veterinarias</a>
+              <a href="/crm-taller-mecanico-automatizado/">Talleres mecánicos</a>
+              <a href="/software-automatizacion-empresas-b2b-espana/">Empresas B2B</a>
+              <a href="/sectores/"><strong>Ver todos los sectores →</strong></a>
+            </nav>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-title">Contacto</h4>
+            <div class="contact-info">
+              <a href="mailto:jose.moscardo@moslab.org" class="contact-item">jose.moscardo@moslab.org</a>
+              <a href="https://linkedin.com/in/josemariamoscardo" target="_blank" rel="noopener" class="contact-item">LinkedIn</a>
+              <span class="contact-item">Málaga, España</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 MosLab. Todos los derechos reservados.</p>
+          <div class="legal-links">
+            <a href="/privacidad/">Política de Privacidad</a>
+            <a href="/aviso-legal/">Aviso Legal</a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="/script.js"></script>
+    <script src="/newsletter.js" defer></script>
 </body>
 </html>
